@@ -6,8 +6,7 @@ Created on Sun Apr 20 11:12:37 2014
 """
 
 import sympy
-import scipy.linalg
-import scipy as sp
+from scipy import linalg, optimize
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -41,9 +40,15 @@ wss_sym_dict = {}
 
 def get_sstate_sol_dict_from_sympy_eqs(glist, xss_sym_dict, xini_dict={}):
 
+#    print xss_sym_dict
+#    print xini_dict
+#    print glist
+    
     nx = len(glist)
 
     glist_lam = sympy.lambdify([xss_sym_dict.values()], glist, dummify=False)
+
+    glist_lam
 
     if xini_dict == {}:
         xini_list = 0.2*np.ones(nx)
@@ -51,6 +56,8 @@ def get_sstate_sol_dict_from_sympy_eqs(glist, xss_sym_dict, xini_dict={}):
     else:
         xini_list = [x.subs(xini_dict) for x in xss_sym_dict.values()]
 
+#    print xini_list
+    
     xini_af = np.empty(len(xini_list), dtype='float')
 
     for i in range(len(xini_list)):
@@ -58,7 +65,7 @@ def get_sstate_sol_dict_from_sympy_eqs(glist, xss_sym_dict, xini_dict={}):
 
     xini_list = np.array(xini_list)
 
-    sol = sp.optimize.root(glist_lam, xini_af)
+    sol = optimize.root(glist_lam, xini_af)
 
     return dict(zip(xss_sym_dict.values(), np.around(sol['x'], decimals=12)))
 
@@ -257,7 +264,12 @@ def set_x_w_sym_dicts(this_x_names, this_w_names):
 def make_x_w_param_sym_dicts(this_x_names, this_w_names, this_param_names):
     x_sym_dict, w_sym_dict = set_x_w_sym_dicts(this_x_names, this_w_names)
     param_sym_dict = set_param_sym_dict(this_param_names)
-    return x_sym_dict, w_sym_dict, param_sym_dict
+    
+    x_in_ss_sym_d = {st: x_sym_dict[st] for st in x_sym_dict.keys() 
+                     if 'ss' in st}
+
+    
+    return x_sym_dict, x_in_ss_sym_d, w_sym_dict, param_sym_dict
 
 
 
@@ -503,7 +515,7 @@ class OldSignalStateSpace:
 class FullInfoModel:
     x = 0
 
-    def __init__(self, statespace, x_names, w_names, param_names,
+    def __init__(self, statespace, all_names,
                  xw_sym_dicts={}, ss_x_sol_dict={},  par_to_values_dict={},
                  eq_conditions=[], utility=[], xss_ini_dict={}, theta=10.0):
 
@@ -513,18 +525,18 @@ class FullInfoModel:
         self.D_num = statespace.D_num
         self.G_num = statespace.G_num
         self.par_to_values_dict = par_to_values_dict
-        self.x_names = x_names
-        self.w_names = w_names
-        self.param_names = param_names
+        self.x_names = all_names['x_names']
+        self.w_names = all_names['w_names']
+        self.param_names = all_names['param_names']
         self.q = sympy.Symbol('q')
         self.utility = utility
         self.beta = sympy.Symbol('beta')
         self.theta = theta
 
-        self.param_sym_dict = make_param_sym_dict(param_names)
+        self.param_sym_dict = make_param_sym_dict(self.param_names)
 
         if xw_sym_dicts == {}:
-            self.xw_sym_dicts = set_x_w_sym_dicts(x_names, w_names)
+            self.xw_sym_dicts = set_x_w_sym_dicts(self.x_names, self.w_names)
         else:
             self.xw_sym_dicts = xw_sym_dicts
 
@@ -558,24 +570,28 @@ class FullInfoModel:
         self.wvar_tp1_sym = self.normal_w_s_tp1.values()
         self.wvar_t_sym = self.normal_w_s_t.values()
 
-        self.normal_xw_to_q = make_normal_to_q_dict(x_names, w_names)
+        self.normal_xw_to_q = make_normal_to_q_dict(self.x_names, self.w_names)
 
-        self.normal_and_0_to_ss = make_normal_to_steady_state(x_names, w_names)
+        self.normal_and_0_to_ss = make_normal_to_steady_state(self.x_names, self.w_names)
 
         self.x_in_ss_sym_d = {st: self.x_s_d[st]
                               for st in self.x_s_d.keys() if 'ss' in st}
-
+        
+#        print 'self.x_in_ss_sym_d', self.x_in_ss_sym_d
+        
         self.w_in_ss_zero_d = make_wss_to_zero_dict(self.w_names)
 
-        self.qdiffs_to_012_d = make_qdiff_to_q012(x_names)
+        self.qdiffs_to_012_d = make_qdiff_to_q012(self.x_names)
 
         self.eq_conditions = eq_conditions
         self.d_g_dxw_1, self.d_g_dxw_2 = self.d1d2_g_x_w_unevaluated()
 
         self.fun_d_first_numpy = None
         self.fun_d_second_numpy = None
-        self.fun_d_first_theano = None
-        self.fun_d_second_theano = None
+        self.Need_compile_theano_fn_first = False
+        self.Need_compile_theano_fn_second = False
+#        self.fun_d_first_theano = None
+#        self.fun_d_second_theano = None
 
 
 #        symbols_per_eq = [g.atoms(sympy.Symbol) for g in self.eq_conditions]
@@ -593,6 +609,11 @@ class FullInfoModel:
             self.xw_symbols_eq_cond_nopar = list(
                 set.union(*symbols_per_eq_nopar))
 
+#            print 'self.eq_conditions_nopar', self.eq_conditions_nopar
+#            print 'self.normal_and_0_to_ss', self.normal_and_0_to_ss
+#            print 'self.w_in_ss_zero_d', self.w_in_ss_zero_d
+#            print 'self.eq_conditions_nopar_ss',self.eq_conditions_nopar_ss
+            
             if ss_x_sol_dict == {}:
                 self.ss_solutions_dict = get_sstate_sol_dict_from_sympy_eqs(
                     self.eq_conditions_nopar_ss,
@@ -612,6 +633,7 @@ class FullInfoModel:
                                       for x in self.normal_x_s_t.values()]
             self.normal_x_s_t_ss_values_d = dict(
                 zip(self.normal_x_s_t.values(), normal_x_s_t_ss_values))
+
 
             normal_x_s_tm1_ss_values = [x.subs(self.normal_and_0_to_ss).subs(self.ss_solutions_dict)
                                         for x in self.normal_x_s_tm1.values()]
@@ -811,12 +833,20 @@ class FullInfoModel:
             return d_first, d_second
 
         elif mod == 'theano':
-            if self.fun_d_first_theano == None or self.fun_d_second_theano == None:
-                self.fun_d_first_theano, self.fun_d_second_theano, valsth = self.make_theano_fns_of_d1d2xw(
+            if self.Need_compile_theano_fn_first:
+                fn_d_first_th, fn_d_second_th, valth = self.make_theano_fns_of_d1d2xw(
                     d_g_dxw_1, d_g_dxw_2)
-            d_first = self.fun_d_first_theano(*args_values)
-            d_second = self.fun_d_second_theano(*args_values)
+            d_first = fn_d_first_th(*args_values)
+            d_second = fn_d_second_th(*args_values)
             return d_first, d_second
+
+#        elif mod == 'theano':
+#            if self.fun_d_first_theano == None or self.fun_d_second_theano == None:
+#                self.fun_d_first_theano, self.fun_d_second_theano, valsth = self.make_theano_fns_of_d1d2xw(
+#                    d_g_dxw_1, d_g_dxw_2)
+#            d_first = self.fun_d_first_theano(*args_values)
+#            d_second = self.fun_d_second_theano(*args_values)
+#            return d_first, d_second
 
         else:
             print "Must specify 'numpy' or 'theano' "
@@ -978,10 +1008,25 @@ class FullInfoModel:
 #        print '\nself.normal_xw_s_ss_values_d:', self.normal_xw_s_ss_values_d
 #        print '\nself.par_to_values_dict:', self.par_to_values_dict
 
-        dg_first_lam = sympy.lambdify(args, dg_first, dummify=False)
-        dg_second_lam = sympy.lambdify(args, dg_second, dummify=False)
+        dg_first_lam = sympy.lambdify(args, dg_first, modules='numpy', dummify=False)
+        dg_second_lam = sympy.lambdify(args, dg_second, modules='numpy', dummify=False)
+
+        dtypes = {inp: 'float64' for inp in args}
+        
+#        print 'dtypes', dtypes
+        
+#        print 'end of print in inside make_theano_fns_of_d1d2xw:\n'
+        dg_first_th = theano_function(args, dg_first,
+                                      on_unused_input='ignore',
+                                      dtypes=dtypes)
+        
+        dg_second_th = theano_function(
+            args, dg_second, on_unused_input='ignore')
+
+
 
         return dg_first_lam, dg_second_lam, args_values
+        
 
     def make_theano_fns_of_d1d2xw(self, dg_first, dg_second):
 
@@ -999,11 +1044,25 @@ class FullInfoModel:
 
         args_values = args_values_x + args_values_w + args_values_p
 
-        dg_first_th = theano_function(args, dg_first, on_unused_input='ignore')
-        dg_second_th = theano_function(
+        print 'inside make_theano_fns_of_d1d2xw:\n'
+        print 'args = ', args
+        print 'dg_first: ', dg_first
+        
+        dtypes = {inp: 'float64' for inp in args}
+        
+        print 'dtypes', dtypes
+        
+        print 'end of print in inside make_theano_fns_of_d1d2xw:\n'
+        dg_first_th = sympy.printing.theanocode.theano_function(args, dg_first,
+                                      on_unused_input='ignore',
+                                      dtypes=dtypes,
+                                      mode='DebugMode')
+        
+        dg_second_th = sympy.printing.theanocode.theano_function(
             args, dg_second, on_unused_input='ignore')
 
         return dg_first_th, dg_second_th, args_values
+
 
     def get_first_order_approx_coeff_fi(self, eqs=[],
                                         param_vals_d={},
