@@ -25,9 +25,6 @@ rgqz = robjects.r.gqz
 
 q = sympy.Symbol('q')
 
-#x_names_list = ['a', 'C','I', 'K', 'L','Y','zetaa']
-#w_names_list = ['wa', 'wzetaa']
-
 x_names = []
 w_names = []
 x_sym_dict = {}
@@ -40,10 +37,6 @@ wss_sym_dict = {}
 
 def get_sstate_sol_dict_from_sympy_eqs(glist, xss_sym_dict, xini_dict={}):
 
-#    print xss_sym_dict
-#    print xini_dict
-#    print glist
-    
     nx = len(glist)
 
     glist_lam = sympy.lambdify([xss_sym_dict.values()], glist, dummify=False)
@@ -52,12 +45,9 @@ def get_sstate_sol_dict_from_sympy_eqs(glist, xss_sym_dict, xini_dict={}):
 
     if xini_dict == {}:
         xini_list = 0.2*np.ones(nx)
-#        print '\nxini_list:', xini_list
     else:
         xini_list = [x.subs(xini_dict) for x in xss_sym_dict.values()]
 
-#    print xini_list
-    
     xini_af = np.empty(len(xini_list), dtype='float')
 
     for i in range(len(xini_list)):
@@ -113,7 +103,7 @@ def make_sym_dict(names_list, date_str, isw=False):
 
     dated_names_q = [name + '_q' for name in dated_names]
     dated_names_q_fun = [sympy.Function(x)(q) for x in dated_names]
-#    print '\n'
+
     dic_to_be_filled.update(dict(zip(dated_names_q, dated_names_q_fun)))
 
     return dic_to_be_filled
@@ -211,7 +201,8 @@ def set_param_sym_dict(this_param_names):
     return param_sym_dict
 
 
-def make_sym_dict_all_dates(names_list, dates_list, isw=True, do_steady_states_names=True):
+def make_sym_dict_all_dates(names_list, dates_list, isw=True,
+    do_steady_states_names=True):
 
     sym_dict_all_dates = {}
 
@@ -237,8 +228,6 @@ def set_x_w_sym_dicts(this_x_names, this_w_names):
     x_names = this_x_names
     w_names = this_w_names
 
-#    print '\nx_names, this_x_names: ',x_names, this_x_names
-
     x_dates = ['tm1', 't', 'tp1']
     w_dates = ['t', 'tp1']
 
@@ -258,20 +247,18 @@ def set_x_w_sym_dicts(this_x_names, this_w_names):
     x_sym_tp1_dict = make_sym_dict(x_names, 'tp1')
     w_sym_t_dict = make_sym_dict(w_names, 't')
     w_sym_tp1_dict = make_sym_dict(w_names, 'tp1')
-#
+
     return x_sym_dict, w_sym_dict
+
 
 def make_x_w_param_sym_dicts(this_x_names, this_w_names, this_param_names):
     x_sym_dict, w_sym_dict = set_x_w_sym_dicts(this_x_names, this_w_names)
     param_sym_dict = set_param_sym_dict(this_param_names)
-    
-    x_in_ss_sym_d = {st: x_sym_dict[st] for st in x_sym_dict.keys() 
+
+    x_in_ss_sym_d = {st: x_sym_dict[st] for st in x_sym_dict.keys()
                      if 'ss' in st}
 
-    
     return x_sym_dict, x_in_ss_sym_d, w_sym_dict, param_sym_dict
-
-
 
 
 def Fckliy_az_mua(xini_az):
@@ -342,7 +329,7 @@ def make_state_space_sym(num_signals, num_states, is_homo):
 
 
 def all_vars_par_par(a_of_values, set_par_x, set_par_lev, par_tex_x,
-                     par_tex_lev, par_name_x, par_name_lev, vars_tex, postname):
+    par_tex_lev, par_name_x, par_name_lev, vars_tex, postname):
 
     for v in range(len(set_par_lev)):
         fig, ax = plt.subplots()
@@ -387,13 +374,12 @@ def old_matrix2numpyfloat(m):
 
 
 def numpy_state_space_matrices(sspacemats_dic, name2val_dic, user_names=False,
-                               mod2user_dic=None):
-                                   
+    mod2user_dic=None):
+
     A = sspacemats_dic['A_z']
     C = sspacemats_dic['C_z']
     D = sspacemats_dic['D_s']
     G = sspacemats_dic['G_s']
-                                  
 
     if mod2user_dic:
         Asn = A.subs(mod2user_dic).subs(name2val_dic)
@@ -412,9 +398,10 @@ def numpy_state_space_matrices(sspacemats_dic, name2val_dic, user_names=False,
     Gnn = matrix2numpyfloat(Gsn)
 
     return Ann, Cnn, Dnn, Gnn
+
 
 def numpy_state_space_matrices_old(A, C, D, G, name2val_dic, user_names=False,
-                               mod2user_dic=None):
+    mod2user_dic=None):
 
     if mod2user_dic:
         Asn = A.subs(mod2user_dic).subs(name2val_dic)
@@ -433,91 +420,56 @@ def numpy_state_space_matrices_old(A, C, D, G, name2val_dic, user_names=False,
     Gnn = matrix2numpyfloat(Gsn)
 
     return Ann, Cnn, Dnn, Gnn
+
 
 class SignalStateSpace:
 
     def __init__(self, n_x=1, n_s=1, param_val_dic={},
                  user_names_dic={}):
-                     
+
         ssp_mats_sym_d = make_state_space_sym(n_s,
                                               n_x, True)
-        
+
         self.A_sym = ssp_mats_sym_d['A_z']
         self.C_sym = ssp_mats_sym_d['C_z']
         self.D_sym = ssp_mats_sym_d['D_s']
         self.G_sym = ssp_mats_sym_d['G_s']
-        
-        if  user_names_dic!={}:  
+
+        if user_names_dic != {}:
             self.A_sym_u = self.A_sym.subs(user_names_dic)
             self.C_sym_u = self.C_sym.subs(user_names_dic)
             self.D_sym_u = self.D_sym.subs(user_names_dic)
             self.G_sym_u = self.G_sym.subs(user_names_dic)
-            self.A_num = self.A_sym_u.subs(param_val_dic) 
-            self.A_num = matrix2numpyfloat(self.A_num) 
-            self.C_num = self.C_sym_u.subs(param_val_dic) 
-            self.C_num = matrix2numpyfloat(self.C_num) 
-            self.D_num = self.D_sym_u.subs(param_val_dic) 
-            self.D_num = matrix2numpyfloat(self.D_num) 
-            self.G_num = self.G_sym_u.subs(param_val_dic) 
-            self.G_num = matrix2numpyfloat(self.G_num) 
-                        
+            self.A_num = self.A_sym_u.subs(param_val_dic)
+            self.A_num = matrix2numpyfloat(self.A_num)
+            self.C_num = self.C_sym_u.subs(param_val_dic)
+            self.C_num = matrix2numpyfloat(self.C_num)
+            self.D_num = self.D_sym_u.subs(param_val_dic)
+            self.D_num = matrix2numpyfloat(self.D_num)
+            self.G_num = self.G_sym_u.subs(param_val_dic)
+            self.G_num = matrix2numpyfloat(self.G_num)
+
         else:
-            self.A_num = self.A_sym.subs(param_val_dic) 
-            self.A_num = matrix2numpyfloat(self.A_num) 
-            self.C_num = self.C_sym.subs(param_val_dic) 
-            self.C_num = matrix2numpyfloat(self.C_num) 
-            self.D_num = self.D_sym.subs(param_val_dic) 
-            self.D_num = matrix2numpyfloat(self.D_num) 
-            self.G_num = self.G_sym.subs(param_val_dic) 
-            self.G_num = matrix2numpyfloat(self.G_num) 
+            self.A_num = self.A_sym.subs(param_val_dic)
+            self.A_num = matrix2numpyfloat(self.A_num)
+            self.C_num = self.C_sym.subs(param_val_dic)
+            self.C_num = matrix2numpyfloat(self.C_num)
+            self.D_num = self.D_sym.subs(param_val_dic)
+            self.D_num = matrix2numpyfloat(self.D_num)
+            self.G_num = self.G_sym.subs(param_val_dic)
+            self.G_num = matrix2numpyfloat(self.G_num)
             self.A_sym_u = {}
             self.C_sym_u = {}
             self.D_sym_u = {}
             self.G_sym_u = {}
-            
-           
-            
-
-
-class OldSignalStateSpace:
-
-    def __init__(self, A_num=[], C_num=[], D_num=[], G_num=[],
-                 A_sym=None, C_sym=None, D_sym=None, G_sym=None, param_val_dic={},
-                 user_names_dic={}):
-
-        self.A_num = A_num
-        self.C_num = C_num
-        self.D_num = D_num
-        self.G_num = G_num
-
-        self.A_sym = A_sym
-        self.C_sym = C_sym
-        self.D_sym = D_sym
-        self.G_sym = G_sym
-
-        if param_val_dic != {}:
-            self.A_num = A_sym.subs(param_val_dic)
-            self.A_num = matrix2numpyfloat(self.A_num)
-            self.C_num = C_sym.subs(param_val_dic)
-            self.C_num = matrix2numpyfloat(self.C_num)
-            self.D_num = D_sym.subs(param_val_dic)
-            self.D_num = matrix2numpyfloat(self.D_num)
-            self.G_num = G_sym.subs(param_val_dic)
-            self.G_num = matrix2numpyfloat(self.G_num)
-
-        if user_names_dic != {}:
-            self.A_sym = self.A_sym.subs(user_names_dic)
-            self.C_sym = self.C_sym.subs(user_names_dic)
-            self.D_sym = self.D_sym.subs(user_names_dic)
-            self.G_sym = self.G_sym.subs(user_names_dic)
 
 
 class FullInfoModel:
     x = 0
 
     def __init__(self, statespace, all_names,
-                 xw_sym_dicts={}, ss_x_sol_dict={},  par_to_values_dict={},
-                 eq_conditions=[], utility=[], xss_ini_dict={}, theta=10.0):
+        xw_sym_dicts={}, ss_x_sol_dict={},  par_to_values_dict={},
+        eq_conditions=[], utility=[], xss_ini_dict={}, theta=10.0):
 
         self.statespace = statespace
         self.A_num = statespace.A_num
@@ -572,13 +524,12 @@ class FullInfoModel:
 
         self.normal_xw_to_q = make_normal_to_q_dict(self.x_names, self.w_names)
 
-        self.normal_and_0_to_ss = make_normal_to_steady_state(self.x_names, self.w_names)
+        self.normal_and_0_to_ss = make_normal_to_steady_state(
+            self.x_names, self.w_names)
 
         self.x_in_ss_sym_d = {st: self.x_s_d[st]
                               for st in self.x_s_d.keys() if 'ss' in st}
-        
-#        print 'self.x_in_ss_sym_d', self.x_in_ss_sym_d
-        
+
         self.w_in_ss_zero_d = make_wss_to_zero_dict(self.w_names)
 
         self.qdiffs_to_012_d = make_qdiff_to_q012(self.x_names)
@@ -590,12 +541,6 @@ class FullInfoModel:
         self.fun_d_second_numpy = None
         self.Need_compile_theano_fn_first = False
         self.Need_compile_theano_fn_second = False
-#        self.fun_d_first_theano = None
-#        self.fun_d_second_theano = None
-
-
-#        symbols_per_eq = [g.atoms(sympy.Symbol) for g in self.eq_conditions]
-#        self.xwparams_symbols_eq_cond = list(set.union(*symbols_per_eq))
 
         if par_to_values_dict != {}:
             self.eq_conditions_nopar = [
@@ -609,11 +554,6 @@ class FullInfoModel:
             self.xw_symbols_eq_cond_nopar = list(
                 set.union(*symbols_per_eq_nopar))
 
-#            print 'self.eq_conditions_nopar', self.eq_conditions_nopar
-#            print 'self.normal_and_0_to_ss', self.normal_and_0_to_ss
-#            print 'self.w_in_ss_zero_d', self.w_in_ss_zero_d
-#            print 'self.eq_conditions_nopar_ss',self.eq_conditions_nopar_ss
-            
             if ss_x_sol_dict == {}:
                 self.ss_solutions_dict = get_sstate_sol_dict_from_sympy_eqs(
                     self.eq_conditions_nopar_ss,
@@ -627,13 +567,13 @@ class FullInfoModel:
             normal_x_s_tp1_ss_values = [x.subs(self.normal_and_0_to_ss).subs(self.ss_solutions_dict)
                                         for x in self.normal_x_s_tp1.values()]
             self.normal_x_s_tp1_ss_values_d = dict(
+
                 zip(self.normal_x_s_tp1.values(), normal_x_s_tp1_ss_values))
 
             normal_x_s_t_ss_values = [x.subs(self.normal_and_0_to_ss).subs(self.ss_solutions_dict)
                                       for x in self.normal_x_s_t.values()]
             self.normal_x_s_t_ss_values_d = dict(
                 zip(self.normal_x_s_t.values(), normal_x_s_t_ss_values))
-
 
             normal_x_s_tm1_ss_values = [x.subs(self.normal_and_0_to_ss).subs(self.ss_solutions_dict)
                                         for x in self.normal_x_s_tm1.values()]
@@ -663,25 +603,6 @@ class FullInfoModel:
                              for p in self.param_sym_dict.values()]
 
             self.args_values = args_values_x + args_values_w + args_values_p
-
-
-#        self.ss_solutions_dict =  get_sstate_sol_dict_from_sympy_eqs(
-#                            eqs_nopar_ss, self.x_in_ss_sym_d,
-#                                           xini_dict=self.xss_ini_dict)
-#
-
-
-#        for k, v in x_sym_dict.iteritems():
-#        for k, v in self.x_s_d.iteritems() :
-#            exec('self.' + k + '= v')
-#
-#
-#        for k, v in w_sym_dict.iteritems():
-#            exec('self.' + k + '= v')
-#
-#
-#        for k, v in param_sym_dict.iteritems():
-#            exec('self.' + k + '= v')
 
     def d1d2_g_implicit_q_unevaluated(self):
 
@@ -817,19 +738,6 @@ class FullInfoModel:
 
             d_first = [np.array(d, dtype='float') for d in d_first]
             d_second = [np.array(d, dtype='float') for d in d_second]
-#            print '\nThis is get_evaluated_dgdxw12:'
-#            print '\nOutput from make_numpy etc:'
-#            print '\ntype(d_first):', type(d_first)
-#            print '\ntype(d_first[0]):', type(d_first[0])
-# print '\nd_first[0]):', d_first[0]
-#            print '\ntype(d_first[0])):', type(d_first[0][0,0])
-#
-#            print '\ntype(d_second):', type(d_second)
-#            print '\nlen(d_second):', len(d_second)
-#            print '\ntype(d_second[0]):', type(d_second[0])
-# print '\nd_second[0]):', d_second[0]
-#            print '\ntype(d_second[0])):', type(d_second[0][0,0])
-
             return d_first, d_second
 
         elif mod == 'theano':
@@ -839,14 +747,6 @@ class FullInfoModel:
             d_first = fn_d_first_th(*args_values)
             d_second = fn_d_second_th(*args_values)
             return d_first, d_second
-
-#        elif mod == 'theano':
-#            if self.fun_d_first_theano == None or self.fun_d_second_theano == None:
-#                self.fun_d_first_theano, self.fun_d_second_theano, valsth = self.make_theano_fns_of_d1d2xw(
-#                    d_g_dxw_1, d_g_dxw_2)
-#            d_first = self.fun_d_first_theano(*args_values)
-#            d_second = self.fun_d_second_theano(*args_values)
-#            return d_first, d_second
 
         else:
             print "Must specify 'numpy' or 'theano' "
@@ -885,107 +785,9 @@ class FullInfoModel:
                 totsec = sta_sec[0]
                 for i in range(len(sta_sec)-1):
                     totsec = totsec.col_join(sta_sec[i+1])
-#                print '\ntotsec.shape:', totsec.shape
                 d_g_second_stack.append(totsec)
-
-#        print '\nthis is d1d2_g_x_w_unevaluated:'
-#        print '\nlen(d_g_second_stack):',len(d_g_second_stack)
 
         return d_g_first, d_g_second_stack
-
-    def old_d1d2_g_x_w_unevaluated_old(self):
-
-        deriv_vars_x_t = self.xvar_t_sym
-        deriv_vars_x_tm1 = self.xvar_tm1_sym
-        deriv_vars_x_tp1 = self.xvar_tp1_sym
-        deriv_vars_w_t = self.wvar_t_sym
-        deriv_vars_w_tp1 = self.wvar_tp1_sym
-
-        deriv_vars_all = [deriv_vars_x_tp1, deriv_vars_x_t, deriv_vars_x_tm1,
-                          deriv_vars_w_tp1, deriv_vars_w_t]
-
-        g_eqs = sympy.Matrix(self.eq_conditions)
-
-        d_g_d_xtp1 = g_eqs.jacobian(deriv_vars_x_tp1)
-        d_g_d_xt = g_eqs.jacobian(deriv_vars_x_t)
-        d_g_d_xtm1 = g_eqs.jacobian(deriv_vars_x_tm1)
-        d_g_d_wtp1 = g_eqs.jacobian(deriv_vars_w_tp1)
-        d_g_d_wt = g_eqs.jacobian(deriv_vars_w_t)
-
-        d_g_first = [d_g_d_xtp1, d_g_d_xt, d_g_d_xtm1, d_g_d_wtp1, d_g_d_wt]
-
-        d_g_second = []
-
-        for dg in d_g_first:
-            for dvar in deriv_vars_all:
-                d2g = sympy.Matrix(list(dg)).jacobian(dvar)
-                d_g_second.append(d2g)
-
-        d_g_second_stack = []
-        for dg in d_g_first:
-            for dvar in deriv_vars_all:
-                sta_sec = [
-                    dg[i, :].jacobian(dvar).T.vec().T for i in range(dg.rows)]
-                totsec = sta_sec[0]
-                for i in range(len(sta_sec)-1):
-                    totsec = totsec.col_join(sta_sec[i+1])
-                print '\ntotsec.shape:', totsec.shape
-                d_g_second_stack.append(totsec)
-
-
-#        df_dx = feqsm.jacobian(xvars)
-#        sta_sec = [df_dx[i,:].jacobian(wvars).T.vec().T for i in range(df_dx.rows)]
-#        totsec = sta_sec[0]
-#        for i in  range(len(sta_sec)-1):
-#            totsec = totsec.col_join(sta_sec[i+1])
-
-        print '\nthis is d1d2_g_x_w_unevaluated:'
-        print '\nlen(d_g_second):', len(d_g_second)
-        print '\nlen(d_g_second_stack):', len(d_g_second_stack)
-
-        d_g_d_xtp1_d_xtp1 = sympy.Matrix(
-            list(d_g_d_xtp1)).jacobian(deriv_vars_x_tp1)
-        d_g_d_xtp1_d_xt = sympy.Matrix(
-            list(d_g_d_xtp1)).jacobian(deriv_vars_x_t)
-        d_g_d_xtp1_d_xtm1 = sympy.Matrix(
-            list(d_g_d_xtp1)).jacobian(deriv_vars_x_tm1)
-        d_g_d_xtp1_d_wtp1 = sympy.Matrix(
-            list(d_g_d_xtp1)).jacobian(deriv_vars_w_tp1)
-        d_g_d_xtp1_d_wt = sympy.Matrix(
-            list(d_g_d_xtp1)).jacobian(deriv_vars_w_t)
-
-        d_g_d_xt_d_xt = sympy.Matrix(list(d_g_d_xt)).jacobian(deriv_vars_x_t)
-        d_g_d_xt_d_xtm1 = sympy.Matrix(
-            list(d_g_d_xt)).jacobian(deriv_vars_x_tm1)
-        d_g_d_xt_d_wtp1 = sympy.Matrix(
-            list(d_g_d_xt)).jacobian(deriv_vars_w_tp1)
-        d_g_d_xt_d_wt = sympy.Matrix(list(d_g_d_xt)).jacobian(deriv_vars_w_t)
-
-        d_g_d_xtm1_d_xtm1 = sympy.Matrix(
-            list(d_g_d_xtm1)).jacobian(deriv_vars_x_tm1)
-        d_g_d_xtm1_d_wtp1 = sympy.Matrix(
-            list(d_g_d_xtm1)).jacobian(deriv_vars_w_tp1)
-        d_g_d_xtm1_d_wt = sympy.Matrix(
-            list(d_g_d_xtm1)).jacobian(deriv_vars_w_t)
-
-        d_g_d_wtp1_d_wtp1 = sympy.Matrix(
-            list(d_g_d_wtp1)).jacobian(deriv_vars_w_tp1)
-        d_g_d_wtp1_d_wt = sympy.Matrix(
-            list(d_g_d_wtp1)).jacobian(deriv_vars_w_t)
-
-        d_g_d_wt_d_wt = sympy.Matrix(list(d_g_d_wt)).jacobian(deriv_vars_w_t)
-
-        d_g_firsts = [d_g_d_xtp1, d_g_d_xt, d_g_d_xtm1, d_g_d_wtp1, d_g_d_wt]
-
-        d_g_seconds = [d_g_d_xtp1_d_xtp1, d_g_d_xtp1_d_xt, d_g_d_xtp1_d_xtm1,
-                       d_g_d_xtp1_d_wtp1, d_g_d_xtp1_d_wt,
-                       d_g_d_xt_d_xt, d_g_d_xt_d_xtm1, d_g_d_xt_d_wtp1,
-                       d_g_d_xt_d_wt,
-                       d_g_d_xtm1_d_xtm1, d_g_d_xtm1_d_wtp1, d_g_d_xtm1_d_wt,
-                       d_g_d_wtp1_d_wtp1, d_g_d_wtp1_d_wt,
-                       d_g_d_wt_d_wt]
-
-        return d_g_firsts, d_g_seconds
 
     def make_numpy_fns_of_d1d2xw(self, dg_first, dg_second):
 
@@ -1003,30 +805,13 @@ class FullInfoModel:
 
         args_values = args_values_x + args_values_w + args_values_p
 
-#        print '\nargs for lambdify:', args
-#        print '\nargs values for lambdify:', args_values
-#        print '\nself.normal_xw_s_ss_values_d:', self.normal_xw_s_ss_values_d
-#        print '\nself.par_to_values_dict:', self.par_to_values_dict
+        dg_first_lam = sympy.lambdify(args, dg_first)
+        dg_second_lam = sympy.lambdify(args, dg_second)
 
-        dg_first_lam = sympy.lambdify(args, dg_first, modules='numpy', dummify=False)
-        dg_second_lam = sympy.lambdify(args, dg_second, modules='numpy', dummify=False)
-
-        dtypes = {inp: 'float64' for inp in args}
-        
-#        print 'dtypes', dtypes
-        
-#        print 'end of print in inside make_theano_fns_of_d1d2xw:\n'
-        dg_first_th = theano_function(args, dg_first,
-                                      on_unused_input='ignore',
-                                      dtypes=dtypes)
-        
-        dg_second_th = theano_function(
-            args, dg_second, on_unused_input='ignore')
-
-
+        self.fun_d_first_numpy = dg_first_lam
+        self.fun_d_second_numpy = dg_second_lam
 
         return dg_first_lam, dg_second_lam, args_values
-        
 
     def make_theano_fns_of_d1d2xw(self, dg_first, dg_second):
 
@@ -1047,26 +832,23 @@ class FullInfoModel:
         print 'inside make_theano_fns_of_d1d2xw:\n'
         print 'args = ', args
         print 'dg_first: ', dg_first
-        
+
         dtypes = {inp: 'float64' for inp in args}
-        
+
         print 'dtypes', dtypes
-        
+
         print 'end of print in inside make_theano_fns_of_d1d2xw:\n'
         dg_first_th = sympy.printing.theanocode.theano_function(args, dg_first,
-                                      on_unused_input='ignore',
-                                      dtypes=dtypes,
-                                      mode='DebugMode')
-        
+                                                                on_unused_input='ignore',
+                                                                dtypes=dtypes,
+                                                                mode='DebugMode')
+
         dg_second_th = sympy.printing.theanocode.theano_function(
             args, dg_second, on_unused_input='ignore')
 
         return dg_first_th, dg_second_th, args_values
 
-
-    def get_first_order_approx_coeff_fi(self, eqs=[],
-                                        param_vals_d={},
-                                        mod='numpy'):
+    def get_first_order_approx_coeff_fi(self, eqs=[], param_vals_d={}, mod='numpy'):
 
         beta = self.beta.subs(self.par_to_values_dict)
         theta = self.theta
@@ -1082,11 +864,6 @@ class FullInfoModel:
         gwt_ss = matrix2numpyfloat(gwt_ss)
 
         nx = gxtp1_ss.shape[1]
-
-#        print '\ngxtp1_ss:',gxtp1_ss
-#        print '\ntype(gxtp1_ss):',type(gxtp1_ss)
-#        print '\ntype(np.array(gxtp1_ss)):',type(np.array(gxtp1_ss))
-        print '\nnx:', nx
         # quad_coeffmat_in_eq_for_P is Uhlig's \Psi matrix, sensible
         quad_coeffmat_in_eq_for_P = gxtp1_ss
         # lin_coeffmat_in_eq_for_P is Uhlig's (-\Gamma) matrix, sensible
@@ -1112,13 +889,10 @@ class FullInfoModel:
         psi_w_inner = np.dot(gxtp1_ss, stable_psi_x) + gx_ss
         psi_w = - np.dot(np.linalg.inv(psi_w_inner), gwt_ss)
 
-#        psi_q part:
-        psi_q_inv_term = scipy.linalg.inv(np.dot(gxtp1_ss, psi_x) +
-                                          gxtp1_ss + gx_ss)
+        psi_q_inv_term = linalg.inv(np.dot(gxtp1_ss, psi_x) +
+                                    gxtp1_ss + gx_ss)
 
         coef_on_dist_E = np.dot(gxtp1_ss, psi_w) + gwtp1_ss
-
-#        utility_ss_sym = self.utility.subs(self.ss_solutions_dict)
 
         utility_sym_mat = sympy.Matrix([self.utility])
 
@@ -1126,39 +900,29 @@ class FullInfoModel:
         du_dx_nopar = [u.subs(self.par_to_values_dict) for u in list(du_dx)]
         du_dx_at_ss = [u.subs(self.normal_and_0_to_ss).subs(
             self.ss_solutions_dict) for u in du_dx_nopar]
-#        print '\ndu_dx_at_ss:', du_dx_at_ss
         du_dx_at_ss = self.matrix2numpyfloat(sympy.Matrix(du_dx_at_ss))
         nx = len(self.xvar_t_sym)
         Ibetaphi = np.eye(nx) - beta*psi_x
-        invIbetaphi = scipy.linalg.inv(Ibetaphi)
-        print '\ndu_dx_at_ss', du_dx_at_ss
-        print '\ndu_dx_at_ss.shape', du_dx_at_ss.shape
-        print '\ndu_dx_at_ss.T.shape', du_dx_at_ss.T.shape
-        print '\ninvIbetaphi.shape', invIbetaphi.shape
+        invIbetaphi = linalg.inv(Ibetaphi)
+
         Vx = np.dot(du_dx_at_ss.T, invIbetaphi)
 
         E_w_dist = - np.dot(Vx, psi_w).T/theta
 
         vec_for_diag = np.dot(coef_on_dist_E, E_w_dist)
 
-#        print 'E_w_dist', E_w_dist
-#        print 'coef_on_dist_E', coef_on_dist_E
-#        print 'vec_for_diag', vec_for_diag
-#
         diag_mat = np.diag(vec_for_diag)
 
         psi_q = - np.dot(psi_q_inv_term, gq_ss + diag_mat)
 
         return psi_x, psi_w, psi_q
 
-    def get_second_order_approx_coeff_fi(self, psi_x, psi_w, d_first, d_second):
+    def get_second_order_approx_coeff_fi(self, psi_x, psi_w, psi_q, d_first, d_second):
 
         gxtp1, gxt, gxtm1, gwtp1, gwpt, gq = d_first
 
         nx = psi_x.shape[1]
         nw = psi_w.shape[1]
-
-        print '\nlen(d_second):', len(d_second)
 
         gxtp1xtp1 = d_second[0]
         gxtp1xt = d_second[1]
@@ -1202,49 +966,321 @@ class FullInfoModel:
         gqwt = d_second[34]
         gqq = d_second[35]
 
+        I_n = np.eye(nx)
+        I_n_dot_j = [I_n[:, j].reshape((nx, 1)) for j in range(nx)]
+        psiwkronIndotj_list = [np.kron(psi_w, c) for c in I_n_dot_j]
+        psiwkronIndotj = np.concatenate(psiwkronIndotj_list, axis=1)
+        psiwkronIk = np.kron(psi_w, np.eye(nw))
+        psixkronIn = np.kron(psi_x, np.eye(nx))
+        psixkronIk = np.kron(psi_x, np.eye(nw))
+        psiqkronIn = np.kron(psi_q, np.eye(nx))
+        psiqkronIk = np.kron(psi_q, np.eye(nw))
+
+        Inkronpsix = np.kron(np.eye(nx), psi_x)
+        Inkronpsiw = np.kron(np.eye(nx), psi_w)
+        Inkronpsiq = np.kron(np.eye(nx), psi_q)
+        Inkronpsixsquared = np.kron(np.eye(nx), np.dot(psi_x, psi_x))
+        Ikkronpsix = np.kron(np.eye(nw), psi_x)
+
+        psixkronpsix = np.kron(psi_x, psi_x)
+        psixkronpsiw = np.kron(psi_x, psi_w)
+        psiwkronpsix = np.kron(psi_w, psi_x)
+        psixkronpsiq = np.kron(psi_x, psi_q)
+        psiqkronpsix = np.kron(psi_q, psi_x)
+        psiwkronpsiq = np.kron(psi_w, psi_q)
+        psiqkronpsiw = np.kron(psi_q, psi_w)
+        psiwkronpsiw = np.kron(psi_w, psi_w)
+
+        # equation for psi_xx
+        # A psi_xx + gxtp1 psi_xx B + C
+        # A = gxt + gxtp1 psi_x
+        # B = (psi_x kron psi_x)
+        # C =big constant
+        # vectorized solution:
+        # [(I_nn kron A) + (B' kron gxtp1)] vec(psi_xx) = -vec(C)
+
+        A_for_psixx = gxt + np.dot(gxtp1, psi_x)
+        B_for_psixx = np.kron(psi_x, psi_x)
+
+        C_for_psixx_1 = gxtm1xtm1 + 2*np.dot(gxtm1xt, Inkronpsix)
+        C_for_psixx_2 = gxtxt + 2*np.dot(gxtxtp1, Inkronpsix) \
+            + np.dot(gxtp1xtp1, psixkronpsix)
+        C_for_psixx_3 = 2*np.dot(gxtm1xtp1, Inkronpsixsquared)
+        C_for_psixx = C_for_psixx_1 + np.dot(C_for_psixx_2, psixkronpsix) \
+            + C_for_psixx_3
+        leftmat = np.kron(np.eye(nx*nx), A_for_psixx) + \
+            np.kron(B_for_psixx.T, gxtp1)
+        rightmat = - C_for_psixx.T.flatten()  # one dimensional array
+        # two dimensional column array
+        rightmat2d = - C_for_psixx.T.reshape(-1, 1)
+
+        invleftmat = linalg.inv(leftmat)
+
+        vec_psixx_sol = np.dot(invleftmat, rightmat)
+        vec_psixx_sol2d = np.dot(invleftmat, rightmat2d)
+
+        vec_psi_x_x_bysolve = linalg.solve(leftmat, rightmat)  # twice as fast
+
+        psi_x_x = vec_psixx_sol.reshape((nx, nx*nx), order='F')
+        psi_x_x_2d = vec_psixx_sol2d.reshape((nx, nx*nx), order='F')
+
+        # equation for psi_x_w
+        # 0= 2*Gammax2*psi_xw + 2*gtm1wt + Gammaxw*(psi_x kron Ik) +
+        # Gammaxtm1xt*(In kron psi_x)
+
+        Gamma_xtp1_2 = gxtp1
+        Gamma_xtp1_xtp1 = gxtp1xtp1
+        Gamma_xtp1_wtp1 = 2*gxtp1wtp1 + np.dot(Gamma_xtp1_xtp1, psiwkronIndotj)
+        Gamma_xtp1_wt = 2*gxtp1wt
+        Gamma_xtp1_q = 2*gxtp1q + np.dot(Gamma_xtp1_xtp1, psiqkronIn)
+
+        Gamma_xt_2 = gxt + np.dot(Gamma_xtp1_2, psi_x)
+        Gamma_xt_xtp1 = 2*gxtxtp1 + np.dot(Gamma_xtp1_xtp1, psixkronIn)
+        Gamma_xt_xt = gxtxt + \
+            np.dot(Gamma_xtp1_2, psi_x_x) + np.dot(Gamma_xt_xtp1, Inkronpsix)
+        Gamma_xt_wt = 2*gxtwt + \
+            np.dot(Gamma_xtp1_wt, psixkronIk) + \
+            np.dot(Gamma_xt_xt, psiwkronIndotj)
+
+        Gamma_xtm1_xtp1 = 2*gxtm1xtp1
+        Gamma_xtm1_xt = 2*gxtm1xt + \
+            np.dot(Gamma_xt_xt, psixkronIn) + \
+            np.dot(Gamma_xtm1_xtp1, Inkronpsix)
+
+        Gamma_wtp1_wt = np.dot(Gamma_xtp1_wt, psiwkronIk)
+
+        A_for_psi_x_w = 2*Gamma_xt_2
+        b_for_psi_x_w = - 2*gxtm1wt + \
+            np.dot(Gamma_xt_wt, psixkronIk) + np.dot(Gamma_xtm1_xt, Inkronpsiw)
+        psi_x_w = np.dot(linalg.inv(A_for_psi_x_w), b_for_psi_x_w)
+        psi_x_w_bysolve = linalg.solve(A_for_psi_x_w, b_for_psi_x_w)
+
+        Gamma_xt_wtp1 = 2*gxtwtp1 + 2 * np.dot(Gamma_xtp1_2, psi_x_w) + np.dot(
+            Gamma_xtp1_wtp1, psixkronIk) + np.dot(Gamma_xt_xtp1, Inkronpsiw)
+        Gamma_xtm1_wtp1 = 2*gxtm1wtp1 + \
+            np.dot(Gamma_xt_wtp1, psixkronIk) + \
+            np.dot(Gamma_xtm1_xtp1, Inkronpsiw)
+
+        Gamma_wt_wtp1 = 2*gwtwtp1 + np.dot(Gamma_xt_wtp1, psiwkronIk)
+
+        # equation for psi_x_w
+        # Gammax2*psi_xw + gww +  Gammaxw*(psi_w kron Ik)
+        A_for_psi_w_w = Gamma_xt_2
+        b_for_psi_w_w = gwtwt + np.dot(Gamma_xt_wt, psiwkronIk)
+        psi_w_w = np.dot(linalg.inv(A_for_psi_w_w), b_for_psi_w_w)
+        psi_w_w_bysolve = linalg.solve(A_for_psi_w_w, b_for_psi_w_w)
+
+        # Compute Vxx
+        utility_sym_mat = sympy.Matrix([self.utility])
+        du_dx = utility_sym_mat.jacobian([self.xvar_t_sym])
+        du_dx_nopar = [u.subs(self.par_to_values_dict) for u in list(du_dx)]
+        du_dx_at_ss = [u.subs(self.normal_and_0_to_ss).subs(
+            self.ss_solutions_dict) for u in du_dx_nopar]
+        du_dx_at_ss = self.matrix2numpyfloat(sympy.Matrix(du_dx_at_ss))
+
+        beta = self.beta.subs(self.par_to_values_dict)
+        Ibetaphi = np.eye(nx) - beta*psi_x
+        invIbetaphi = linalg.inv(Ibetaphi)
+        Vx = np.dot(du_dx_at_ss.T, invIbetaphi)
+
+        du_dx = utility_sym_mat.jacobian([self.xvar_t_sym])
+        du_dx_dx = du_dx.jacobian(self.xvar_t_sym)
+        du_dx_dx_nopar = du_dx_dx.subs(self.par_to_values_dict)
+        du_dx_dx_at_ss = du_dx_dx_nopar.subs(
+            self.normal_and_0_to_ss).subs(self.ss_solutions_dict)
+        du_dx_dx_at_ss = self.matrix2numpyfloat(du_dx_dx_at_ss)
+        # now, vectorize and then transpose the hessian. Becomes 1 \times nx^2
+        # vector
+        du_dx_dx_at_ss = du_dx_dx_at_ss.T.reshape(-1, 1).T
+
+        Vxx_term_1 = du_dx_dx_at_ss + beta * np.dot(Vx, psi_x_x)
+        inv_of_Vxx_term_2 = np.eye(nx*nx) - beta*psixkronpsix
+        Vxx = np.dot(Vxx_term_1, linalg.inv(inv_of_Vxx_term_2))
+
+        # Gx
+        Gx_term_1 = np.dot(gxtp1, psi_w) + gwtp1
+        Gx_term_2 = 2*np.dot(Vx, psi_x_w) + np.dot(Vxx, psixkronpsiw)
+        Gx_term_2 = matrix2numpyfloat(Gx_term_2)
+        matGx_term_2 = Gx_term_2.reshape(nw, nx, order='F')
+        Gx_term_3 = np.dot(Vxx, psiwkronpsix)
+        Gx_term_3 = matrix2numpyfloat(Gx_term_3)
+        matGx_term_3 = Gx_term_3.reshape(nx, nw, order='F')
+
+        theta = self.theta
+        Gx = np.dot(Gx_term_1, matGx_term_2 + matGx_term_3.T)/theta
+
+        # Equation (50) bearing on determintation of psi_x_q
+        # coe1 psixq + coe2 psixq coe3 + constant terms = 0
+        # convert it as
+        # (I kron coe1) vec(psixq) + (coe3' kron coe2) vec(psixq) = -vec(constant terms)
+        # [(I kron coe1) + (coe3' kron coe2)] vec(psixq)  = -vec(constant terms)
+        # Solve it as Ax = b
+
+        coe1 = 2*Gamma_xt_2  # is 7x7
+        coe2 = 2*Gamma_xtp1_2  # is 7x7
+        coe3 = psi_x  # is 7x7
+
+        # now some constant terms:
+        eq50cons_1 = 2*gxtm1q + \
+            np.dot(Gamma_xtm1_xtp1, Inkronpsiq) + \
+            np.dot(Gamma_xtm1_xt, Inkronpsiq)
+
+        eq50cons_2_a = 2*gxtq + 2*np.dot(Gamma_xtp1_q, psi_x)
+        eq50cons_2_b = np.dot(
+            Gamma_xt_xtp1, Inkronpsiq) + np.dot(Gamma_xt_xt, psiqkronIn)
+        eq50cons_2 = np.dot(eq50cons_2_a+eq50cons_2_b, psi_x)
+
+        E_w_dist = - np.dot(Vx, psi_w).T/theta
+        eq50cons_3_list = [np.dot(E_w_dist.T, Gamma_xtm1_wtp1[i, :].reshape(
+            (nw, nx), order='F')) for i in range(nx)]
+
+        eq50cons_3 = np.concatenate(eq50cons_3_list)
+
+        eq50cons = eq50cons_1 + eq50cons_2 + eq50cons_3
+
+        cons_for_psixq = eq50cons + np.dot(Gx, psi_x)
+        # (coe3' kron coe2) is 49x49, then the I in (I kron coe1) must be 7x7
+        A_for_vecpsixq = np.kron(np.eye(nx), coe1) + np.kron(coe3.T, coe2)
+        b_for_vecpsixq = -cons_for_psixq.reshape((-1, 1))
+        vec_psixq = linalg.solve(A_for_vecpsixq, b_for_vecpsixq)
+        psi_x_q = vec_psixq.reshape((nx, nx), order='F')
+
+        # equation for psi_w_q:
+        # A psiwq + constants = 0
+        # A is 2*Gamma_{x2}
+        # psiwq is a matrix and so it is constants. We could vectorize the equation as
+        # (I kron A) vec(psiwq) = - vec(constants)
+
+        eq51_coe = 2 * Gamma_xt_2
+        eq51_cons_1 = 2*gwtq + \
+            np.dot(Gamma_xtp1_wt, psiqkronIk) + np.dot(Gamma_xt_wt, psiqkronIk)
+
+        Gamma_xt_q_1of2 = 2*gxtq + 2 * \
+            np.dot(Gamma_xtp1_2, psi_x_q) + np.dot(Gamma_xtp1_q, psi_x)
+        Gamma_xt_q_2of2 = np.dot(
+            Gamma_xt_xtp1, Inkronpsiq)+np.dot(Gamma_xt_xt, psiqkronIn)
+        Gamma_xt_q = Gamma_xt_q_1of2 + Gamma_xt_q_2of2
+
+        eq51_cons_2 = np.dot(Gamma_xt_q, psi_w)
+
+        eq51_cons_3a_list = [np.dot(E_w_dist.T, Gamma_wtp1_wt[i, :].reshape(
+            (nw, nw), order='F')) for i in range(nx)]
+        eq51_cons_3a = np.concatenate(eq51_cons_3a_list)
+
+        eq51_cons_3b_list = [np.dot(E_w_dist.T, Gamma_wt_wtp1[i, :].reshape(
+            (nw, nw), order='F')) for i in range(nx)]
+        eq51_cons_3b = np.concatenate(eq51_cons_3b_list)
+
+        eq51_cons_3 = eq51_cons_3a + eq51_cons_3b
+
+        eq51_cons = eq51_cons_1 + eq51_cons_2 + eq51_cons_3
+        cons_for_psiwq = eq51_cons + np.dot(Gx, psi_w)
+
+        A_for_vecpsiwq = np.kron(np.eye(nw, nw), eq51_coe)
+        b_for_vecpsiwq = -cons_for_psiwq.reshape((-1, 1))
+        vec_psiwq = linalg.solve(A_for_vecpsiwq, b_for_vecpsiwq)
+        psi_w_q = vec_psiwq.reshape((nx, nw), order='F')
+
+        # equation for Vxq:
+        #du_dx =  utility_sym_mat.jacobian([self.xvar_t_sym])
+        du_dx_dq = du_dx.jacobian(sympy.Matrix([q]))
+        du_dx_dq_nopar = du_dx_dq.subs(self.par_to_values_dict)
+        du_dx_dq_at_ss = du_dx_dq_nopar.subs(
+            self.normal_and_0_to_ss).subs(self.ss_solutions_dict)
+        du_dx_dq_at_ss = self.matrix2numpyfloat(du_dx_dq_at_ss)
+        # now, vectorize and then transpose the hessian. Becomes 1 \times nx^2
+        # vector
+        du_dx_dq_at_ss = du_dx_dq_at_ss.T.reshape(-1, 1).T
+        uxq = du_dx_dq_at_ss
+
+        Vxiq_term1 = beta*np.dot(Vx, psi_x_q)+0.5 * \
+            np.dot(Vxx, psixkronpsiq+psiqkronpsix)
+
+        Vxq_term2a = 2*np.dot(Vx, psi_x_w) + np.dot(Vxx, psixkronpsiw)
+        Vxq_term2a = Vxq_term2a.reshape((nw, nx), order='F')
+        Vxq_term2b = np.dot(Vxx, psiwkronpsix)
+        Vxq_term2b = Vxq_term2b.reshape((nx, nw), order='F')
+        Vxq_term2c = np.dot(Vx, psi_w)
+        Vxq_term2 = -beta*0.5 * \
+            np.dot(Vxq_term2c, (Vxq_term2a + Vxq_term2b.T))/theta
+        Vxq_rhs = uxq + Vxiq_term1 + Vxq_term2
+        Vxq_lhs = np.eye(nx) - beta*psi_x
+        #Vxq = np.dot(Vxq_rhs, scipy.linalg.inv(Vxq_lhs))
+        Vxq = linalg.solve(Vxq_lhs.T, Vxq_rhs.T).T  # solving A.T x.T = b.T
+
+        # equation for psi_q_q
+        Eq52_coe = Gamma_xtp1_2 + Gamma_xt_2
+        Eq52_cons_1 = gqq + np.dot(Gamma_xtp1_q + Gamma_xt_q, psi_q)
+
+        Gamma_wtp1_q_a = 2*gwtp1q + 2 * \
+            np.dot(Gamma_xtp1_2, psi_w_q) + np.dot(Gamma_xtp1_wtp1, psiqkronIk)
+        Gamma_wtp1_q_b = np.dot(
+            Gamma_xtp1_q, psi_w) + np.dot(Gamma_xt_wtp1, psiqkronIk)
+        Gamma_wtp1_q = Gamma_wtp1_q_a + Gamma_wtp1_q_b
+
+        Eq52_cons_2a = np.dot(Gamma_wtp1_q, E_w_dist)
+
+        Gamma_wtp1_wtp1 = gwtp1wtp1 + \
+            np.dot(Gamma_xtp1_2, psi_w_w)+np.dot(Gamma_xtp1_wtp1, psiwkronIk)
+
+        E_wkronw_dist = np.eye(
+            nw) + np.dot(np.dot(Vx, psi_w).T, np.dot(Vx, psi_w))/(theta**2)
+        E_wkronw_dist = E_wkronw_dist.reshape((-1, 1))
+        Eq52_cons_2b = np.dot(Gamma_wtp1_wtp1, E_wkronw_dist)
+        Eq52_cons_2 = Eq52_cons_2a + Eq52_cons_2b
+        Eq52_cons = Eq52_cons_1 + Eq52_cons_2
+
+        cons_psiqq_a = (np.dot(gxtp1, psi_w) + gwtp1)/theta
+
+        cons_psiqq_b = 2*np.dot(Vx, psi_w_q) + np.dot(Vxx,
+                                                      (psiwkronpsiq+psiqkronpsiw)) + 2*np.dot(Vxq, psi_w)
+        cons_psiqq_ab = np.dot(cons_psiqq_a, cons_psiqq_b.T)
+
+        cons_psiqq_c_1 = (
+            np.dot(Vx, psi_w_w) + np.dot(Vxx, psiwkronpsiw)).reshape((nw, nw), order='F')
+        cons_psiqq_c = np.dot(cons_psiqq_c_1.T, E_w_dist)
+        cons_psiqq_ac = np.dot(cons_psiqq_a, cons_psiqq_c)
+
+        cons_psiqq_d = np.dot(cons_psiqq_c_1, E_w_dist)
+        cons_psiqq_ad = np.dot(cons_psiqq_a, cons_psiqq_d)
+
+        terms_in_Eq56 = np.dot(
+            Gx, psi_q) - cons_psiqq_ab - cons_psiqq_ac - cons_psiqq_ad
+        #terms_in_Eq56 =  np.dot(Gx, psi_q) + cons_psiqq_ab - cons_psiqq_ac - cons_psiqq_ad
+
+        cons_for_psiqq = Eq52_cons + terms_in_Eq56
+
+        psi_q_q = linalg.solve(Eq52_coe, -cons_for_psiqq)
+
+        return psi_x_x, psi_x_w, psi_x_q, psi_w_w, psi_w_q, psi_q_q
+
+    def simul_approx_secord_fi(inix0, inix1, inix2, phi_var, phi_var_var):
+        a = 1
+
+        return a
+
     def solve_quad_matrix_stable_sol_QZ(self, lin_con_mat, quad_mat, nx):
 
         gqzresults = rgqz(np.asarray(lin_con_mat), np.asarray(quad_mat),
                           sort="S")
-
         # lin_con_mat is Uhlig's toolkit \Xi matrix
         # quad_mat is Uhlig's toolkit \Delta matrix
 
-#        print '\n'
-#        print 'type(lin_con_mat):' ,type(lin_con_mat)
-#        print '\n'
-#        print 'type(quad_mat):' ,type(quad_mat)
-
-
-#        gqzresults = rgqz(np.asarray(lin_con_mat), np.asarray(quad_mat),
-#                            sort="S")
-
-
-#        S_s = np.mat(gqzresults_s[0])
-#        T_s = np.mat(gqzresults_s[1])
-#        Q_s = np.mat(gqzresults_s[6])
-#        Z_s = np.mat(gqzresults_s[7])
-#
         S = np.array(gqzresults[0])
         T = np.array(gqzresults[1])
         Q = np.array(gqzresults[6])
         Z = np.array(gqzresults[7])
-
-#        nx = F_mat.shape[1]
 
         Z_11 = Z[0:nx, 0:nx]
         Z_12 = Z[0:nx, nx:]
         Z_21 = Z[nx:, 0:nx]
         Z_22 = Z[nx:, nx:]
 
-#        P_mat = np.dot(Z_11, Z_21.I)
-
         P_mat = np.dot(Z_11, np.linalg.inv(Z_21))
 
         return P_mat
 
     def explain_phi_x(self):
-
         print '\n'
         print 'deriv_vars_x_t:'
         print self.xvar_t_sym
@@ -1254,11 +1290,7 @@ class FullInfoModel:
         print[self.wat_sym, self.wzetaat_sym]
 
     def impulse_response_toy_fi(self, phi_x, phi_w, shock=1, x0=[],
-                                finalT=30, shock_type='wa', shock_mag=1,
-                                dologs=False):
-
-        #        print 'phi_x.shape',phi_x.shape
-        #        print 'phi_x.shape[0]',phi_x.shape[0]
+        finalT=30, shock_type='wa', shock_mag=1, dologs=False):
 
         steady_s_list_sym = [self.Css_sym, self.Kss_sym, self.Lss_sym,
                              self.Iss_sym, self.Yss_sym]
@@ -1269,19 +1301,10 @@ class FullInfoModel:
         steady_s_vec = np.zeros((6, 1))
         steady_s_vec[0:-1, :] = np.array([steady_s_list_num]).T
 
-
-#        print 'steady_s_list_sym', steady_s_list_sym
-#        print 'steady_s_list_num', steady_s_list_num
-#        print 'steady_s_vec', steady_s_vec
-#
-
         if x0 == []:
             x0 = np.zeros((phi_x.shape[0], 1))
 
         x_time_series_mat = np.empty((x0.shape[0], finalT))
-
-#        print '\n'
-#        print 'x_time_series_mat.shape', x_time_series_mat.shape
 
         x_non_sta_time_series_mat = np.empty((x0.shape[0], finalT))
 
@@ -1310,18 +1333,13 @@ class FullInfoModel:
                                                        sel_vec)
             phi_x = loglog_coeffs[:, 0:6]
             phi_w = loglog_coeffs[:, 6:8]
-#            steady_s_vec = np.vstack((vss,np.zeros((1,1)))) #only x variables
             steady_s_vec[sel_vec] = np.log(steady_s_vec[sel_vec])
 
         first_response_x = np.dot(phi_x, x0) + np.dot(phi_w, impulse_vector)
 
-#        print 'steady_s_vec line 942', steady_s_vec
-#        print 'first_response_x',  first_response_x
-
         first_new_values_x = steady_s_vec + first_response_x
 
         x_time_series_mat[:, 0] = first_new_values_x[:, 0]
-#        x_non_sta_time_series_mat[:,0] = first_response_x[:,0]/A_minusone
         x_non_sta_time_series_mat[:, 0] = first_new_values_x[:, 0]*A_minusone
 
         a_zero = np.dot(self.D, np.array( (mua, zetaa_minusone))) + \
@@ -1343,14 +1361,10 @@ class FullInfoModel:
 
         current_x = first_new_values_x  # C_0, K_1, L_0 etc.
 
-#        print '\n'
-#        print 'steady_s_vec', steady_s_vec
-
         for t in range(finalT-1):
             current_x = steady_s_vec + np.dot(phi_x, current_x-steady_s_vec)
             x_time_series_mat[:, t+1] = current_x[:, 0]  # C_1, K_2, L_1 ...
             # \tilde{C}_1, \tilde{K}_2, L_1 ...
-#            x_non_sta_time_series_mat[:,t+1] = current_x[:,0]/current_A
 
             if dologs:
                 x_non_sta_time_series_mat[
