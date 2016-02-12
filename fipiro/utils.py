@@ -1,16 +1,18 @@
 import sympy
 from scipy import linalg, optimize
 import numpy as np
-import matplotlib.pyplot as plt
+# from sympy.utilities.autowrap import ufuncify
+# from sympy.printing.theanocode import theano_function
+# import matplotlib.pyplot as plt
 
 # if using R's geigen package to compute the ordered QZ decomposition, we
 # need to load this package via rpy2:
 # Note: Scipy 0.17 plans to pack its own ordered QZ
-import rpy2.robjects as robjects
-import rpy2.robjects.numpy2ri
-rpy2.robjects.numpy2ri.activate()
-robjects.r.library("geigen")
-rgqz = robjects.r.gqz
+# import rpy2.robjects as robjects
+# import rpy2.robjects.numpy2ri
+# rpy2.robjects.numpy2ri.activate()
+# robjects.r.library("geigen")
+# rgqz = robjects.r.gqz
 
 
 q = sympy.Symbol('q')
@@ -20,6 +22,7 @@ x_sym_dict = {}
 xss_sym_dict = {}
 w_sym_dict = {}
 wss_sym_dict = {}
+
 
 def solve_quad_matrix_stable_sol_QZ(lin_con_mat, quad_mat, nx):
 
@@ -38,7 +41,7 @@ def solve_quad_matrix_stable_sol_QZ(lin_con_mat, quad_mat, nx):
     Z_21 = Z[nx:, 0:nx]
     Z_22 = Z[nx:, nx:]
 
-    # print "lin_con_mat", lin_con_mat
+    # # print "lin_con_mat", lin_con_mat
     # print "quad_mat", quad_mat
 
     # print "nx", nx
@@ -49,18 +52,18 @@ def solve_quad_matrix_stable_sol_QZ(lin_con_mat, quad_mat, nx):
 
     return P_mat
 
-def get_sstate_sol_dict_from_sympy_eqs(glist, xss_sym_dict, xini_dict={}):
+
+def get_sstate_sol_dict_from_sympy_eqs(glist, vars_ss_sym,
+                                       vars_initvalues_dict={}):
 
     nx = len(glist)
 
-    glist_lam = sympy.lambdify([xss_sym_dict.values()], glist, dummify=False)
+    glist_lam = sympy.lambdify([vars_ss_sym], glist, dummify=False)
 
-    glist_lam
-
-    if xini_dict == {}:
-        xini_list = 0.2*np.ones(nx)
+    if vars_initvalues_dict == {}:
+        xini_list = 0.2 * np.ones(nx)
     else:
-        xini_list = [x.subs(xini_dict) for x in xss_sym_dict.values()]
+        xini_list = [x.subs(vars_initvalues_dict) for x in vars_ss_sym]
 
     xini_af = np.empty(len(xini_list), dtype='float')
 
@@ -69,9 +72,34 @@ def get_sstate_sol_dict_from_sympy_eqs(glist, xss_sym_dict, xini_dict={}):
 
     xini_list = np.array(xini_list)
 
-    sol = optimize.root(glist_lam, xini_af)
+<<<<<<< HEAD
+=======
+    print "entering ss solver function"
+    print "equations to solve:"
+    print glist
+    print "number of equations: " + str(nx) + "\n"
+    print "list of variables: "
+    print vars_ss_sym
+    print "xini_list:"
+    print xini_list
+    print "xini_af:"
+    print xini_af
 
-    return dict(zip(xss_sym_dict.values(), np.around(sol['x'], decimals=12)))
+>>>>>>> 25e5ad1... fix eqns 2
+    sol = optimize.root(glist_lam, xini_af)
+    print "steady state solution\n"
+    print sol
+    print "\n end of ss solver function \n"
+
+    return dict(zip(vars_ss_sym, np.around(sol['x'], decimals=12)))
+
+
+def make_basic_sym_dic(names_list, date_string):
+    """put docstring here"""
+    dated_names = [name + date_string for name in names_list]
+    sym_list = [sympy.Symbol(x) for x in dated_names]
+    basic_sym_dic = dict(zip(dated_names, sym_list))
+    return basic_sym_dic
 
 
 def make_wss_to_zero_dict(w_names):
@@ -94,7 +122,7 @@ def make_param_sym_dict(param_names):
     return dic_to_be_filled
 
 
-def make_sym_dict(names_list, date_str, isw=False):
+def make_sym_dict(names_list, date_str, isw=False, do_derivatives=True):
     dic_to_be_filled = {}
     dated_names = [name + date_str for name in names_list]
     dated_names_sym = [sympy.Symbol(x) for x in dated_names]
@@ -103,22 +131,23 @@ def make_sym_dict(names_list, date_str, isw=False):
     if isw:
         return dic_to_be_filled
 
-    dated_names_0 = [name + '_0' for name in dated_names]
-    dated_names_0_sym = [sympy.Symbol(x) for x in dated_names_0]
-    dic_to_be_filled.update(dict(zip(dated_names_0, dated_names_0_sym)))
+    if do_derivatives:
+        dated_names_0 = [name + '_0' for name in dated_names]
+        dated_names_0_sym = [sympy.Symbol(x) for x in dated_names_0]
+        dic_to_be_filled.update(dict(zip(dated_names_0, dated_names_0_sym)))
 
-    dated_names_1 = [name + '_1' for name in dated_names]
-    dated_names_1_sym = [sympy.Symbol(x) for x in dated_names_1]
-    dic_to_be_filled.update(dict(zip(dated_names_1, dated_names_1_sym)))
+        dated_names_1 = [name + '_1' for name in dated_names]
+        dated_names_1_sym = [sympy.Symbol(x) for x in dated_names_1]
+        dic_to_be_filled.update(dict(zip(dated_names_1, dated_names_1_sym)))
 
-    dated_names_2 = [name + '_2' for name in dated_names]
-    dated_names_2_sym = [sympy.Symbol(x) for x in dated_names_2]
-    dic_to_be_filled.update(dict(zip(dated_names_2, dated_names_2_sym)))
+        dated_names_2 = [name + '_2' for name in dated_names]
+        dated_names_2_sym = [sympy.Symbol(x) for x in dated_names_2]
+        dic_to_be_filled.update(dict(zip(dated_names_2, dated_names_2_sym)))
 
-    dated_names_q = [name + '_q' for name in dated_names]
-    dated_names_q_fun = [sympy.Function(x)(q) for x in dated_names]
+        dated_names_q = [name + '_q' for name in dated_names]
+        dated_names_q_fun = [sympy.Function(x)(q) for x in dated_names]
 
-    dic_to_be_filled.update(dict(zip(dated_names_q, dated_names_q_fun)))
+        dic_to_be_filled.update(dict(zip(dated_names_q, dated_names_q_fun)))
 
     return dic_to_be_filled
 
@@ -195,7 +224,7 @@ def make_normal_to_q_dict(x_names, w_names):
 
     for date_str in ['tp1', 't']:
         dated_names = [name + date_str for name in w_names]
-        dated_q_mul_sym = [q*sympy.Symbol(x) for x in dated_names]
+        dated_q_mul_sym = [q * sympy.Symbol(x) for x in dated_names]
         w_normal_to_q.update(dict(zip(dated_names, dated_q_mul_sym)))
 
     xw_normal_to_q.update(x_normal_to_q)
@@ -216,7 +245,7 @@ def set_param_sym_dict(this_param_names):
 
 
 def make_sym_dict_all_dates(names_list, dates_list, isw=True,
-    do_steady_states_names=True):
+                            do_steady_states_names=True):
 
     sym_dict_all_dates = {}
 
@@ -256,12 +285,6 @@ def set_x_w_sym_dicts(this_x_names, this_w_names):
     w_sym_dict.update(w_sym)
     wss_sym_dict.update(w_sym_ss)
 
-    x_sym_tm1_dict = make_sym_dict(x_names, 'tm1')
-    x_sym_t_dict = make_sym_dict(x_names, 't')
-    x_sym_tp1_dict = make_sym_dict(x_names, 'tp1')
-    w_sym_t_dict = make_sym_dict(w_names, 't')
-    w_sym_tp1_dict = make_sym_dict(w_names, 'tp1')
-
     return x_sym_dict, w_sym_dict
 
 
@@ -275,30 +298,12 @@ def make_x_w_param_sym_dicts(this_x_names, this_w_names, this_param_names):
     return x_sym_dict, x_in_ss_sym_d, w_sym_dict, param_sym_dict
 
 
-def Fckliy_az_mua(xini_az):
-    barC, barK, barL, barI, barY, bara, barzetaa = xini_az[0], xini_az[
-        1], xini_az[2], xini_az[3], xini_az[4], xini_az[5], xini_az[6]
-
-    foc1 = beta*np.exp(-mua)*(alpha*barY/barK + 1 - delta) - 1
-    foc2 = barY - barC - barI
-    foc3 = barI - np.exp(mua)*barK + (1-delta)*barK
-    nurat = nu/(1-nu)
-    foc4 = nurat*(1-alpha)*barY/barC - barL/(1-barL)
-    foc5 = barY - np.exp((1-alpha)*mua) * barK**alpha * barL**(1-alpha)
-    foc6 = bara - mua - barzetaa
-    foc7 = barzetaa - rhoavalue*barzetaa
-    focsckliy = np.array([foc1, foc2, foc3, foc4, foc5, foc6, foc7])
-
-    return focsckliy
-
-
 def make_state_space_sym(num_signals, num_states, is_homo):
-
     # mu_rho_dict_sym = {}
     state_state_sym_dict = {}
 
     # mu_names = ['mu_'+str(i) for i in range(num_states)]
-    rho_names = ['rho_'+str(i) for i in range(num_states)]
+    rho_names = ['rho_' + str(i) for i in range(num_states)]
     # mu_rho_names = mu_names + rho_names
 
     # mu_names_sym = [sympy.Symbol(x) for x in mu_names]
@@ -316,8 +321,9 @@ def make_state_space_sym(num_signals, num_states, is_homo):
 
     if is_homo:
         sigmas_signal_names = [
-            'sigma_signal_'+str(i) for i in range(num_signals)]
-        sigmas_state_names = ['sigma_state_'+str(i) for i in range(num_states)]
+            'sigma_signal_' + str(i) for i in range(num_signals)]
+        sigmas_state_names = ['sigma_state_' + str(i) for i in
+                              range(num_states)]
         sigmas_signal_sym = [sympy.Symbol(x) for x in sigmas_signal_names]
         sigmas_state_sym = [sympy.Symbol(x) for x in sigmas_state_names]
 
@@ -342,25 +348,6 @@ def make_state_space_sym(num_signals, num_states, is_homo):
     return state_state_sym_dict
 
 
-def all_vars_par_par(a_of_values, set_par_x, set_par_lev, par_tex_x,
-    par_tex_lev, par_name_x, par_name_lev, vars_tex, postname):
-
-    for v in range(len(set_par_lev)):
-        fig, ax = plt.subplots()
-        for i in range(5):
-            ax.plot(set_par_x, a_of_values[i, v, :], label=vars_tex[i])
-
-        ax.legend(loc="best", ncol=2)
-        ax.grid(True)
-        ax.set_title("Coeff of persistent shock " +
-                     "("+par_tex_lev + " = " +
-                     "{0:.2f})".format(set_par_lev[v]))
-        ax.set_xlabel(par_tex_x)
-        filename = "../../figures/psi_change_" + par_name_x + "_" + \
-            par_name_lev + "_all_vars_" + str(v) + "_" + postname + ".pdf"
-        fig.savefig(filename)
-
-
 def ir_toy_rpi_from(azA_mat, x_sta, x_nsta, BGP_det, phi_q, islog=False):
 
     copy_phi_q = phi_q.copy()
@@ -380,7 +367,7 @@ def matrix2numpyfloat(m):
 
 
 def numpy_state_space_matrices(sspacemats_dic, name2val_dic, user_names=False,
-    mod2user_dic=None):
+                               mod2user_dic=None):
 
     A = sspacemats_dic['A_z']
     C = sspacemats_dic['C_z']
@@ -404,3 +391,363 @@ def numpy_state_space_matrices(sspacemats_dic, name2val_dic, user_names=False,
     Gnn = matrix2numpyfloat(Gsn)
 
     return Ann, Cnn, Dnn, Gnn
+
+
+class ModelBase(object):
+    """"docstring for """
+    def __init__(self, equations, x_names=[], w_names=[],
+                 param_names=[], par_to_values_dict={},
+                 vars_initvalues_dict={}, compute_ss=True):
+        self.eqns = equations
+        self.x_names = x_names
+        self.w_names = w_names
+        self.param_names = param_names
+        self.par_to_values_dict = par_to_values_dict
+
+        self.x_dates = ['tm1', 't', 'tp1']
+
+        xwp_sym_d = make_x_w_param_sym_dicts(
+                x_names, w_names, param_names)
+
+        x_s_d, x_in_ss_sym_d, w_s_d, param_sym_d = xwp_sym_d
+        self.x_s_d = x_s_d
+        self.x_in_ss_sym_d = x_in_ss_sym_d
+        self.w_s_d = w_s_d
+        self.param_sym_d = param_sym_d
+        self.param_sym = list(sympy.ordered(param_sym_d.values()))
+
+        self.x_in_ss_sym = list(sympy.ordered(self.x_in_ss_sym_d.values()))
+
+        self.normal_x_s_d = {st: self.x_s_d[st] for st in self.x_s_d.keys()
+                             if not ('_q' in st or '_1' in st or '_2' in st or
+                             '_0' in st or 'ss' in st or 'q' in st)}
+
+        self.normal_x_s_tp1 = {st: self.normal_x_s_d[st] for st in
+                               self.normal_x_s_d.keys() if 'tp1' in st}
+
+        self.normal_x_s_t = {st: self.normal_x_s_d[st] for st in
+                             self.normal_x_s_d.keys() if not(
+                             'tm1' in st or 'tp1' in st)}
+
+        self.normal_x_s_tm1 = {st: self.normal_x_s_d[st] for st in
+                               self.normal_x_s_d.keys() if 'tm1' in st}
+
+        self.normal_w_s_d = {st: self.w_s_d[st] for st in self.w_s_d.keys() if
+                             'ss' not in st}
+
+        self.normal_w_s_tp1 = {st: self.normal_w_s_d[st] for st in
+                               self.normal_w_s_d.keys() if 'tp1' in st}
+
+        self.normal_w_s_t = {st: self.normal_w_s_d[st] for st in
+                             self.normal_w_s_d.keys() if
+                             not('tm1' in st or 'tp1' in st)}
+
+        self.xvar_tp1_sym = self.normal_x_s_tp1.values()
+        self.xvar_t_sym = self.normal_x_s_t.values()
+        self.xvar_tm1_sym = self.normal_x_s_tm1.values()
+        self.wvar_tp1_sym = self.normal_w_s_tp1.values()
+        self.wvar_t_sym = self.normal_w_s_t.values()
+
+        self.xvar_tp1_sym = list(sympy.ordered(self.xvar_tp1_sym))
+        self.xvar_t_sym = list(sympy.ordered(self.xvar_t_sym))
+        self.xvar_tm1_sym = list(sympy.ordered(self.xvar_tm1_sym))
+        self.wvar_tp1_sym = list(sympy.ordered(self.wvar_tp1_sym))
+        self.wvar_t_sym = list(sympy.ordered(self.wvar_t_sym))
+
+        self.normal_and_0_to_ss = make_normal_to_steady_state(
+            self.x_names, self.w_names)
+
+        if compute_ss:
+            eqns_no_param = self.make_ss_version_of_eqs(self.eqns)
+            self.ss_solutions_dict = get_sstate_sol_dict_from_sympy_eqs(
+                eqns_no_param, self.x_in_ss_sym,
+                vars_initvalues_dict=vars_initvalues_dict)
+
+            self.ss_residuals = [x.subs(self.ss_solutions_dict) for x in
+                                 eqns_no_param]
+
+            # print eqns_no_param
+
+    def make_ss_version_of_eqs(self, eqs_list):
+        """put docstring here"""
+        eq_conditions_nopar = [
+            x.subs(self.par_to_values_dict) for x in eqs_list]
+
+        w_in_ss_zero_d = make_wss_to_zero_dict(self.w_names)
+
+        eq_conditions_nopar_ss = [x.subs(self.normal_and_0_to_ss).subs(
+            w_in_ss_zero_d) for x in eq_conditions_nopar]
+
+        return eq_conditions_nopar_ss
+
+    def shift_eqns_fwd(self, eqs_list, eqs_idx=[]):
+        x_t_to_tp1_d = dict(zip(self.xvar_t_sym, self.xvar_tp1_sym))
+        x_tm1_to_t_d = dict(zip(self.xvar_tm1_sym, self.xvar_t_sym))
+        w_t_to_tp1_d = dict(zip(self.wvar_t_sym, self.wvar_tp1_sym))
+
+        t_to_tp1_d = {}
+        t_to_tp1_d.update(x_t_to_tp1_d)
+        t_to_tp1_d.update(w_t_to_tp1_d)
+
+        tm1_to_t_d = {}
+        tm1_to_t_d.update(x_tm1_to_t_d)
+
+        for i in eqs_idx:
+            eqs_list[i] = eqs_list[i].subs(t_to_tp1_d)
+            eqs_list[i] = eqs_list[i].subs(tm1_to_t_d)
+        return eqs_list
+
+
+class UhligModel(ModelBase):
+    """docstring for UhligModel"""
+    def __init__(self, equations, u_x_names=[], u_y_names=[], u_z_names=[],
+                 x_names=[], w_names=[], param_names=[], block_indices={},
+                 par_to_values_dict={}, fwd_shift_idx=[], aux_eqs=[],
+                 vars_initvalues_dict={}, u_trans_dict={}, ss_sol_dict={}):
+
+        print u_x_names
+        print u_y_names
+        print u_z_names
+        print x_names
+        print w_names
+
+        ModelBase.__init__(self, equations, x_names, w_names, param_names,
+                           par_to_values_dict=par_to_values_dict,
+                           vars_initvalues_dict=vars_initvalues_dict,
+                           compute_ss=False)
+
+        u_x_tp1_sym_d = make_basic_sym_dic(u_x_names, 'tp1')
+        u_x_t_sym_d = make_basic_sym_dic(u_x_names, 't')
+        u_x_tm1_sym_d = make_basic_sym_dic(u_x_names, 'tm1')
+
+        u_y_tp1_sym_d = make_basic_sym_dic(u_y_names, 'tp1')
+        u_y_t_sym_d = make_basic_sym_dic(u_y_names, 't')
+
+        u_z_tp1_sym_d = make_basic_sym_dic(u_z_names, 'tp1')
+        u_z_t_sym_d = make_basic_sym_dic(u_z_names, 't')
+
+        u_w_tp1_sym_d = make_basic_sym_dic(w_names, 'tp1')
+        u_w_t_sym_d = make_basic_sym_dic(w_names, 't')
+
+        self.u_x_tp1_sym = list(sympy.ordered(u_x_tp1_sym_d.values()))
+        self.u_x_t_sym = list(sympy.ordered(u_x_t_sym_d.values()))
+        self.u_x_tm1_sym = list(sympy.ordered(u_x_tm1_sym_d.values()))
+
+        self.u_y_tp1_sym = list(sympy.ordered(u_y_tp1_sym_d.values()))
+        self.u_y_t_sym = list(sympy.ordered(u_y_t_sym_d.values()))
+
+        self.u_z_tp1_sym = list(sympy.ordered(u_z_tp1_sym_d.values()))
+        self.u_z_t_sym = list(sympy.ordered(u_z_t_sym_d.values()))
+
+        self.u_w_tp1_sym = list(sympy.ordered(u_w_tp1_sym_d.values()))
+        self.u_w_t_sym = list(sympy.ordered(u_w_t_sym_d.values()))
+
+        if fwd_shift_idx != []:
+            equations = self.shift_eqns_fwd(equations, fwd_shift_idx)
+
+        new_eqs = [x.subs(u_trans_dict) for x in equations]
+
+        new_eqs.extend(aux_eqs)
+
+        equations = new_eqs
+
+        if ss_sol_dict == {}:
+            eqns_no_param = self.make_ss_version_of_eqs(equations)
+            self.ss_solutions_dict = get_sstate_sol_dict_from_sympy_eqs(
+                eqns_no_param, self.x_in_ss_sym,
+                vars_initvalues_dict=vars_initvalues_dict)
+
+            self.ss_residuals = [x.subs(self.ss_solutions_dict) for x in
+                                 eqns_no_param]
+
+        self.block_indices = block_indices
+        # print block_indices
+        non_expec_idx = block_indices['non_expectational_block']
+        expec_idx = block_indices['expectational_block']
+        z_idx = block_indices['z_block']
+
+        if x_names == []:
+            x_names = u_x_names + u_y_names + u_z_names
+
+        self.u_param_sym = self.param_sym_d.values()
+        self.u_param_sym = list(sympy.ordered(self.u_param_sym))
+
+        self.eqns = equations
+
+        print "self.eqns"
+        print self.eqns
+
+        if isinstance(non_expec_idx, int):
+            self.eqns_non_expec = [equations[non_expec_idx]]
+        else:
+            self.eqns_non_expec = [equations[i] for i in non_expec_idx]
+
+        if isinstance(expec_idx, int):
+            self.eqns_expec = [equations[expec_idx]]
+        else:
+            self.eqns_expec = [equations[i] for i in expec_idx]
+
+        if isinstance(z_idx, int):
+            self.eqns_z = [equations[z_idx]]
+        else:
+            self.eqns_z = [equations[i] for i in z_idx]
+
+        print "\nself.eqns_non_expec"
+        print self.eqns_non_expec
+        print "\nself.eqns_expec"
+        print self.eqns_expec
+        print "\nself.eqns_z"
+        print self.eqns_z
+
+        self.x_to_devss_dict = make_devss_subs_dict(self.x_names,
+                                                    self.x_dates)
+
+        self.eqns_expec_devss = [x.subs(self.x_to_devss_dict) for x
+                                 in self.eqns_expec]
+        self.eqns_non_expec_devss = [x.subs(self.x_to_devss_dict) for x in
+                                     self.eqns_non_expec]
+        self.eqns_z_devss = [x.subs(self.x_to_devss_dict) for x in
+                             self.eqns_z]
+
+        print "\nself.eqns_non_expec_devss"
+        print self.eqns_non_expec_devss
+        print "\nself.eqns_expec_devss"
+        print self.eqns_expec_devss
+        print "\nself.eqns_z_devss"
+        print self.eqns_z_devss
+
+        self.jacobians_unev, self.jacobians_unev_ss = self.jacobians_sym_uh()
+
+        self.uA_sym = self.jacobians_unev[0]
+        self.uB_sym = self.jacobians_unev[1]
+        self.uC_sym = self.jacobians_unev[2]
+        self.uD_sym = self.jacobians_unev[3]
+        self.uF_sym = self.jacobians_unev[4]
+        self.uG_sym = self.jacobians_unev[5]
+        self.uH_sym = self.jacobians_unev[6]
+        self.uJ_sym = self.jacobians_unev[7]
+        self.uK_sym = self.jacobians_unev[8]
+        self.uL_sym = self.jacobians_unev[9]
+        self.uM_sym = self.jacobians_unev[10]
+        self.uN_sym = self.jacobians_unev[11]
+
+        self.uA_sym_ss = self.jacobians_unev_ss[0]
+        self.uB_sym_ss = self.jacobians_unev_ss[1]
+        self.uC_sym_ss = self.jacobians_unev_ss[2]
+        self.uD_sym_ss = self.jacobians_unev_ss[3]
+        self.uF_sym_ss = self.jacobians_unev_ss[4]
+        self.uG_sym_ss = self.jacobians_unev_ss[5]
+        self.uH_sym_ss = self.jacobians_unev_ss[6]
+        self.uJ_sym_ss = self.jacobians_unev_ss[7]
+        self.uK_sym_ss = self.jacobians_unev_ss[8]
+        self.uL_sym_ss = self.jacobians_unev_ss[9]
+        self.uM_sym_ss = self.jacobians_unev_ss[10]
+        self.uN_sym_ss = self.jacobians_unev_ss[11]
+
+        args = self.x_in_ss_sym + self.u_param_sym
+        self.jac_ss_funcs = sympy.lambdify(args, self.jacobians_unev_ss)
+
+        x_ss_num = [x.subs(self.ss_solutions_dict) for x in self.x_in_ss_sym]
+        par_ss_num = [x.subs(self.par_to_values_dict) for x in self.param_sym]
+        x_par_ss_num = x_ss_num + par_ss_num
+        self.jac_ss_num = [matrix2numpyfloat(x) for x
+                           in self.jac_ss_funcs(*x_par_ss_num)]
+        # # print '\nself.jac_ss_num'
+        # print self.jac_ss_num
+
+        self.uA_num_ss = self.jac_ss_num[0]
+        self.uB_num_ss = self.jac_ss_num[1]
+        self.uC_num_ss = self.jac_ss_num[2]
+        self.uD_num_ss = self.jac_ss_num[3]
+        # print self.uD_sym
+        # print self.uD_sym_ss
+        # print self.uD_num_ss
+        self.uF_num_ss = self.jac_ss_num[4]
+        self.uG_num_ss = self.jac_ss_num[5]
+        self.uH_num_ss = self.jac_ss_num[6]
+        self.uJ_num_ss = self.jac_ss_num[7]
+        self.uK_num_ss = self.jac_ss_num[8]
+        self.uL_num_ss = self.jac_ss_num[9]
+        self.uM_num_ss = self.jac_ss_num[10]
+        self.uN_num_ss = self.jac_ss_num[11]
+
+        self.u_x_ss_sym = [x.subs(self.normal_and_0_to_ss) for x in self.u_x_t_sym]
+        self.u_y_ss_sym = [x.subs(self.normal_and_0_to_ss) for x in self.u_y_t_sym]
+        self.u_z_ss_sym = [x.subs(self.normal_and_0_to_ss) for x in self.u_z_t_sym]
+
+        self.u_x_ss_num = [x.subs(self.ss_solutions_dict) for x in self.u_x_ss_sym]
+        self.u_y_ss_num = [x.subs(self.ss_solutions_dict) for x in self.u_y_ss_sym]
+        self.u_z_ss_num = [x.subs(self.ss_solutions_dict) for x in self.u_z_ss_sym]
+        # self.u_z_ss_num = [0.03, 0.03, 1]
+        # self.u_z_ss_num = [0.03, 1]
+
+        non_zero_z_idx = np.nonzero(self.u_z_ss_num)
+        z_for_diag = np.ones_like(self.u_z_ss_num)
+        z_for_diag[non_zero_z_idx] = self.u_z_ss_num
+
+        print "foooooo\n"
+        print self.u_z_ss_num
+        print non_zero_z_idx
+        print z_for_diag
+        print "moooooo\n"
+
+
+        self.di_u_x_ss_sym = sympy.diag(*self.u_x_ss_sym)
+        self.di_u_y_ss_sym = sympy.diag(*self.u_y_ss_sym)
+        self.di_u_z_ss_sym = sympy.diag(*self.u_z_ss_sym)
+
+        self.di_u_x_ss_num = np.diag(self.u_x_ss_num)
+        self.di_u_y_ss_num = np.diag(self.u_y_ss_num)
+        self.di_u_z_ss_num = np.diag(z_for_diag)
+
+        self.uA_num_ss_log = np.dot(self.uA_num_ss, self.di_u_x_ss_num)
+        self.uB_num_ss_log = np.dot(self.uB_num_ss, self.di_u_x_ss_num)
+        self.uC_num_ss_log = np.dot(self.uC_num_ss, self.di_u_y_ss_num)
+        self.uD_num_ss_log = np.dot(self.uD_num_ss, self.di_u_z_ss_num)
+        self.uF_num_ss_log = np.dot(self.uF_num_ss, self.di_u_x_ss_num)
+        self.uG_num_ss_log = np.dot(self.uG_num_ss, self.di_u_x_ss_num)
+        self.uH_num_ss_log = np.dot(self.uH_num_ss, self.di_u_x_ss_num)
+        self.uJ_num_ss_log = np.dot(self.uJ_num_ss, self.di_u_y_ss_num)
+        self.uK_num_ss_log = np.dot(self.uK_num_ss, self.di_u_y_ss_num)
+        self.uL_num_ss_log = np.dot(self.uL_num_ss, self.di_u_z_ss_num)
+        self.uM_num_ss_log = np.dot(self.uM_num_ss, self.di_u_z_ss_num)
+        self.uN_num_ss_log = np.dot(self.uN_num_ss, self.di_u_z_ss_num)
+
+    def transform_eqs_uh(self, eqs_list, var_subs_d):
+        """put docstring here"""
+        eqns_new_vars = [x.subs(var_subs_d) for x in eqs_list]
+
+        return eqns_new_vars
+
+    def jacobians_sym_uh(self, options={}):
+        """put docstring here"""
+        g_nonexp_eqns = sympy.Matrix(self.eqns_non_expec)
+        g_exp_eqns = sympy.Matrix(self.eqns_expec)
+        g_z_eqns = sympy.Matrix(self.eqns_z)
+
+        d_gne_d_xt = g_nonexp_eqns.jacobian(self.u_x_t_sym)
+        d_gne_d_xtm1 = g_nonexp_eqns.jacobian(self.u_x_tm1_sym)
+        d_gne_d_yt = g_nonexp_eqns.jacobian(self.u_y_t_sym)
+        d_gne_d_zt = g_nonexp_eqns.jacobian(self.u_z_t_sym)
+
+        d_ge_d_xtp1 = g_exp_eqns.jacobian(self.u_x_tp1_sym)
+        d_ge_d_xt = g_exp_eqns.jacobian(self.u_x_t_sym)
+        d_ge_d_xtm1 = g_exp_eqns.jacobian(self.u_x_tm1_sym)
+        d_ge_d_ytp1 = g_exp_eqns.jacobian(self.u_y_tp1_sym)
+        d_ge_d_yt = g_exp_eqns.jacobian(self.u_y_t_sym)
+        d_ge_d_ztp1 = g_exp_eqns.jacobian(self.u_z_tp1_sym)
+        d_ge_d_zt = g_exp_eqns.jacobian(self.u_z_t_sym)
+
+        d_gz_d_zt = g_z_eqns.jacobian(self.u_z_t_sym)
+
+        # d_gne_d_xt_ss = d_gne_d_xt.subs(self.normal_and_0_to_ss)
+        # print d_gne_d_xt_ss
+        d_g_uhlig_unev = [d_gne_d_xt, d_gne_d_xtm1,
+                          d_gne_d_yt, d_gne_d_zt,
+                          d_ge_d_xtp1, d_ge_d_xt, d_ge_d_xtm1,
+                          d_ge_d_ytp1, d_ge_d_yt,
+                          d_ge_d_ztp1, d_ge_d_zt,
+                          d_gz_d_zt]
+        d_g_uhlig_unev_ss = [x.subs(self.normal_and_0_to_ss) for x in
+                             list(d_g_uhlig_unev)]
+        return [d_g_uhlig_unev, d_g_uhlig_unev_ss]

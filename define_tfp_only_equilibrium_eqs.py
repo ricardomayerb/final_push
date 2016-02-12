@@ -170,7 +170,7 @@ def eq_conds_TFP_FI_CIKLY_az_infodating_aconte_sta_all():
 
 def ss_sym_sols_TFP_FI_CIKLY_az_usedating_aleads_sta_all():
 	sol_zetaa_ss = 0
-	sol_a_ss = mua 
+	sol_a_ss = mua
 	theta = nu * (1-alpha)/(1-nu)
 
 	B1 =  beta * (1-delta) * sympy.exp(-sol_a_ss)
@@ -210,7 +210,7 @@ def ss_eq_conds_TFP_FI_CIKLY_az_usedating_aleads_sta_all(sols_ciklyaz, pardict):
 
 	zetaass_expr = rhoa*zetaass
 	ass_expr = mua + zetaass
-	
+
 	g1 = beta*exp(-ass)  * (alpha * Yss/Kss + (1-delta)) - 1
 
 	g2 = nu*(1-alpha)*Yss/(Css*(1-nu)) - Lss/(1-Lss)
@@ -225,12 +225,12 @@ def ss_eq_conds_TFP_FI_CIKLY_az_usedating_aleads_sta_all(sols_ciklyaz, pardict):
 
 	g7 = ass - ass_expr
 
-	glist = [g1, g2, g3, g4, g5, g6, g7]	
+	glist = [g1, g2, g3, g4, g5, g6, g7]
 	return glist
 
 def ss_sym_sols_TFP_FI_CIKLY_az_infodating_aleads_sta_all():
 	sol_zetaa_ss = 0
-	sol_a_ss = mua 
+	sol_a_ss = mua
 	theta = nu * (1-alpha)/(1-nu)
 
 	B1 =  beta * (1-delta) * sympy.exp(-sol_a_ss)
@@ -257,7 +257,7 @@ def ss_eq_conds_TFP_FI_CIKLY_az_infodating_aleads_sta_all(sols_ciklyaz, pardict)
 	Yss = sols_ciklyaz[4]
 	ass = sols_ciklyaz[5]
 	zetaass = sols_ciklyaz[6]
-	
+
 	nu = pardict['nu']
 	alpha = pardict['alpha']
 	beta = pardict['beta']
@@ -270,10 +270,10 @@ def ss_eq_conds_TFP_FI_CIKLY_az_infodating_aleads_sta_all(sols_ciklyaz, pardict)
 
 	Iss_expr = Kss - (1-delta) * exp(-ass) * Kss
 	Yss_expr = exp((1-alpha)*ass - alpha*ass) * Kss**(alpha) * Lss**(1-alpha)
-	
-	ass_expr = mua + zetaass 
 
-	zetaass_expr = rhoa*zetaass 
+	ass_expr = mua + zetaass
+
+	zetaass_expr = rhoa*zetaass
 
 	g1 = beta * (alpha * Yss/Kss + (1-delta)* exp(-ass)) - 1
 
@@ -290,7 +290,7 @@ def ss_eq_conds_TFP_FI_CIKLY_az_infodating_aleads_sta_all(sols_ciklyaz, pardict)
 	g7 = ass - ass_expr
 
 	glist = [g1, g2, g3, g4, g5, g6, g7]
-	
+
 	return glist
 
 
@@ -387,6 +387,4 @@ glist_ckl_az_use_conte = [x for x in glist_ckl_az_use_conte if x != 0]
 glist_ckl_z_use_conte = [x.subs(az4) for x in glist_ckl_az_use_conte]
 glist_ckl_z_use_conte = [x for x in glist_ckl_z_use_conte if x != 0]
 
-
-
-
+######## uligh part

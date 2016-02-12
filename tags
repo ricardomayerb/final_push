@@ -1,0 +1,1497 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+A_for_psi_w_w	.\model_ew_azckily_bu.py	/^A_for_psi_w_w = Gamma_xt_2 $/;"	v
+A_for_psi_w_w	.\test_new_fipir.py	/^A_for_psi_w_w = Gamma_xt_2$/;"	v
+A_for_psi_w_w	.\test_new_fipir_azCIKLY.py	/^A_for_psi_w_w = Gamma_xt_2$/;"	v
+A_for_psi_x_w	.\model_ew_azckily_bu.py	/^A_for_psi_x_w = 2*Gamma_xt_2 $/;"	v
+A_for_psi_x_w	.\test_new_fipir.py	/^A_for_psi_x_w = 2*Gamma_xt_2$/;"	v
+A_for_psi_x_w	.\test_new_fipir_azCIKLY.py	/^A_for_psi_x_w = 2*Gamma_xt_2$/;"	v
+A_for_psixx	.\model_ew_azckily_bu.py	/^A_for_psixx = gxt + np.dot(gxtp1, psi_x)$/;"	v
+A_for_psixx	.\test_new_fipir.py	/^A_for_psixx = gxt + np.dot(gxtp1, psi_x)$/;"	v
+A_for_psixx	.\test_new_fipir_azCIKLY.py	/^A_for_psixx = gxt + np.dot(gxtp1, psi_x)$/;"	v
+A_for_vecpsiwq	.\model_ew_azckily_bu.py	/^A_for_vecpsiwq = np.kron(np.eye(nw,nw), eq51_coe)$/;"	v
+A_for_vecpsiwq	.\test_new_fipir.py	/^A_for_vecpsiwq = np.kron(np.eye(nw, nw), eq51_coe)$/;"	v
+A_for_vecpsiwq	.\test_new_fipir_azCIKLY.py	/^A_for_vecpsiwq = np.kron(np.eye(nw, nw), eq51_coe)$/;"	v
+A_for_vecpsixq	.\model_ew_azckily_bu.py	/^A_for_vecpsixq = np.kron(np.eye(nx), coe1) + np.kron(coe3.T, coe2) $/;"	v
+A_for_vecpsixq	.\test_new_fipir.py	/^A_for_vecpsixq = np.kron(np.eye(nx), coe1) + np.kron(coe3.T, coe2)$/;"	v
+A_for_vecpsixq	.\test_new_fipir_azCIKLY.py	/^A_for_vecpsixq = np.kron(np.eye(nx), coe1) + np.kron(coe3.T, coe2)$/;"	v
+A_z_sym	.\main-fipir-fi-march.py	/^A_z_sym = s_space_matrices_sym['A_z']$/;"	v
+A_z_sym	.\test_new_fipir.py	/^A_z_sym = s_space_matrices_sym['A_z']$/;"	v
+A_z_sym	.\test_new_fipir_azCIKLY.py	/^A_z_sym = s_space_matrices_sym['A_z']$/;"	v
+Aelw	.\main-fipir-fi-march.py	/^Aelw = np.array([[1, 0], [0, rhoa_value]])$/;"	v
+Aelw	.\test_new_fipir.py	/^Aelw = np.array([[1, 0], [0, rhoa_value]])$/;"	v
+Aelw	.\test_new_fipir_azCIKLY.py	/^Aelw = np.array([[1, 0], [0, rhoa_value]])$/;"	v
+B1	.\symbolic_ss_solution.py	/^B1 = (emua + beta*(delta-1))\/(alpha*beta)$/;"	v
+B1powalpha	.\symbolic_ss_solution.py	/^B1powalpha = B1**(1\/(1-alpha))$/;"	v
+B2	.\symbolic_ss_solution.py	/^B2 = emua + delta - 1$/;"	v
+B3	.\symbolic_ss_solution.py	/^B3 = B1 - B2$/;"	v
+B4	.\symbolic_ss_solution.py	/^B4 = theta*B1\/B3$/;"	v
+B5	.\symbolic_ss_solution.py	/^B5 = B4\/(1+B4)$/;"	v
+B6	.\symbolic_ss_solution.py	/^B6 = B5*emua\/B1powalpha$/;"	v
+B_for_psixx	.\model_ew_azckily_bu.py	/^B_for_psixx = np.kron(psi_x, psi_x)$/;"	v
+B_for_psixx	.\test_new_fipir.py	/^B_for_psixx = np.kron(psi_x, psi_x)$/;"	v
+B_for_psixx	.\test_new_fipir_azCIKLY.py	/^B_for_psixx = np.kron(psi_x, psi_x)$/;"	v
+C_for_psixx	.\model_ew_azckily_bu.py	/^                 + C_for_psixx_3$/;"	v
+C_for_psixx	.\test_new_fipir.py	/^    + C_for_psixx_3$/;"	v
+C_for_psixx	.\test_new_fipir_azCIKLY.py	/^    + C_for_psixx_3$/;"	v
+C_for_psixx_1	.\model_ew_azckily_bu.py	/^C_for_psixx_1 = gxtm1xtm1 + 2*np.dot(gxtm1xt,Inkronpsix)$/;"	v
+C_for_psixx_1	.\test_new_fipir.py	/^C_for_psixx_1 = gxtm1xtm1 + 2*np.dot(gxtm1xt, Inkronpsix)$/;"	v
+C_for_psixx_1	.\test_new_fipir_azCIKLY.py	/^C_for_psixx_1 = gxtm1xtm1 + 2*np.dot(gxtm1xt, Inkronpsix)$/;"	v
+C_for_psixx_2	.\model_ew_azckily_bu.py	/^             + np.dot(gxtp1xtp1, psixkronpsix) $/;"	v
+C_for_psixx_2	.\test_new_fipir.py	/^    + np.dot(gxtp1xtp1, psixkronpsix)$/;"	v
+C_for_psixx_2	.\test_new_fipir_azCIKLY.py	/^    + np.dot(gxtp1xtp1, psixkronpsix)$/;"	v
+C_for_psixx_3	.\model_ew_azckily_bu.py	/^C_for_psixx_3 =   2*np.dot(gxtm1xtp1,Inkronpsixsquared)$/;"	v
+C_for_psixx_3	.\test_new_fipir.py	/^C_for_psixx_3 = 2*np.dot(gxtm1xtp1, Inkronpsixsquared)$/;"	v
+C_for_psixx_3	.\test_new_fipir_azCIKLY.py	/^C_for_psixx_3 = 2*np.dot(gxtm1xtp1, Inkronpsixsquared)$/;"	v
+C_sym	.\main-fipir-fi-march.py	/^                                                       C_sym=C_z_sym,$/;"	v
+C_sym	.\test_new_fipir.py	/^                                                       C_sym=C_z_sym,$/;"	v
+C_sym	.\test_new_fipir_azCIKLY.py	/^                                                       C_sym=C_z_sym,$/;"	v
+C_z_sym	.\main-fipir-fi-march.py	/^C_z_sym = s_space_matrices_sym['C_z']$/;"	v
+C_z_sym	.\test_new_fipir.py	/^C_z_sym = s_space_matrices_sym['C_z']$/;"	v
+C_z_sym	.\test_new_fipir_azCIKLY.py	/^C_z_sym = s_space_matrices_sym['C_z']$/;"	v
+Celw	.\main-fipir-fi-march.py	/^Celw = np.array([[0, 0], [0, sigmaza_value]])$/;"	v
+Celw	.\test_new_fipir.py	/^Celw = np.array([[0, 0], [0, sigmaza_value]])$/;"	v
+Celw	.\test_new_fipir_azCIKLY.py	/^Celw = np.array([[0, 0], [0, sigmaza_value]])$/;"	v
+Css_sol_sym	.\symbolic_ss_solution.py	/^Css_sol_sym = B6*B3$/;"	v
+D_s_sym	.\main-fipir-fi-march.py	/^D_s_sym = s_space_matrices_sym['D_s']$/;"	v
+D_s_sym	.\test_new_fipir.py	/^D_s_sym = s_space_matrices_sym['D_s']$/;"	v
+D_s_sym	.\test_new_fipir_azCIKLY.py	/^D_s_sym = s_space_matrices_sym['D_s']$/;"	v
+D_sym	.\main-fipir-fi-march.py	/^                                                       D_sym=D_s_sym,$/;"	v
+D_sym	.\test_new_fipir.py	/^                                                       D_sym=D_s_sym,$/;"	v
+D_sym	.\test_new_fipir_azCIKLY.py	/^                                                       D_sym=D_s_sym,$/;"	v
+Delw	.\main-fipir-fi-march.py	/^Delw = np.array([[1.0, 1.0]])$/;"	v
+Delw	.\test_new_fipir.py	/^Delw = np.array([[1.0, 1.0]])$/;"	v
+Delw	.\test_new_fipir_azCIKLY.py	/^Delw = np.array([[1.0, 1.0]])$/;"	v
+Ds_elw	.\test_new_fipir.py	/^Ds_elw = sympy.Matrix([[1, 1]])$/;"	v
+Ds_elw	.\test_new_fipir_azCIKLY.py	/^Ds_elw = sympy.Matrix([[1, 1]])$/;"	v
+E_w_dist	.\model_ew_azckily_bu.py	/^E_w_dist = - np.dot(Vx,psi_w).T\/theta$/;"	v
+E_w_dist	.\test_new_fipir.py	/^E_w_dist = - np.dot(Vx, psi_w).T\/theta$/;"	v
+E_w_dist	.\test_new_fipir_azCIKLY.py	/^E_w_dist = - np.dot(Vx, psi_w).T\/theta$/;"	v
+E_wkronw_dist	.\model_ew_azckily_bu.py	/^E_wkronw_dist = E_wkronw_dist.reshape((-1,1))$/;"	v
+E_wkronw_dist	.\model_ew_azckily_bu.py	/^E_wkronw_dist = np.eye(nw) + np.dot( np.dot(Vx,psi_w).T, np.dot(Vx,psi_w))\/(theta**2)$/;"	v
+E_wkronw_dist	.\test_new_fipir.py	/^E_wkronw_dist = E_wkronw_dist.reshape((-1, 1))$/;"	v
+E_wkronw_dist	.\test_new_fipir.py	/^E_wkronw_dist = np.eye($/;"	v
+E_wkronw_dist	.\test_new_fipir_azCIKLY.py	/^E_wkronw_dist = E_wkronw_dist.reshape((-1, 1))$/;"	v
+E_wkronw_dist	.\test_new_fipir_azCIKLY.py	/^E_wkronw_dist = np.eye($/;"	v
+Eq52_coe	.\model_ew_azckily_bu.py	/^Eq52_coe = Gamma_xtp1_2 + Gamma_xt_2$/;"	v
+Eq52_coe	.\test_new_fipir.py	/^Eq52_coe = Gamma_xtp1_2 + Gamma_xt_2$/;"	v
+Eq52_coe	.\test_new_fipir_azCIKLY.py	/^Eq52_coe = Gamma_xtp1_2 + Gamma_xt_2$/;"	v
+Eq52_cons	.\model_ew_azckily_bu.py	/^Eq52_cons = Eq52_cons_1 + Eq52_cons_2 $/;"	v
+Eq52_cons	.\test_new_fipir.py	/^Eq52_cons = Eq52_cons_1 + Eq52_cons_2$/;"	v
+Eq52_cons	.\test_new_fipir_azCIKLY.py	/^Eq52_cons = Eq52_cons_1 + Eq52_cons_2$/;"	v
+Eq52_cons_1	.\model_ew_azckily_bu.py	/^Eq52_cons_1 = gqq + np.dot(Gamma_xtp1_q + Gamma_xt_q, psi_q)$/;"	v
+Eq52_cons_1	.\test_new_fipir.py	/^Eq52_cons_1 = gqq + np.dot(Gamma_xtp1_q + Gamma_xt_q, psi_q)$/;"	v
+Eq52_cons_1	.\test_new_fipir_azCIKLY.py	/^Eq52_cons_1 = gqq + np.dot(Gamma_xtp1_q + Gamma_xt_q, psi_q)$/;"	v
+Eq52_cons_2	.\model_ew_azckily_bu.py	/^Eq52_cons_2 = Eq52_cons_2a + Eq52_cons_2b $/;"	v
+Eq52_cons_2	.\test_new_fipir.py	/^Eq52_cons_2 = Eq52_cons_2a + Eq52_cons_2b$/;"	v
+Eq52_cons_2	.\test_new_fipir_azCIKLY.py	/^Eq52_cons_2 = Eq52_cons_2a + Eq52_cons_2b$/;"	v
+Eq52_cons_2a	.\model_ew_azckily_bu.py	/^Eq52_cons_2a = np.dot(Gamma_wtp1_q, E_w_dist)$/;"	v
+Eq52_cons_2a	.\test_new_fipir.py	/^Eq52_cons_2a = np.dot(Gamma_wtp1_q, E_w_dist)$/;"	v
+Eq52_cons_2a	.\test_new_fipir_azCIKLY.py	/^Eq52_cons_2a = np.dot(Gamma_wtp1_q, E_w_dist)$/;"	v
+Eq52_cons_2b	.\model_ew_azckily_bu.py	/^Eq52_cons_2b = np.dot(Gamma_wtp1_wtp1, E_wkronw_dist)$/;"	v
+Eq52_cons_2b	.\test_new_fipir.py	/^Eq52_cons_2b = np.dot(Gamma_wtp1_wtp1, E_wkronw_dist)$/;"	v
+Eq52_cons_2b	.\test_new_fipir_azCIKLY.py	/^Eq52_cons_2b = np.dot(Gamma_wtp1_wtp1, E_wkronw_dist)$/;"	v
+Fckliy_az_mua	.\fipir_aug.py	/^def Fckliy_az_mua(xini_az):$/;"	f
+Fckliy_az_mua	.\fipir_aug_old.py	/^def Fckliy_az_mua(xini_az):$/;"	f
+Fckliy_az_mua	.\fipir_new.py	/^def Fckliy_az_mua(xini_az):$/;"	f
+Fckliy_az_mua	.\fipiro\utils_before_introducing_classes.py	/^def Fckliy_az_mua(xini_az):$/;"	f
+FullInfoModel	.\fipir.py	/^class FullInfoModel:$/;"	c
+FullInfoModel	.\fipir_aug.py	/^class FullInfoModel:$/;"	c
+FullInfoModel	.\fipir_aug_old.py	/^class FullInfoModel:$/;"	c
+FullInfoModel	.\fipir_new.py	/^class FullInfoModel:$/;"	c
+FullInfoModel	.\fipiro\fullinfo.py	/^class FullInfoModel:$/;"	c
+G_s_sym	.\main-fipir-fi-march.py	/^G_s_sym = s_space_matrices_sym['G_s']$/;"	v
+G_s_sym	.\test_new_fipir.py	/^G_s_sym = s_space_matrices_sym['G_s']$/;"	v
+G_s_sym	.\test_new_fipir_azCIKLY.py	/^G_s_sym = s_space_matrices_sym['G_s']$/;"	v
+G_sym	.\main-fipir-fi-march.py	/^                                                       G_sym=G_s_sym,$/;"	v
+G_sym	.\test_new_fipir.py	/^                                                       G_sym=G_s_sym,$/;"	v
+G_sym	.\test_new_fipir_azCIKLY.py	/^                                                       G_sym=G_s_sym,$/;"	v
+Gamma_wt_wtp1	.\model_ew_azckily_bu.py	/^Gamma_wt_wtp1 = 2*gwtwtp1 + np.dot(Gamma_xt_wtp1, psiwkronIk)$/;"	v
+Gamma_wt_wtp1	.\test_new_fipir.py	/^Gamma_wt_wtp1 = 2*gwtwtp1 + np.dot(Gamma_xt_wtp1, psiwkronIk)$/;"	v
+Gamma_wt_wtp1	.\test_new_fipir_azCIKLY.py	/^Gamma_wt_wtp1 = 2*gwtwtp1 + np.dot(Gamma_xt_wtp1, psiwkronIk)$/;"	v
+Gamma_wtp1_q	.\model_ew_azckily_bu.py	/^Gamma_wtp1_q = Gamma_wtp1_q_a + Gamma_wtp1_q_b $/;"	v
+Gamma_wtp1_q	.\test_new_fipir.py	/^Gamma_wtp1_q = Gamma_wtp1_q_a + Gamma_wtp1_q_b$/;"	v
+Gamma_wtp1_q	.\test_new_fipir_azCIKLY.py	/^Gamma_wtp1_q = Gamma_wtp1_q_a + Gamma_wtp1_q_b$/;"	v
+Gamma_wtp1_q_a	.\model_ew_azckily_bu.py	/^Gamma_wtp1_q_a = 2*gwtp1q + 2*np.dot(Gamma_xtp1_2, psi_w_q) + np.dot(Gamma_xtp1_wtp1, psiqkronIk)$/;"	v
+Gamma_wtp1_q_a	.\test_new_fipir.py	/^    np.dot(Gamma_xtp1_2, psi_w_q) + np.dot(Gamma_xtp1_wtp1, psiqkronIk)$/;"	v
+Gamma_wtp1_q_a	.\test_new_fipir_azCIKLY.py	/^    np.dot(Gamma_xtp1_2, psi_w_q) + np.dot(Gamma_xtp1_wtp1, psiqkronIk)$/;"	v
+Gamma_wtp1_q_b	.\model_ew_azckily_bu.py	/^Gamma_wtp1_q_b = np.dot(Gamma_xtp1_q, psi_w) + np.dot(Gamma_xt_wtp1, psiqkronIk) $/;"	v
+Gamma_wtp1_q_b	.\test_new_fipir.py	/^Gamma_wtp1_q_b = np.dot($/;"	v
+Gamma_wtp1_q_b	.\test_new_fipir_azCIKLY.py	/^Gamma_wtp1_q_b = np.dot($/;"	v
+Gamma_wtp1_wt	.\model_ew_azckily_bu.py	/^Gamma_wtp1_wt = np.dot(Gamma_xtp1_wt, psiwkronIk)$/;"	v
+Gamma_wtp1_wt	.\test_new_fipir.py	/^Gamma_wtp1_wt = np.dot(Gamma_xtp1_wt, psiwkronIk)$/;"	v
+Gamma_wtp1_wt	.\test_new_fipir_azCIKLY.py	/^Gamma_wtp1_wt = np.dot(Gamma_xtp1_wt, psiwkronIk)$/;"	v
+Gamma_wtp1_wtp1	.\model_ew_azckily_bu.py	/^Gamma_wtp1_wtp1 = gwtp1wtp1 + np.dot(Gamma_xtp1_2, psi_w_w)+np.dot(Gamma_xtp1_wtp1, psiwkronIk) $/;"	v
+Gamma_wtp1_wtp1	.\test_new_fipir.py	/^    np.dot(Gamma_xtp1_2, psi_w_w)+np.dot(Gamma_xtp1_wtp1, psiwkronIk)$/;"	v
+Gamma_wtp1_wtp1	.\test_new_fipir_azCIKLY.py	/^    np.dot(Gamma_xtp1_2, psi_w_w)+np.dot(Gamma_xtp1_wtp1, psiwkronIk)$/;"	v
+Gamma_xt_2	.\model_ew_azckily_bu.py	/^Gamma_xt_2 = gxt + np.dot(Gamma_xtp1_2, psi_x)$/;"	v
+Gamma_xt_2	.\test_new_fipir.py	/^Gamma_xt_2 = gxt + np.dot(Gamma_xtp1_2, psi_x)$/;"	v
+Gamma_xt_2	.\test_new_fipir_azCIKLY.py	/^Gamma_xt_2 = gxt + np.dot(Gamma_xtp1_2, psi_x)$/;"	v
+Gamma_xt_q	.\model_ew_azckily_bu.py	/^Gamma_xt_q = Gamma_xt_q_1of2 + Gamma_xt_q_2of2$/;"	v
+Gamma_xt_q	.\test_new_fipir.py	/^Gamma_xt_q = Gamma_xt_q_1of2 + Gamma_xt_q_2of2$/;"	v
+Gamma_xt_q	.\test_new_fipir_azCIKLY.py	/^Gamma_xt_q = Gamma_xt_q_1of2 + Gamma_xt_q_2of2$/;"	v
+Gamma_xt_q_1of2	.\model_ew_azckily_bu.py	/^Gamma_xt_q_1of2 = 2*gxtq + 2* np.dot(Gamma_xtp1_2, psi_x_q) + np.dot(Gamma_xtp1_q, psi_x)$/;"	v
+Gamma_xt_q_1of2	.\test_new_fipir.py	/^    np.dot(Gamma_xtp1_2, psi_x_q) + np.dot(Gamma_xtp1_q, psi_x)$/;"	v
+Gamma_xt_q_1of2	.\test_new_fipir_azCIKLY.py	/^    np.dot(Gamma_xtp1_2, psi_x_q) + np.dot(Gamma_xtp1_q, psi_x)$/;"	v
+Gamma_xt_q_2of2	.\model_ew_azckily_bu.py	/^Gamma_xt_q_2of2 = np.dot(Gamma_xt_xtp1, Inkronpsiq)+np.dot(Gamma_xt_xt, psiqkronIn)$/;"	v
+Gamma_xt_q_2of2	.\test_new_fipir.py	/^Gamma_xt_q_2of2 = np.dot($/;"	v
+Gamma_xt_q_2of2	.\test_new_fipir_azCIKLY.py	/^Gamma_xt_q_2of2 = np.dot($/;"	v
+Gamma_xt_wt	.\model_ew_azckily_bu.py	/^Gamma_xt_wt = 2*gxtwt + np.dot(Gamma_xtp1_wt,psixkronIk) + np.dot(Gamma_xt_xt, psiwkronIndotj )      $/;"	v
+Gamma_xt_wt	.\test_new_fipir.py	/^    np.dot(Gamma_xtp1_wt, psixkronIk) + np.dot(Gamma_xt_xt, psiwkronIndotj)$/;"	v
+Gamma_xt_wt	.\test_new_fipir_azCIKLY.py	/^    np.dot(Gamma_xtp1_wt, psixkronIk) + np.dot(Gamma_xt_xt, psiwkronIndotj)$/;"	v
+Gamma_xt_wtp1	.\model_ew_azckily_bu.py	/^Gamma_xt_wtp1 = 2*gxtwtp1 + 2* np.dot(Gamma_xtp1_2, psi_x_w)  + np.dot(Gamma_xtp1_wtp1, psixkronIk)  + np.dot(Gamma_xt_xtp1, Inkronpsiw)$/;"	v
+Gamma_xt_wtp1	.\test_new_fipir.py	/^Gamma_xt_wtp1 = 2*gxtwtp1 + 2 * np.dot(Gamma_xtp1_2, psi_x_w) + np.dot($/;"	v
+Gamma_xt_wtp1	.\test_new_fipir_azCIKLY.py	/^Gamma_xt_wtp1 = 2*gxtwtp1 + 2 * np.dot(Gamma_xtp1_2, psi_x_w) + np.dot($/;"	v
+Gamma_xt_xt	.\model_ew_azckily_bu.py	/^Gamma_xt_xt = gxtxt + np.dot(Gamma_xtp1_2,psi_x_x) + np.dot(Gamma_xt_xtp1,Inkronpsix)$/;"	v
+Gamma_xt_xt	.\test_new_fipir.py	/^    np.dot(Gamma_xtp1_2, psi_x_x) + np.dot(Gamma_xt_xtp1, Inkronpsix)$/;"	v
+Gamma_xt_xt	.\test_new_fipir_azCIKLY.py	/^    np.dot(Gamma_xtp1_2, psi_x_x) + np.dot(Gamma_xt_xtp1, Inkronpsix)$/;"	v
+Gamma_xt_xtp1	.\model_ew_azckily_bu.py	/^Gamma_xt_xtp1 = 2*gxtxtp1 + np.dot(Gamma_xtp1_xtp1,psixkronIn)$/;"	v
+Gamma_xt_xtp1	.\test_new_fipir.py	/^Gamma_xt_xtp1 = 2*gxtxtp1 + np.dot(Gamma_xtp1_xtp1, psixkronIn)$/;"	v
+Gamma_xt_xtp1	.\test_new_fipir_azCIKLY.py	/^Gamma_xt_xtp1 = 2*gxtxtp1 + np.dot(Gamma_xtp1_xtp1, psixkronIn)$/;"	v
+Gamma_xtm1_wtp1	.\model_ew_azckily_bu.py	/^Gamma_xtm1_wtp1 = 2*gxtm1wtp1 + np.dot(Gamma_xt_wtp1, psixkronIk) + np.dot(Gamma_xtm1_xtp1, Inkronpsiw)$/;"	v
+Gamma_xtm1_wtp1	.\test_new_fipir.py	/^    np.dot(Gamma_xt_wtp1, psixkronIk) + np.dot(Gamma_xtm1_xtp1, Inkronpsiw)$/;"	v
+Gamma_xtm1_wtp1	.\test_new_fipir_azCIKLY.py	/^    np.dot(Gamma_xt_wtp1, psixkronIk) + np.dot(Gamma_xtm1_xtp1, Inkronpsiw)$/;"	v
+Gamma_xtm1_xt	.\model_ew_azckily_bu.py	/^Gamma_xtm1_xt = 2*gxtm1xt + np.dot(Gamma_xt_xt, psixkronIn) +  np.dot(Gamma_xtm1_xtp1, Inkronpsix)$/;"	v
+Gamma_xtm1_xt	.\test_new_fipir.py	/^    np.dot(Gamma_xt_xt, psixkronIn) + np.dot(Gamma_xtm1_xtp1, Inkronpsix)$/;"	v
+Gamma_xtm1_xt	.\test_new_fipir_azCIKLY.py	/^    np.dot(Gamma_xt_xt, psixkronIn) + np.dot(Gamma_xtm1_xtp1, Inkronpsix)$/;"	v
+Gamma_xtm1_xtp1	.\model_ew_azckily_bu.py	/^Gamma_xtm1_xtp1 = 2*gxtm1xtp1$/;"	v
+Gamma_xtm1_xtp1	.\test_new_fipir.py	/^Gamma_xtm1_xtp1 = 2*gxtm1xtp1$/;"	v
+Gamma_xtm1_xtp1	.\test_new_fipir_azCIKLY.py	/^Gamma_xtm1_xtp1 = 2*gxtm1xtp1$/;"	v
+Gamma_xtp1_2	.\model_ew_azckily_bu.py	/^Gamma_xtp1_2 = gxtp1$/;"	v
+Gamma_xtp1_2	.\test_new_fipir.py	/^Gamma_xtp1_2 = gxtp1$/;"	v
+Gamma_xtp1_2	.\test_new_fipir_azCIKLY.py	/^Gamma_xtp1_2 = gxtp1$/;"	v
+Gamma_xtp1_q	.\model_ew_azckily_bu.py	/^Gamma_xtp1_q = 2*gxtp1q + np.dot(Gamma_xtp1_xtp1, psiqkronIn)$/;"	v
+Gamma_xtp1_q	.\test_new_fipir.py	/^Gamma_xtp1_q = 2*gxtp1q + np.dot(Gamma_xtp1_xtp1, psiqkronIn)$/;"	v
+Gamma_xtp1_q	.\test_new_fipir_azCIKLY.py	/^Gamma_xtp1_q = 2*gxtp1q + np.dot(Gamma_xtp1_xtp1, psiqkronIn)$/;"	v
+Gamma_xtp1_wt	.\model_ew_azckily_bu.py	/^Gamma_xtp1_wt = 2*gxtp1wt$/;"	v
+Gamma_xtp1_wt	.\test_new_fipir.py	/^Gamma_xtp1_wt = 2*gxtp1wt$/;"	v
+Gamma_xtp1_wt	.\test_new_fipir_azCIKLY.py	/^Gamma_xtp1_wt = 2*gxtp1wt$/;"	v
+Gamma_xtp1_wtp1	.\model_ew_azckily_bu.py	/^Gamma_xtp1_wtp1 = 2*gxtp1wtp1 + np.dot(Gamma_xtp1_xtp1,psiwkronIndotj)$/;"	v
+Gamma_xtp1_wtp1	.\test_new_fipir.py	/^Gamma_xtp1_wtp1 = 2*gxtp1wtp1 + np.dot(Gamma_xtp1_xtp1, psiwkronIndotj)$/;"	v
+Gamma_xtp1_wtp1	.\test_new_fipir_azCIKLY.py	/^Gamma_xtp1_wtp1 = 2*gxtp1wtp1 + np.dot(Gamma_xtp1_xtp1, psiwkronIndotj)$/;"	v
+Gamma_xtp1_xtp1	.\model_ew_azckily_bu.py	/^Gamma_xtp1_xtp1 = gxtp1xtp1$/;"	v
+Gamma_xtp1_xtp1	.\test_new_fipir.py	/^Gamma_xtp1_xtp1 = gxtp1xtp1$/;"	v
+Gamma_xtp1_xtp1	.\test_new_fipir_azCIKLY.py	/^Gamma_xtp1_xtp1 = gxtp1xtp1$/;"	v
+Gelw	.\main-fipir-fi-march.py	/^Gelw = np.array([[sigmaa_value, sigmaza_value]])$/;"	v
+Gelw	.\test_new_fipir.py	/^Gelw = np.array([[sigmaa_value, sigmaza_value]])$/;"	v
+Gelw	.\test_new_fipir_azCIKLY.py	/^Gelw = np.array([[sigmaa_value, sigmaza_value]])$/;"	v
+Gx	.\model_ew_azckily_bu.py	/^Gx =  np.dot(Gx_term_1, matGx_term_2 + matGx_term_3.T)\/theta$/;"	v
+Gx	.\test_new_fipir.py	/^Gx = np.dot(Gx_term_1, matGx_term_2 + matGx_term_3.T)\/theta$/;"	v
+Gx	.\test_new_fipir_azCIKLY.py	/^Gx = np.dot(Gx_term_1, matGx_term_2 + matGx_term_3.T)\/theta$/;"	v
+Gx_term_1	.\model_ew_azckily_bu.py	/^Gx_term_1 = np.dot(gxtp1, psi_w) + gwtp1$/;"	v
+Gx_term_1	.\test_new_fipir.py	/^Gx_term_1 = np.dot(gxtp1, psi_w) + gwtp1$/;"	v
+Gx_term_1	.\test_new_fipir_azCIKLY.py	/^Gx_term_1 = np.dot(gxtp1, psi_w) + gwtp1$/;"	v
+Gx_term_2	.\model_ew_azckily_bu.py	/^Gx_term_2 = 2*np.dot(Vx, psi_x_w) + np.dot(Vxx, psixkronpsiw)$/;"	v
+Gx_term_2	.\model_ew_azckily_bu.py	/^Gx_term_2 = fipir_aug.matrix2numpyfloat(Gx_term_2) $/;"	v
+Gx_term_2	.\test_new_fipir.py	/^Gx_term_2 = 2*np.dot(Vx, psi_x_w) + np.dot(Vxx, psixkronpsiw)$/;"	v
+Gx_term_2	.\test_new_fipir.py	/^Gx_term_2 = fipir_new.matrix2numpyfloat(Gx_term_2)$/;"	v
+Gx_term_2	.\test_new_fipir_azCIKLY.py	/^Gx_term_2 = 2*np.dot(Vx, psi_x_w) + np.dot(Vxx, psixkronpsiw)$/;"	v
+Gx_term_2	.\test_new_fipir_azCIKLY.py	/^Gx_term_2 = fipir_new.matrix2numpyfloat(Gx_term_2)$/;"	v
+Gx_term_3	.\model_ew_azckily_bu.py	/^Gx_term_3 = fipir_aug.matrix2numpyfloat(Gx_term_3) $/;"	v
+Gx_term_3	.\model_ew_azckily_bu.py	/^Gx_term_3 = np.dot(Vxx, psiwkronpsix)$/;"	v
+Gx_term_3	.\test_new_fipir.py	/^Gx_term_3 = fipir_new.matrix2numpyfloat(Gx_term_3)$/;"	v
+Gx_term_3	.\test_new_fipir.py	/^Gx_term_3 = np.dot(Vxx, psiwkronpsix)$/;"	v
+Gx_term_3	.\test_new_fipir_azCIKLY.py	/^Gx_term_3 = fipir_new.matrix2numpyfloat(Gx_term_3)$/;"	v
+Gx_term_3	.\test_new_fipir_azCIKLY.py	/^Gx_term_3 = np.dot(Vxx, psiwkronpsix)$/;"	v
+I_n	.\model_ew_azckily_bu.py	/^I_n = np.eye(nx)        $/;"	v
+I_n	.\test_new_fipir.py	/^I_n = np.eye(nx)$/;"	v
+I_n	.\test_new_fipir_azCIKLY.py	/^I_n = np.eye(nx)$/;"	v
+I_n_dot_j	.\model_ew_azckily_bu.py	/^I_n_dot_j =  [I_n[:,j].reshape((nx,1)) for j in range(nx)]$/;"	v
+I_n_dot_j	.\test_new_fipir.py	/^I_n_dot_j = [I_n[:, j].reshape((nx, 1)) for j in range(nx)]$/;"	v
+I_n_dot_j	.\test_new_fipir_azCIKLY.py	/^I_n_dot_j = [I_n[:, j].reshape((nx, 1)) for j in range(nx)]$/;"	v
+Ibetaphi	.\model_ew_azckily_bu.py	/^Ibetaphi = np.eye(nx) - beta*psi_x$/;"	v
+Ibetaphi	.\test_new_fipir.py	/^Ibetaphi = np.eye(nx) - beta*psi_x$/;"	v
+Ibetaphi	.\test_new_fipir_azCIKLY.py	/^Ibetaphi = np.eye(nx) - beta*psi_x$/;"	v
+Ikkronpsix	.\model_ew_azckily_bu.py	/^Ikkronpsix = np.kron(np.eye(nw), psi_x)$/;"	v
+Ikkronpsix	.\test_new_fipir.py	/^Ikkronpsix = np.kron(np.eye(nw), psi_x)$/;"	v
+Ikkronpsix	.\test_new_fipir_azCIKLY.py	/^Ikkronpsix = np.kron(np.eye(nw), psi_x)$/;"	v
+Inkronpsiq	.\model_ew_azckily_bu.py	/^Inkronpsiq = np.kron(np.eye(nx), psi_q)$/;"	v
+Inkronpsiq	.\test_new_fipir.py	/^Inkronpsiq = np.kron(np.eye(nx), psi_q)$/;"	v
+Inkronpsiq	.\test_new_fipir_azCIKLY.py	/^Inkronpsiq = np.kron(np.eye(nx), psi_q)$/;"	v
+Inkronpsiw	.\model_ew_azckily_bu.py	/^Inkronpsiw = np.kron(np.eye(nx), psi_w)$/;"	v
+Inkronpsiw	.\test_new_fipir.py	/^Inkronpsiw = np.kron(np.eye(nx), psi_w)$/;"	v
+Inkronpsiw	.\test_new_fipir_azCIKLY.py	/^Inkronpsiw = np.kron(np.eye(nx), psi_w)$/;"	v
+Inkronpsix	.\model_ew_azckily_bu.py	/^Inkronpsix = np.kron(np.eye(nx), psi_x)$/;"	v
+Inkronpsix	.\test_new_fipir.py	/^Inkronpsix = np.kron(np.eye(nx), psi_x)$/;"	v
+Inkronpsix	.\test_new_fipir_azCIKLY.py	/^Inkronpsix = np.kron(np.eye(nx), psi_x)$/;"	v
+Inkronpsixsquared	.\model_ew_azckily_bu.py	/^Inkronpsixsquared = np.kron(np.eye(nx), np.dot(psi_x, psi_x))$/;"	v
+Inkronpsixsquared	.\test_new_fipir.py	/^Inkronpsixsquared = np.kron(np.eye(nx), np.dot(psi_x, psi_x))$/;"	v
+Inkronpsixsquared	.\test_new_fipir_azCIKLY.py	/^Inkronpsixsquared = np.kron(np.eye(nx), np.dot(psi_x, psi_x))$/;"	v
+Iss_sol_sym	.\symbolic_ss_solution.py	/^Iss_sol_sym = B6*B2$/;"	v
+Kss_sol_sym	.\symbolic_ss_solution.py	/^Kss_sol_sym = B6$/;"	v
+Lss_sol_sym	.\symbolic_ss_solution.py	/^Lss_sol_sym = B5$/;"	v
+ModelBase	.\fipiro\utils.py	/^class ModelBase(object):$/;"	c
+OldSignalStateSpace	.\fipir_aug_old.py	/^class OldSignalStateSpace:$/;"	c
+OldSignalStateSpace	.\fipir_new.py	/^class OldSignalStateSpace:$/;"	c
+PartialInfoModel	.\fipir.py	/^class PartialInfoModel(FullInfoModel):$/;"	c
+RobustFullInfoModel	.\fipir.py	/^class RobustFullInfoModel(FullInfoModel):$/;"	c
+RobustPartialInfoModel	.\fipir.py	/^class RobustPartialInfoModel(PartialInfoModel):$/;"	c
+SNR_value	.\main-fipir-fi-march.py	/^SNR_value = 10$/;"	v
+SNR_value	.\test_new_fipir.py	/^SNR_value = 10$/;"	v
+SNR_value	.\test_new_fipir_azCIKLY.py	/^SNR_value = 10$/;"	v
+SignalStateSpace	.\fipir_aug.py	/^class SignalStateSpace:$/;"	c
+SignalStateSpace	.\fipir_aug_old.py	/^class SignalStateSpace:$/;"	c
+SignalStateSpace	.\fipiro\sspace.py	/^class SignalStateSpace:$/;"	c
+SignalStateSpace2	.\fipir_new.py	/^class SignalStateSpace2:$/;"	c
+StateSpace	.\fipir.py	/^class StateSpace:$/;"	c
+UhligModel	.\fipiro\utils.py	/^class UhligModel(ModelBase):$/;"	c
+Vx	.\model_ew_azckily_bu.py	/^Vx = np.dot(du_dx_at_ss.T, invIbetaphi)$/;"	v
+Vx	.\test_new_fipir.py	/^Vx = np.dot(du_dx_at_ss.T, invIbetaphi)$/;"	v
+Vx	.\test_new_fipir_azCIKLY.py	/^Vx = np.dot(du_dx_at_ss.T, invIbetaphi)$/;"	v
+Vxiq_term1	.\model_ew_azckily_bu.py	/^Vxiq_term1 = beta*np.dot(Vx, psi_x_q)+0.5*np.dot(Vxx,psixkronpsiq+psiqkronpsix)$/;"	v
+Vxiq_term1	.\test_new_fipir.py	/^    np.dot(Vxx, psixkronpsiq+psiqkronpsix)$/;"	v
+Vxiq_term1	.\test_new_fipir_azCIKLY.py	/^    np.dot(Vxx, psixkronpsiq+psiqkronpsix)$/;"	v
+Vxq	.\model_ew_azckily_bu.py	/^Vxq = linalg.solve(Vxq_lhs.T, Vxq_rhs.T).T #solving A.T x.T = b.T$/;"	v
+Vxq	.\test_new_fipir.py	/^Vxq = scipy.linalg.solve(Vxq_lhs.T, Vxq_rhs.T).T  # solving A.T x.T = b.T$/;"	v
+Vxq	.\test_new_fipir_azCIKLY.py	/^Vxq = scipy.linalg.solve(Vxq_lhs.T, Vxq_rhs.T).T  # solving A.T x.T = b.T$/;"	v
+Vxq_lhs	.\model_ew_azckily_bu.py	/^Vxq_lhs = np.eye(nx) - beta*psi_x$/;"	v
+Vxq_lhs	.\test_new_fipir.py	/^Vxq_lhs = np.eye(nx) - beta*psi_x$/;"	v
+Vxq_lhs	.\test_new_fipir_azCIKLY.py	/^Vxq_lhs = np.eye(nx) - beta*psi_x$/;"	v
+Vxq_rhs	.\model_ew_azckily_bu.py	/^Vxq_rhs = uxq + Vxiq_term1 + Vxq_term2$/;"	v
+Vxq_rhs	.\test_new_fipir.py	/^Vxq_rhs = uxq + Vxiq_term1 + Vxq_term2$/;"	v
+Vxq_rhs	.\test_new_fipir_azCIKLY.py	/^Vxq_rhs = uxq + Vxiq_term1 + Vxq_term2$/;"	v
+Vxq_term2	.\model_ew_azckily_bu.py	/^Vxq_term2 = -beta*0.5*np.dot(Vxq_term2c,(Vxq_term2a + Vxq_term2b.T))\/theta$/;"	v
+Vxq_term2	.\test_new_fipir.py	/^Vxq_term2 = -beta*0.5*np.dot(Vxq_term2c, (Vxq_term2a + Vxq_term2b.T))\/theta$/;"	v
+Vxq_term2	.\test_new_fipir_azCIKLY.py	/^Vxq_term2 = -beta*0.5*np.dot(Vxq_term2c, (Vxq_term2a + Vxq_term2b.T))\/theta$/;"	v
+Vxq_term2a	.\model_ew_azckily_bu.py	/^Vxq_term2a =   Vxq_term2a.reshape((nw, nx), order='F')$/;"	v
+Vxq_term2a	.\model_ew_azckily_bu.py	/^Vxq_term2a = 2*np.dot(Vx, psi_x_w) + np.dot(Vxx, psixkronpsiw)$/;"	v
+Vxq_term2a	.\test_new_fipir.py	/^Vxq_term2a = 2*np.dot(Vx, psi_x_w) + np.dot(Vxx, psixkronpsiw)$/;"	v
+Vxq_term2a	.\test_new_fipir.py	/^Vxq_term2a = Vxq_term2a.reshape((nw, nx), order='F')$/;"	v
+Vxq_term2a	.\test_new_fipir_azCIKLY.py	/^Vxq_term2a = 2*np.dot(Vx, psi_x_w) + np.dot(Vxx, psixkronpsiw)$/;"	v
+Vxq_term2a	.\test_new_fipir_azCIKLY.py	/^Vxq_term2a = Vxq_term2a.reshape((nw, nx), order='F')$/;"	v
+Vxq_term2b	.\model_ew_azckily_bu.py	/^Vxq_term2b =   Vxq_term2b.reshape((nx, nw), order='F')$/;"	v
+Vxq_term2b	.\model_ew_azckily_bu.py	/^Vxq_term2b =  np.dot(Vxx, psiwkronpsix)$/;"	v
+Vxq_term2b	.\test_new_fipir.py	/^Vxq_term2b = Vxq_term2b.reshape((nx, nw), order='F')$/;"	v
+Vxq_term2b	.\test_new_fipir.py	/^Vxq_term2b = np.dot(Vxx, psiwkronpsix)$/;"	v
+Vxq_term2b	.\test_new_fipir_azCIKLY.py	/^Vxq_term2b = Vxq_term2b.reshape((nx, nw), order='F')$/;"	v
+Vxq_term2b	.\test_new_fipir_azCIKLY.py	/^Vxq_term2b = np.dot(Vxx, psiwkronpsix)$/;"	v
+Vxq_term2c	.\model_ew_azckily_bu.py	/^Vxq_term2c =   np.dot(Vx,psi_w)$/;"	v
+Vxq_term2c	.\test_new_fipir.py	/^Vxq_term2c = np.dot(Vx, psi_w)$/;"	v
+Vxq_term2c	.\test_new_fipir_azCIKLY.py	/^Vxq_term2c = np.dot(Vx, psi_w)$/;"	v
+Vxx	.\model_ew_azckily_bu.py	/^Vxx = np.dot(Vxx_term_1, linalg.inv(inv_of_Vxx_term_2) ) $/;"	v
+Vxx	.\test_new_fipir.py	/^Vxx = np.dot(Vxx_term_1, scipy.linalg.inv(inv_of_Vxx_term_2))$/;"	v
+Vxx	.\test_new_fipir_azCIKLY.py	/^Vxx = np.dot(Vxx_term_1, scipy.linalg.inv(inv_of_Vxx_term_2))$/;"	v
+Vxx_term_1	.\model_ew_azckily_bu.py	/^Vxx_term_1 = du_dx_dx_at_ss + beta* np.dot(Vx, psi_x_x)$/;"	v
+Vxx_term_1	.\test_new_fipir.py	/^Vxx_term_1 = du_dx_dx_at_ss + beta * np.dot(Vx, psi_x_x)$/;"	v
+Vxx_term_1	.\test_new_fipir_azCIKLY.py	/^Vxx_term_1 = du_dx_dx_at_ss + beta * np.dot(Vx, psi_x_x)$/;"	v
+Yss_sol_sym	.\symbolic_ss_solution.py	/^Yss_sol_sym = B6*B1$/;"	v
+__init__	.\fipir.py	/^    def __init__(self, A=[], C=[], D=[], G=[], z0=0):$/;"	m	class:StateSpace
+__init__	.\fipir.py	/^    def __init__(self, statespace,  alpha = 0.33, delta = 0.1, gamma=1,$/;"	m	class:FullInfoModel
+__init__	.\fipir.py	/^    def __init__(self, statespace,  alpha = 0.33, delta = 0.1, gamma=1,$/;"	m	class:PartialInfoModel
+__init__	.\fipir.py	/^    def __init__(self, statespace,  alpha = 0.33, delta = 0.1, gamma=1,$/;"	m	class:RobustFullInfoModel
+__init__	.\fipir.py	/^    def __init__(self, statespace,  alpha = 0.33, delta = 0.1, gamma=1,$/;"	m	class:RobustPartialInfoModel
+__init__	.\fipir_aug.py	/^    def __init__(self, n_x=1, n_s=1, param_val_dic={},$/;"	m	class:SignalStateSpace
+__init__	.\fipir_aug.py	/^    def __init__(self, statespace, all_names,$/;"	m	class:FullInfoModel
+__init__	.\fipir_aug_old.py	/^    def __init__(self, A_num=[], C_num=[], D_num=[], G_num=[],$/;"	m	class:OldSignalStateSpace
+__init__	.\fipir_aug_old.py	/^    def __init__(self, n_x=1, n_s=1, param_val_dic={},$/;"	m	class:SignalStateSpace
+__init__	.\fipir_aug_old.py	/^    def __init__(self, statespace, all_names,$/;"	m	class:FullInfoModel
+__init__	.\fipir_new.py	/^    def __init__(self, A_num=[], C_num=[], D_num=[], G_num=[],$/;"	m	class:OldSignalStateSpace
+__init__	.\fipir_new.py	/^    def __init__(self, n_x=1, n_s=1, param_val_dic={},$/;"	m	class:SignalStateSpace2
+__init__	.\fipir_new.py	/^    def __init__(self, statespace, x_names, w_names, param_names,$/;"	m	class:FullInfoModel
+__init__	.\fipiro\fullinfo.py	/^    def __init__(self, statespace, all_names,$/;"	m	class:FullInfoModel
+__init__	.\fipiro\sspace.py	/^    def __init__(self, n_x=1, n_s=1, param_val_dic={},$/;"	m	class:SignalStateSpace
+__init__	.\fipiro\utils.py	/^    def __init__(self, equations, u_x_names=[], u_y_names=[], u_z_names=[],$/;"	m	class:UhligModel
+__init__	.\fipiro\utils.py	/^    def __init__(self, equations, x_names=[], w_names=[], param_names=[]):$/;"	m	class:ModelBase
+a	.\tryfonts.py	/^a = 2$/;"	v
+add_model_symbols_pi	.\fipir.py	/^    def add_model_symbols_pi(self):$/;"	m	class:PartialInfoModel
+add_model_symbols_rfi	.\fipir.py	/^    def add_model_symbols_rfi(self):$/;"	m	class:RobustFullInfoModel
+add_model_symbols_rpi	.\fipir.py	/^    def add_model_symbols_rpi(self):$/;"	m	class:RobustPartialInfoModel
+all_names	.\define_tfp_only_equilibrium_eqs.py	/^all_names = {$/;"	v
+all_names	.\fipiro\define_ciklyaz_infodate_aleads_equilibrium_eqs.py	/^all_names = {$/;"	v
+all_names	.\model_ew_azckily.py	/^all_names = {'x_names':x_names,'w_names':w_names,'param_names':param_names}$/;"	v
+all_names	.\model_ew_azckily_bu.py	/^all_names = {'x_names':x_names,'w_names':w_names,'param_names':param_names}$/;"	v
+all_names	.\model_ew_azckily_fipiro.py	/^all_names = {'x_names':x_names,'w_names':w_names,'param_names':param_names}$/;"	v
+all_names	.\try_uhlig.py	/^all_names = {$/;"	v
+all_names	.\use_fipiro.py	/^all_names = {$/;"	v
+all_param_values_dict	.\define_tfp_only_equilibrium_eqs.py	/^all_param_values_dict = {}$/;"	v
+all_param_values_dict	.\main-fipir-fi-march.py	/^all_param_values_dict = {}$/;"	v
+all_param_values_dict	.\model_ew_azckily.py	/^all_param_values_dict = {}$/;"	v
+all_param_values_dict	.\model_ew_azckily_bu.py	/^all_param_values_dict = {}$/;"	v
+all_param_values_dict	.\model_ew_azckily_fipiro.py	/^all_param_values_dict = {}$/;"	v
+all_param_values_dict	.\test_new_fipir.py	/^all_param_values_dict = {}$/;"	v
+all_param_values_dict	.\test_new_fipir_azCIKLY.py	/^all_param_values_dict = {}$/;"	v
+all_param_values_dict	.\use_fipiro.py	/^all_param_values_dict = {}$/;"	v
+all_param_values_names_dict	.\define_tfp_only_equilibrium_eqs.py	/^all_param_values_names_dict = {}$/;"	v
+all_vars_par_par	.\fipir.py	/^def all_vars_par_par(a_of_values, set_par_x, set_par_lev, par_tex_x, $/;"	f
+all_vars_par_par	.\fipir_aug.py	/^def all_vars_par_par(a_of_values, set_par_x, set_par_lev, par_tex_x,$/;"	f
+all_vars_par_par	.\fipir_aug_old.py	/^def all_vars_par_par(a_of_values, set_par_x, set_par_lev, par_tex_x,$/;"	f
+all_vars_par_par	.\fipir_new.py	/^def all_vars_par_par(a_of_values, set_par_x, set_par_lev, par_tex_x,$/;"	f
+alpha_value	.\define_tfp_only_equilibrium_eqs.py	/^alpha_value = 0.36$/;"	v
+alpha_value	.\main-fipir-fi-march.py	/^alpha_value = 0.36$/;"	v
+alpha_value	.\model_ew_azckily.py	/^alpha_value = 0.36$/;"	v
+alpha_value	.\model_ew_azckily_bu.py	/^alpha_value = 0.36$/;"	v
+alpha_value	.\model_ew_azckily_fipiro.py	/^alpha_value = 0.36$/;"	v
+alpha_value	.\symbolic_ss_solution.py	/^alpha_value = 0.36$/;"	v
+alpha_value	.\test_new_fipir.py	/^alpha_value = 0.36$/;"	v
+alpha_value	.\test_new_fipir_azCIKLY.py	/^alpha_value = 0.36$/;"	v
+alpha_value	.\use_fipiro.py	/^alpha_value = 0.36$/;"	v
+ass_sol_sym	.\symbolic_ss_solution.py	/^ass_sol_sym = mua$/;"	v
+az_dict	.\test_new_fipir.py	/^az_dict = {at: mua + zetaat + sigmaa*wat, atp1: mua + zetaatp1 + sigmaa*watp1}$/;"	v
+az_dict	.\test_new_fipir_azCIKLY.py	/^az_dict = {at: mua + zetaat + sigmaa*wat, atp1: mua + zetaatp1 + sigmaa*watp1}$/;"	v
+b	.\tryfonts.py	/^b = 3$/;"	v
+b_for_psi_w_w	.\model_ew_azckily_bu.py	/^b_for_psi_w_w = gwtwt + np.dot(Gamma_xt_wt, psiwkronIk) $/;"	v
+b_for_psi_w_w	.\test_new_fipir.py	/^b_for_psi_w_w = gwtwt + np.dot(Gamma_xt_wt, psiwkronIk)$/;"	v
+b_for_psi_w_w	.\test_new_fipir_azCIKLY.py	/^b_for_psi_w_w = gwtwt + np.dot(Gamma_xt_wt, psiwkronIk)$/;"	v
+b_for_psi_x_w	.\model_ew_azckily_bu.py	/^b_for_psi_x_w = - 2*gxtm1wt + np.dot(Gamma_xt_wt, psixkronIk) + np.dot(Gamma_xtm1_xt, Inkronpsiw)$/;"	v
+b_for_psi_x_w	.\test_new_fipir.py	/^    np.dot(Gamma_xt_wt, psixkronIk) + np.dot(Gamma_xtm1_xt, Inkronpsiw)$/;"	v
+b_for_psi_x_w	.\test_new_fipir_azCIKLY.py	/^    np.dot(Gamma_xt_wt, psixkronIk) + np.dot(Gamma_xtm1_xt, Inkronpsiw)$/;"	v
+b_for_vecpsiwq	.\model_ew_azckily_bu.py	/^b_for_vecpsiwq = -cons_for_psiwq.reshape((-1,1))$/;"	v
+b_for_vecpsiwq	.\test_new_fipir.py	/^b_for_vecpsiwq = -cons_for_psiwq.reshape((-1, 1))$/;"	v
+b_for_vecpsiwq	.\test_new_fipir_azCIKLY.py	/^b_for_vecpsiwq = -cons_for_psiwq.reshape((-1, 1))$/;"	v
+b_for_vecpsixq	.\model_ew_azckily_bu.py	/^b_for_vecpsixq = -cons_for_psixq.reshape((-1,1))$/;"	v
+b_for_vecpsixq	.\test_new_fipir.py	/^b_for_vecpsixq = -cons_for_psixq.reshape((-1, 1))$/;"	v
+b_for_vecpsixq	.\test_new_fipir_azCIKLY.py	/^b_for_vecpsixq = -cons_for_psixq.reshape((-1, 1))$/;"	v
+beta	.\model_ew_azckily_bu.py	/^beta = fi.beta.subs(fi.par_to_values_dict)$/;"	v
+beta	.\test_new_fipir.py	/^beta = elw_fi.beta.subs(elw_fi.par_to_values_dict)$/;"	v
+beta	.\test_new_fipir_azCIKLY.py	/^beta = elw_fi.beta.subs(elw_fi.par_to_values_dict)$/;"	v
+beta_value	.\define_tfp_only_equilibrium_eqs.py	/^beta_value = 0.98$/;"	v
+beta_value	.\main-fipir-fi-march.py	/^beta_value = 0.98$/;"	v
+beta_value	.\model_ew_azckily.py	/^beta_value = 0.98$/;"	v
+beta_value	.\model_ew_azckily_bu.py	/^beta_value = 0.98$/;"	v
+beta_value	.\model_ew_azckily_fipiro.py	/^beta_value = 0.98$/;"	v
+beta_value	.\symbolic_ss_solution.py	/^beta_value = 0.98$/;"	v
+beta_value	.\test_new_fipir.py	/^beta_value = 0.98$/;"	v
+beta_value	.\test_new_fipir_azCIKLY.py	/^beta_value = 0.98$/;"	v
+beta_value	.\use_fipiro.py	/^beta_value = 0.98$/;"	v
+block_indices	.\try_uhlig.py	/^                      block_indices=uhlig_block_indices,$/;"	v
+bmodel	.\try_uhlig.py	/^bmodel = u.ModelBase(glist_cikly_az_info, x_names=x_names,$/;"	v
+coe1	.\model_ew_azckily_bu.py	/^coe1 = 2*Gamma_xt_2 #is 7x7$/;"	v
+coe1	.\test_new_fipir.py	/^coe1 = 2*Gamma_xt_2  # is 7x7$/;"	v
+coe1	.\test_new_fipir_azCIKLY.py	/^coe1 = 2*Gamma_xt_2  # is 7x7$/;"	v
+coe2	.\model_ew_azckily_bu.py	/^coe2 = 2*Gamma_xtp1_2 # is 7x7$/;"	v
+coe2	.\test_new_fipir.py	/^coe2 = 2*Gamma_xtp1_2  # is 7x7$/;"	v
+coe2	.\test_new_fipir_azCIKLY.py	/^coe2 = 2*Gamma_xtp1_2  # is 7x7$/;"	v
+coe3	.\model_ew_azckily_bu.py	/^coe3 = psi_x # is 7x7$/;"	v
+coe3	.\test_new_fipir.py	/^coe3 = psi_x  # is 7x7$/;"	v
+coe3	.\test_new_fipir_azCIKLY.py	/^coe3 = psi_x  # is 7x7$/;"	v
+cons_for_psiqq	.\model_ew_azckily_bu.py	/^cons_for_psiqq = Eq52_cons + terms_in_Eq56 $/;"	v
+cons_for_psiqq	.\test_new_fipir.py	/^cons_for_psiqq = Eq52_cons + terms_in_Eq56$/;"	v
+cons_for_psiqq	.\test_new_fipir_azCIKLY.py	/^cons_for_psiqq = Eq52_cons + terms_in_Eq56$/;"	v
+cons_for_psiwq	.\model_ew_azckily_bu.py	/^cons_for_psiwq  = eq51_cons  + np.dot(Gx, psi_w)$/;"	v
+cons_for_psiwq	.\test_new_fipir.py	/^cons_for_psiwq = eq51_cons + np.dot(Gx, psi_w)$/;"	v
+cons_for_psiwq	.\test_new_fipir_azCIKLY.py	/^cons_for_psiwq = eq51_cons + np.dot(Gx, psi_w)$/;"	v
+cons_for_psixq	.\model_ew_azckily_bu.py	/^cons_for_psixq  = eq50cons  + np.dot(Gx, psi_x)$/;"	v
+cons_for_psixq	.\test_new_fipir.py	/^cons_for_psixq = eq50cons + np.dot(Gx, psi_x)$/;"	v
+cons_for_psixq	.\test_new_fipir_azCIKLY.py	/^cons_for_psixq = eq50cons + np.dot(Gx, psi_x)$/;"	v
+cons_psiqq_a	.\model_ew_azckily_bu.py	/^cons_psiqq_a = (np.dot(gxtp1, psi_w) + gwtp1)\/theta$/;"	v
+cons_psiqq_a	.\test_new_fipir.py	/^cons_psiqq_a = (np.dot(gxtp1, psi_w) + gwtp1)\/theta$/;"	v
+cons_psiqq_a	.\test_new_fipir_azCIKLY.py	/^cons_psiqq_a = (np.dot(gxtp1, psi_w) + gwtp1)\/theta$/;"	v
+cons_psiqq_ab	.\model_ew_azckily_bu.py	/^cons_psiqq_ab  = np.dot(cons_psiqq_a , cons_psiqq_b.T)$/;"	v
+cons_psiqq_ab	.\test_new_fipir.py	/^cons_psiqq_ab = np.dot(cons_psiqq_a, cons_psiqq_b.T)$/;"	v
+cons_psiqq_ab	.\test_new_fipir_azCIKLY.py	/^cons_psiqq_ab = np.dot(cons_psiqq_a, cons_psiqq_b.T)$/;"	v
+cons_psiqq_ac	.\model_ew_azckily_bu.py	/^cons_psiqq_ac  = np.dot(cons_psiqq_a , cons_psiqq_c)$/;"	v
+cons_psiqq_ac	.\test_new_fipir.py	/^cons_psiqq_ac = np.dot(cons_psiqq_a, cons_psiqq_c)$/;"	v
+cons_psiqq_ac	.\test_new_fipir_azCIKLY.py	/^cons_psiqq_ac = np.dot(cons_psiqq_a, cons_psiqq_c)$/;"	v
+cons_psiqq_ad	.\model_ew_azckily_bu.py	/^cons_psiqq_ad  = np.dot(cons_psiqq_a , cons_psiqq_d)$/;"	v
+cons_psiqq_ad	.\test_new_fipir.py	/^cons_psiqq_ad = np.dot(cons_psiqq_a, cons_psiqq_d)$/;"	v
+cons_psiqq_ad	.\test_new_fipir_azCIKLY.py	/^cons_psiqq_ad = np.dot(cons_psiqq_a, cons_psiqq_d)$/;"	v
+cons_psiqq_b	.\model_ew_azckily_bu.py	/^cons_psiqq_b =   2*np.dot(Vx, psi_w_q) + np.dot(Vxx, (psiwkronpsiq+psiqkronpsiw)) +  2*np.dot(Vxq, psi_w)$/;"	v
+cons_psiqq_b	.\test_new_fipir.py	/^cons_psiqq_b = 2*np.dot(Vx, psi_w_q) + np.dot(Vxx,$/;"	v
+cons_psiqq_b	.\test_new_fipir_azCIKLY.py	/^cons_psiqq_b = 2*np.dot(Vx, psi_w_q) + np.dot(Vxx,$/;"	v
+cons_psiqq_c	.\model_ew_azckily_bu.py	/^cons_psiqq_c = np.dot(cons_psiqq_c_1.T, E_w_dist)$/;"	v
+cons_psiqq_c	.\test_new_fipir.py	/^cons_psiqq_c = np.dot(cons_psiqq_c_1.T, E_w_dist)$/;"	v
+cons_psiqq_c	.\test_new_fipir_azCIKLY.py	/^cons_psiqq_c = np.dot(cons_psiqq_c_1.T, E_w_dist)$/;"	v
+cons_psiqq_c_1	.\model_ew_azckily_bu.py	/^cons_psiqq_c_1 = (np.dot(Vx, psi_w_w) + np.dot(Vxx, psiwkronpsiw)).reshape((nw,nw), order='F')$/;"	v
+cons_psiqq_c_1	.\test_new_fipir.py	/^cons_psiqq_c_1 = ($/;"	v
+cons_psiqq_c_1	.\test_new_fipir_azCIKLY.py	/^cons_psiqq_c_1 = ($/;"	v
+cons_psiqq_d	.\model_ew_azckily_bu.py	/^cons_psiqq_d = np.dot(cons_psiqq_c_1, E_w_dist)$/;"	v
+cons_psiqq_d	.\test_new_fipir.py	/^cons_psiqq_d = np.dot(cons_psiqq_c_1, E_w_dist)$/;"	v
+cons_psiqq_d	.\test_new_fipir_azCIKLY.py	/^cons_psiqq_d = np.dot(cons_psiqq_c_1, E_w_dist)$/;"	v
+d1d2_g_implicit_q_unevaluated	.\fipir_aug.py	/^    def d1d2_g_implicit_q_unevaluated(self):$/;"	m	class:FullInfoModel
+d1d2_g_implicit_q_unevaluated	.\fipir_aug_old.py	/^    def d1d2_g_implicit_q_unevaluated(self):$/;"	m	class:FullInfoModel
+d1d2_g_implicit_q_unevaluated	.\fipir_new.py	/^    def d1d2_g_implicit_q_unevaluated(self):$/;"	m	class:FullInfoModel
+d1d2_g_implicit_q_unevaluated	.\fipiro\fullinfo.py	/^    def d1d2_g_implicit_q_unevaluated(self):$/;"	m	class:FullInfoModel
+d1d2_g_x_w_unevaluated	.\fipir_aug.py	/^    def d1d2_g_x_w_unevaluated(self):$/;"	m	class:FullInfoModel
+d1d2_g_x_w_unevaluated	.\fipir_aug_old.py	/^    def d1d2_g_x_w_unevaluated(self):$/;"	m	class:FullInfoModel
+d1d2_g_x_w_unevaluated	.\fipir_new.py	/^    def d1d2_g_x_w_unevaluated(self):$/;"	m	class:FullInfoModel
+d1d2_g_x_w_unevaluated	.\fipiro\fullinfo.py	/^    def d1d2_g_x_w_unevaluated(self):$/;"	m	class:FullInfoModel
+d_second	.\model_ew_azckily_bu.py	/^d_second = dse_n$/;"	v
+d_second	.\test_new_fipir.py	/^d_second = dse_n$/;"	v
+d_second	.\test_new_fipir_azCIKLY.py	/^d_second = dse_n$/;"	v
+delta_value	.\define_tfp_only_equilibrium_eqs.py	/^delta_value = 0.1$/;"	v
+delta_value	.\main-fipir-fi-march.py	/^delta_value = 0.1$/;"	v
+delta_value	.\model_ew_azckily.py	/^delta_value = 0.1$/;"	v
+delta_value	.\model_ew_azckily_bu.py	/^delta_value = 0.1$/;"	v
+delta_value	.\model_ew_azckily_fipiro.py	/^delta_value = 0.1$/;"	v
+delta_value	.\symbolic_ss_solution.py	/^delta_value = 0.1$/;"	v
+delta_value	.\test_new_fipir.py	/^delta_value = 0.1$/;"	v
+delta_value	.\test_new_fipir_azCIKLY.py	/^delta_value = 0.1$/;"	v
+delta_value	.\use_fipiro.py	/^delta_value = 0.1$/;"	v
+du_dx	.\model_ew_azckily_bu.py	/^du_dx =  utility_sym_mat.jacobian([fi.xvar_t_sym])   $/;"	v
+du_dx	.\model_ew_azckily_bu.py	/^du_dx =  utility_sym_mat.jacobian([fi.xvar_t_sym])  $/;"	v
+du_dx	.\test_new_fipir.py	/^du_dx = utility_sym_mat.jacobian([elw_fi.xvar_t_sym])$/;"	v
+du_dx	.\test_new_fipir_azCIKLY.py	/^du_dx = utility_sym_mat.jacobian([elw_fi.xvar_t_sym])$/;"	v
+du_dx_at_ss	.\model_ew_azckily_bu.py	/^du_dx_at_ss = [u.subs(fi.normal_and_0_to_ss).subs(fi.ss_solutions_dict) for u in du_dx_nopar]$/;"	v
+du_dx_at_ss	.\model_ew_azckily_bu.py	/^du_dx_at_ss = fi.matrix2numpyfloat(sympy.Matrix(du_dx_at_ss))$/;"	v
+du_dx_at_ss	.\test_new_fipir.py	/^du_dx_at_ss = [u.subs(elw_fi.normal_and_0_to_ss).subs($/;"	v
+du_dx_at_ss	.\test_new_fipir.py	/^du_dx_at_ss = elw_fi.matrix2numpyfloat(sympy.Matrix(du_dx_at_ss))$/;"	v
+du_dx_at_ss	.\test_new_fipir_azCIKLY.py	/^du_dx_at_ss = [u.subs(elw_fi.normal_and_0_to_ss).subs($/;"	v
+du_dx_at_ss	.\test_new_fipir_azCIKLY.py	/^du_dx_at_ss = elw_fi.matrix2numpyfloat(sympy.Matrix(du_dx_at_ss))$/;"	v
+du_dx_dq	.\model_ew_azckily_bu.py	/^du_dx_dq = du_dx.jacobian(sympy.Matrix([q]))$/;"	v
+du_dx_dq	.\test_new_fipir.py	/^du_dx_dq = du_dx.jacobian(sympy.Matrix([q]))$/;"	v
+du_dx_dq	.\test_new_fipir_azCIKLY.py	/^du_dx_dq = du_dx.jacobian(sympy.Matrix([q]))$/;"	v
+du_dx_dq_at_ss	.\model_ew_azckily_bu.py	/^du_dx_dq_at_ss = du_dx_dq_at_ss.T.reshape(-1,1).T$/;"	v
+du_dx_dq_at_ss	.\model_ew_azckily_bu.py	/^du_dx_dq_at_ss = du_dx_dq_nopar.subs(fi.normal_and_0_to_ss).subs(fi.ss_solutions_dict)$/;"	v
+du_dx_dq_at_ss	.\model_ew_azckily_bu.py	/^du_dx_dq_at_ss = fi.matrix2numpyfloat(du_dx_dq_at_ss)$/;"	v
+du_dx_dq_at_ss	.\test_new_fipir.py	/^du_dx_dq_at_ss = du_dx_dq_at_ss.T.reshape(-1, 1).T$/;"	v
+du_dx_dq_at_ss	.\test_new_fipir.py	/^du_dx_dq_at_ss = du_dx_dq_nopar.subs($/;"	v
+du_dx_dq_at_ss	.\test_new_fipir.py	/^du_dx_dq_at_ss = elw_fi.matrix2numpyfloat(du_dx_dq_at_ss)$/;"	v
+du_dx_dq_at_ss	.\test_new_fipir_azCIKLY.py	/^du_dx_dq_at_ss = du_dx_dq_at_ss.T.reshape(-1, 1).T$/;"	v
+du_dx_dq_at_ss	.\test_new_fipir_azCIKLY.py	/^du_dx_dq_at_ss = du_dx_dq_nopar.subs($/;"	v
+du_dx_dq_at_ss	.\test_new_fipir_azCIKLY.py	/^du_dx_dq_at_ss = elw_fi.matrix2numpyfloat(du_dx_dq_at_ss)$/;"	v
+du_dx_dq_nopar	.\model_ew_azckily_bu.py	/^du_dx_dq_nopar =  du_dx_dq.subs(fi.par_to_values_dict)$/;"	v
+du_dx_dq_nopar	.\test_new_fipir.py	/^du_dx_dq_nopar = du_dx_dq.subs(elw_fi.par_to_values_dict)$/;"	v
+du_dx_dq_nopar	.\test_new_fipir_azCIKLY.py	/^du_dx_dq_nopar = du_dx_dq.subs(elw_fi.par_to_values_dict)$/;"	v
+du_dx_dx	.\model_ew_azckily_bu.py	/^du_dx_dx = du_dx.jacobian(fi.xvar_t_sym)$/;"	v
+du_dx_dx	.\test_new_fipir.py	/^du_dx_dx = du_dx.jacobian(elw_fi.xvar_t_sym)$/;"	v
+du_dx_dx	.\test_new_fipir_azCIKLY.py	/^du_dx_dx = du_dx.jacobian(elw_fi.xvar_t_sym)$/;"	v
+du_dx_dx_at_ss	.\model_ew_azckily_bu.py	/^du_dx_dx_at_ss = du_dx_dx_at_ss.T.reshape(-1,1).T$/;"	v
+du_dx_dx_at_ss	.\model_ew_azckily_bu.py	/^du_dx_dx_at_ss = du_dx_dx_nopar.subs(fi.normal_and_0_to_ss).subs(fi.ss_solutions_dict)$/;"	v
+du_dx_dx_at_ss	.\model_ew_azckily_bu.py	/^du_dx_dx_at_ss = fi.matrix2numpyfloat(du_dx_dx_at_ss)$/;"	v
+du_dx_dx_at_ss	.\test_new_fipir.py	/^du_dx_dx_at_ss = du_dx_dx_at_ss.T.reshape(-1, 1).T$/;"	v
+du_dx_dx_at_ss	.\test_new_fipir.py	/^du_dx_dx_at_ss = du_dx_dx_nopar.subs($/;"	v
+du_dx_dx_at_ss	.\test_new_fipir.py	/^du_dx_dx_at_ss = elw_fi.matrix2numpyfloat(du_dx_dx_at_ss)$/;"	v
+du_dx_dx_at_ss	.\test_new_fipir_azCIKLY.py	/^du_dx_dx_at_ss = du_dx_dx_at_ss.T.reshape(-1, 1).T$/;"	v
+du_dx_dx_at_ss	.\test_new_fipir_azCIKLY.py	/^du_dx_dx_at_ss = du_dx_dx_nopar.subs($/;"	v
+du_dx_dx_at_ss	.\test_new_fipir_azCIKLY.py	/^du_dx_dx_at_ss = elw_fi.matrix2numpyfloat(du_dx_dx_at_ss)$/;"	v
+du_dx_dx_nopar	.\model_ew_azckily_bu.py	/^du_dx_dx_nopar =  du_dx_dx.subs(fi.par_to_values_dict)$/;"	v
+du_dx_dx_nopar	.\test_new_fipir.py	/^du_dx_dx_nopar = du_dx_dx.subs(elw_fi.par_to_values_dict)$/;"	v
+du_dx_dx_nopar	.\test_new_fipir_azCIKLY.py	/^du_dx_dx_nopar = du_dx_dx.subs(elw_fi.par_to_values_dict)$/;"	v
+du_dx_nopar	.\model_ew_azckily_bu.py	/^du_dx_nopar =  [u.subs(fi.par_to_values_dict) for u in list(du_dx)]$/;"	v
+du_dx_nopar	.\test_new_fipir.py	/^du_dx_nopar = [u.subs(elw_fi.par_to_values_dict) for u in list(du_dx)]$/;"	v
+du_dx_nopar	.\test_new_fipir_azCIKLY.py	/^du_dx_nopar = [u.subs(elw_fi.par_to_values_dict) for u in list(du_dx)]$/;"	v
+elw_fi	.\main-fipir-fi-march.py	/^elw_fi = fipir_new.FullInfoModel(ss_elw, x_names, w_names, param_names,$/;"	v
+elw_fi	.\test_new_fipir.py	/^elw_fi = fipir_new.FullInfoModel(ss_elw, x_names, w_names, param_names,$/;"	v
+elw_fi	.\test_new_fipir_azCIKLY.py	/^elw_fi = fipir_new.FullInfoModel(ss_elw, x_names, w_names, param_names,$/;"	v
+emua	.\symbolic_ss_solution.py	/^emua = sympy.exp(mua)$/;"	v
+eq50cons	.\model_ew_azckily_bu.py	/^eq50cons = eq50cons_1 + eq50cons_2 + eq50cons_3$/;"	v
+eq50cons	.\test_new_fipir.py	/^eq50cons = eq50cons_1 + eq50cons_2 + eq50cons_3$/;"	v
+eq50cons	.\test_new_fipir_azCIKLY.py	/^eq50cons = eq50cons_1 + eq50cons_2 + eq50cons_3$/;"	v
+eq50cons_1	.\model_ew_azckily_bu.py	/^eq50cons_1 = 2*gxtm1q + np.dot(Gamma_xtm1_xtp1, Inkronpsiq) +  np.dot(Gamma_xtm1_xt, Inkronpsiq)$/;"	v
+eq50cons_1	.\test_new_fipir.py	/^    np.dot(Gamma_xtm1_xtp1, Inkronpsiq) + np.dot(Gamma_xtm1_xt, Inkronpsiq)$/;"	v
+eq50cons_1	.\test_new_fipir_azCIKLY.py	/^    np.dot(Gamma_xtm1_xtp1, Inkronpsiq) + np.dot(Gamma_xtm1_xt, Inkronpsiq)$/;"	v
+eq50cons_2	.\model_ew_azckily_bu.py	/^eq50cons_2 = np.dot(eq50cons_2_a+eq50cons_2_b , psi_x)$/;"	v
+eq50cons_2	.\test_new_fipir.py	/^eq50cons_2 = np.dot(eq50cons_2_a+eq50cons_2_b, psi_x)$/;"	v
+eq50cons_2	.\test_new_fipir_azCIKLY.py	/^eq50cons_2 = np.dot(eq50cons_2_a+eq50cons_2_b, psi_x)$/;"	v
+eq50cons_2_a	.\model_ew_azckily_bu.py	/^eq50cons_2_a  = 2*gxtq + 2*np.dot(Gamma_xtp1_q,psi_x) $/;"	v
+eq50cons_2_a	.\test_new_fipir.py	/^eq50cons_2_a = 2*gxtq + 2*np.dot(Gamma_xtp1_q, psi_x)$/;"	v
+eq50cons_2_a	.\test_new_fipir_azCIKLY.py	/^eq50cons_2_a = 2*gxtq + 2*np.dot(Gamma_xtp1_q, psi_x)$/;"	v
+eq50cons_2_b	.\model_ew_azckily_bu.py	/^eq50cons_2_b  = np.dot(Gamma_xt_xtp1, Inkronpsiq) + np.dot(Gamma_xt_xt, psiqkronIn) $/;"	v
+eq50cons_2_b	.\test_new_fipir.py	/^    np.dot(Gamma_xt_xt, psiqkronIn)$/;"	v
+eq50cons_2_b	.\test_new_fipir_azCIKLY.py	/^    np.dot(Gamma_xt_xt, psiqkronIn)$/;"	v
+eq50cons_3	.\model_ew_azckily_bu.py	/^eq50cons_3 = np.concatenate(eq50cons_3_list)$/;"	v
+eq50cons_3	.\test_new_fipir.py	/^eq50cons_3 = np.concatenate(eq50cons_3_list)$/;"	v
+eq50cons_3	.\test_new_fipir_azCIKLY.py	/^eq50cons_3 = np.concatenate(eq50cons_3_list)$/;"	v
+eq50cons_3_list	.\model_ew_azckily_bu.py	/^eq50cons_3_list = [np.dot(E_w_dist.T, Gamma_xtm1_wtp1[i,:].reshape((nw,nx), order='F')) for i in range(nx)]$/;"	v
+eq50cons_3_list	.\test_new_fipir.py	/^eq50cons_3_list = [np.dot(E_w_dist.T, Gamma_xtm1_wtp1[i, :].reshape($/;"	v
+eq50cons_3_list	.\test_new_fipir_azCIKLY.py	/^eq50cons_3_list = [np.dot(E_w_dist.T, Gamma_xtm1_wtp1[i, :].reshape($/;"	v
+eq51_coe	.\model_ew_azckily_bu.py	/^eq51_coe = 2* Gamma_xt_2$/;"	v
+eq51_coe	.\test_new_fipir.py	/^eq51_coe = 2 * Gamma_xt_2$/;"	v
+eq51_coe	.\test_new_fipir_azCIKLY.py	/^eq51_coe = 2 * Gamma_xt_2$/;"	v
+eq51_cons	.\model_ew_azckily_bu.py	/^eq51_cons = eq51_cons_1 + eq51_cons_2 + eq51_cons_3$/;"	v
+eq51_cons	.\test_new_fipir.py	/^eq51_cons = eq51_cons_1 + eq51_cons_2 + eq51_cons_3$/;"	v
+eq51_cons	.\test_new_fipir_azCIKLY.py	/^eq51_cons = eq51_cons_1 + eq51_cons_2 + eq51_cons_3$/;"	v
+eq51_cons_1	.\model_ew_azckily_bu.py	/^eq51_cons_1 = 2*gwtq + np.dot(Gamma_xtp1_wt, psiqkronIk) + np.dot(Gamma_xt_wt, psiqkronIk)$/;"	v
+eq51_cons_1	.\test_new_fipir.py	/^    np.dot(Gamma_xtp1_wt, psiqkronIk) + np.dot(Gamma_xt_wt, psiqkronIk)$/;"	v
+eq51_cons_1	.\test_new_fipir_azCIKLY.py	/^    np.dot(Gamma_xtp1_wt, psiqkronIk) + np.dot(Gamma_xt_wt, psiqkronIk)$/;"	v
+eq51_cons_2	.\model_ew_azckily_bu.py	/^eq51_cons_2 = np.dot(Gamma_xt_q, psi_w)$/;"	v
+eq51_cons_2	.\test_new_fipir.py	/^eq51_cons_2 = np.dot(Gamma_xt_q, psi_w)$/;"	v
+eq51_cons_2	.\test_new_fipir_azCIKLY.py	/^eq51_cons_2 = np.dot(Gamma_xt_q, psi_w)$/;"	v
+eq51_cons_3	.\model_ew_azckily_bu.py	/^eq51_cons_3 = eq51_cons_3a + eq51_cons_3b$/;"	v
+eq51_cons_3	.\test_new_fipir.py	/^eq51_cons_3 = eq51_cons_3a + eq51_cons_3b$/;"	v
+eq51_cons_3	.\test_new_fipir_azCIKLY.py	/^eq51_cons_3 = eq51_cons_3a + eq51_cons_3b$/;"	v
+eq51_cons_3a	.\model_ew_azckily_bu.py	/^eq51_cons_3a =  np.concatenate(eq51_cons_3a_list)$/;"	v
+eq51_cons_3a	.\test_new_fipir.py	/^eq51_cons_3a = np.concatenate(eq51_cons_3a_list)$/;"	v
+eq51_cons_3a	.\test_new_fipir_azCIKLY.py	/^eq51_cons_3a = np.concatenate(eq51_cons_3a_list)$/;"	v
+eq51_cons_3a_list	.\model_ew_azckily_bu.py	/^eq51_cons_3a_list = [np.dot(E_w_dist.T, Gamma_wtp1_wt[i,:].reshape((nw,nw), order='F')) for i in range(nx)]$/;"	v
+eq51_cons_3a_list	.\test_new_fipir.py	/^eq51_cons_3a_list = [np.dot(E_w_dist.T, Gamma_wtp1_wt[i, :].reshape($/;"	v
+eq51_cons_3a_list	.\test_new_fipir_azCIKLY.py	/^eq51_cons_3a_list = [np.dot(E_w_dist.T, Gamma_wtp1_wt[i, :].reshape($/;"	v
+eq51_cons_3b	.\model_ew_azckily_bu.py	/^eq51_cons_3b =  np.concatenate(eq51_cons_3b_list)$/;"	v
+eq51_cons_3b	.\test_new_fipir.py	/^eq51_cons_3b = np.concatenate(eq51_cons_3b_list)$/;"	v
+eq51_cons_3b	.\test_new_fipir_azCIKLY.py	/^eq51_cons_3b = np.concatenate(eq51_cons_3b_list)$/;"	v
+eq51_cons_3b_list	.\model_ew_azckily_bu.py	/^eq51_cons_3b_list = [np.dot(E_w_dist.T, Gamma_wt_wtp1[i,:].reshape((nw,nw), order='F')) for i in range(nx)]$/;"	v
+eq51_cons_3b_list	.\test_new_fipir.py	/^eq51_cons_3b_list = [np.dot(E_w_dist.T, Gamma_wt_wtp1[i, :].reshape($/;"	v
+eq51_cons_3b_list	.\test_new_fipir_azCIKLY.py	/^eq51_cons_3b_list = [np.dot(E_w_dist.T, Gamma_wt_wtp1[i, :].reshape($/;"	v
+eq_conditions	.\main-fipir-fi-march.py	/^                                 eq_conditions=glist_cikly_az,$/;"	v
+eq_conditions	.\model_ew_azckily.py	/^                             eq_conditions=glist_cikly_az,$/;"	v
+eq_conditions	.\model_ew_azckily_bu.py	/^                             eq_conditions=glist_cikly_az,$/;"	v
+eq_conditions	.\model_ew_azckily_fipiro.py	/^                             eq_conditions=glist_cikly_az,$/;"	v
+eq_conditions	.\test_new_fipir.py	/^                                 eq_conditions=glist_cikly_az,$/;"	v
+eq_conditions	.\test_new_fipir_azCIKLY.py	/^                                 eq_conditions=glist_cikly_az,$/;"	v
+eq_conditions	.\use_fipiro.py	/^                             eq_conditions=glist_cikly_az,$/;"	v
+eq_conditions_TFP_FI_CIKLY_az_usedating_aleads	.\fipiro\define_ciklyaz_infodate_aleads_equilibrium_eqs.py	/^def eq_conditions_TFP_FI_CIKLY_az_usedating_aleads():$/;"	f
+eq_conditions_toy_FI_CIKLY_az	.\main-fipir-fi-march.py	/^def eq_conditions_toy_FI_CIKLY_az():$/;"	f
+eq_conditions_toy_FI_CIKLY_az	.\model_ew_azckily.py	/^def eq_conditions_toy_FI_CIKLY_az():$/;"	f
+eq_conditions_toy_FI_CIKLY_az	.\model_ew_azckily_bu.py	/^def eq_conditions_toy_FI_CIKLY_az():$/;"	f
+eq_conditions_toy_FI_CIKLY_az	.\model_ew_azckily_fipiro.py	/^def eq_conditions_toy_FI_CIKLY_az():$/;"	f
+eq_conditions_toy_FI_CIKLY_az	.\test_new_fipir.py	/^def eq_conditions_toy_FI_CIKLY_az():$/;"	f
+eq_conditions_toy_FI_CIKLY_az	.\test_new_fipir_azCIKLY.py	/^def eq_conditions_toy_FI_CIKLY_az():$/;"	f
+eq_conditions_toy_FI_CIKLY_az	.\use_fipiro.py	/^def eq_conditions_toy_FI_CIKLY_az():$/;"	f
+eq_conditions_toy_FI_CIKLY_az_infodate_contK	.\main-fipir-fi-march.py	/^def eq_conditions_toy_FI_CIKLY_az_infodate_contK():$/;"	f
+eq_conditions_toy_FI_CIKLY_az_infodate_contK	.\test_new_fipir.py	/^def eq_conditions_toy_FI_CIKLY_az_infodate_contK():$/;"	f
+eq_conditions_toy_FI_CIKLY_az_infodate_contK	.\test_new_fipir_azCIKLY.py	/^def eq_conditions_toy_FI_CIKLY_az_infodate_contK():$/;"	f
+eq_conds_TFP_FI_CIKLY_az_infodating_aconte_sta_all	.\define_tfp_only_equilibrium_eqs.py	/^def eq_conds_TFP_FI_CIKLY_az_infodating_aconte_sta_all():$/;"	f
+eq_conds_TFP_FI_CIKLY_az_infodating_aleads_sta_all	.\define_tfp_only_equilibrium_eqs.py	/^def eq_conds_TFP_FI_CIKLY_az_infodating_aleads_sta_all():$/;"	f
+eq_conds_TFP_FI_CIKLY_az_infodating_aleads_sta_all	.\try_uhlig.py	/^def eq_conds_TFP_FI_CIKLY_az_infodating_aleads_sta_all():$/;"	f
+eq_conds_TFP_FI_CIKLY_az_usedating_aconte_sta_all	.\define_tfp_only_equilibrium_eqs.py	/^def eq_conds_TFP_FI_CIKLY_az_usedating_aconte_sta_all():$/;"	f
+eq_conds_TFP_FI_CIKLY_az_usedating_aleads_sta_all	.\define_tfp_only_equilibrium_eqs.py	/^def eq_conds_TFP_FI_CIKLY_az_usedating_aleads_sta_all():$/;"	f
+ex_block_index	.\try_uhlig.py	/^ex_block_index = (0)$/;"	v
+exp	.\define_tfp_only_equilibrium_eqs.py	/^from math import exp$/;"	i
+exp	.\try_uhlig.py	/^from math import exp$/;"	i
+explain_phi_x	.\fipir.py	/^    def explain_phi_x(self):$/;"	m	class:FullInfoModel
+explain_phi_x	.\fipir_aug.py	/^    def explain_phi_x(self):$/;"	m	class:FullInfoModel
+explain_phi_x	.\fipir_aug_old.py	/^    def explain_phi_x(self):$/;"	m	class:FullInfoModel
+explain_phi_x	.\fipir_new.py	/^    def explain_phi_x(self):$/;"	m	class:FullInfoModel
+explain_phi_x	.\fipiro\fullinfo.py	/^    def explain_phi_x(self):$/;"	m	class:FullInfoModel
+f	.\use_fipiro.py	/^from fipiro import fullinfo as f$/;"	i
+fi	.\model_ew_azckily.py	/^fi = fipir_aug.FullInfoModel(ssp, all_names,$/;"	v
+fi	.\model_ew_azckily_bu.py	/^fi = fipir_aug.FullInfoModel(ssp, all_names,$/;"	v
+fi	.\model_ew_azckily_fipiro.py	/^fi = fipiro.FullInfoModel(ssp, all_names,$/;"	v
+fi	.\use_fipiro.py	/^fi = f.FullInfoModel(ssp, all_names,$/;"	v
+fipir_aug	.\model_ew_azckily.py	/^import fipir_aug$/;"	i
+fipir_aug	.\model_ew_azckily_bu.py	/^import fipir_aug$/;"	i
+fipir_new	.\main-fipir-fi-march.py	/^import fipir_new$/;"	i
+fipir_new	.\test_new_fipir.py	/^import fipir_new$/;"	i
+fipir_new	.\test_new_fipir_azCIKLY.py	/^import fipir_new$/;"	i
+fipiro	.\model_ew_azckily_fipiro.py	/^import fipiro$/;"	i
+fipiro	.\try_uhlig.py	/^import fipiro$/;"	i
+fipiro	.\try_uhlig.py	/^import fipiro.utils as u$/;"	i
+fipiro	.\use_fipiro.py	/^import fipiro.fullinfo$/;"	i
+fipiro	.\use_fipiro.py	/^import fipiro.sspace$/;"	i
+fipiro	.\use_fipiro.py	/^import fipiro.utils$/;"	i
+foo	.\symbolic_ss_solution.py	/^foo = [x.subs(tech_prefs_prod_dict) for x in [B1, B2, B3, B4, B5, B6]]$/;"	v
+from_linlin_to_loglog	.\fipir.py	/^    def from_linlin_to_loglog(self, coeffs_of_linlin, ss_vec_xw, sel_vec):$/;"	m	class:FullInfoModel
+from_linlin_to_loglog	.\fipir_aug.py	/^    def from_linlin_to_loglog(self, coeffs_of_linlin, ss_vec_xw, sel_vec):$/;"	m	class:FullInfoModel
+from_linlin_to_loglog	.\fipir_aug_old.py	/^    def from_linlin_to_loglog(self, coeffs_of_linlin, ss_vec_xw, sel_vec):$/;"	m	class:FullInfoModel
+from_linlin_to_loglog	.\fipir_new.py	/^    def from_linlin_to_loglog(self, coeffs_of_linlin, ss_vec_xw, sel_vec):$/;"	m	class:FullInfoModel
+from_linlin_to_loglog	.\fipiro\fullinfo.py	/^    def from_linlin_to_loglog(self, coeffs_of_linlin, ss_vec_xw, sel_vec):$/;"	m	class:FullInfoModel
+fullinfo	.\use_fipiro.py	/^import fipiro.fullinfo$/;"	i
+get_dgdxw12_evaluated_at_ss	.\fipiro\fullinfo.py	/^    def get_dgdxw12_evaluated_at_ss(self, mod='numpy'):$/;"	m	class:FullInfoModel
+get_evaluated_dgdxw12	.\fipir_aug.py	/^    def get_evaluated_dgdxw12(self, eq_system=[], param_vals_d={}, mod='numpy'):$/;"	m	class:FullInfoModel
+get_evaluated_dgdxw12	.\fipir_aug_old.py	/^    def get_evaluated_dgdxw12(self, eq_system=[], param_vals_d={}, mod='numpy'):$/;"	m	class:FullInfoModel
+get_evaluated_dgdxw12	.\fipir_new.py	/^    def get_evaluated_dgdxw12(self, eq_system=[], param_vals_d={}, mod='numpy'):$/;"	m	class:FullInfoModel
+get_first_ord_coef_rfi	.\fipir.py	/^    def get_first_ord_coef_rfi(self, isPartialInfo=False, isloglog=False):$/;"	m	class:RobustFullInfoModel
+get_first_ord_coef_rpi	.\fipir.py	/^    def get_first_ord_coef_rpi(self, isPartialInfo=True, isloglog=False):$/;"	m	class:RobustPartialInfoModel
+get_first_order_approx_coeff	.\fipir.py	/^    def get_first_order_approx_coeff(self,isPartialInfo=False, isloglog=False):$/;"	m	class:FullInfoModel
+get_first_order_approx_coeff_fi	.\fipir_aug.py	/^    def get_first_order_approx_coeff_fi(self, eqs=[], param_vals_d={}, mod='numpy'):$/;"	m	class:FullInfoModel
+get_first_order_approx_coeff_fi	.\fipir_aug_old.py	/^    def get_first_order_approx_coeff_fi(self, eqs=[],$/;"	m	class:FullInfoModel
+get_first_order_approx_coeff_fi	.\fipir_new.py	/^    def get_first_order_approx_coeff_fi(self, eqs=[],$/;"	m	class:FullInfoModel
+get_first_order_approx_coeff_fi	.\fipiro\fullinfo.py	/^    def get_first_order_approx_coeff_fi(self, eqs=[], param_vals_d={}, mod='numpy',$/;"	m	class:FullInfoModel
+get_gq_at_ss	.\fipir.py	/^    def get_gq_at_ss(self, symbolic_elem='just_x_w', $/;"	m	class:RobustFullInfoModel
+get_gq_at_ss	.\fipir.py	/^    def get_gq_at_ss(self, symbolic_elem='just_x_w', $/;"	m	class:RobustPartialInfoModel
+get_modelsymbols	.\fipir.py	/^    def get_modelsymbols(self, modtype='toy'):$/;"	m	class:FullInfoModel
+get_second_order_approx_coeff_fi	.\fipir_aug.py	/^    def get_second_order_approx_coeff_fi(self, psi_x, psi_w, psi_q, d_first, d_second):$/;"	m	class:FullInfoModel
+get_second_order_approx_coeff_fi	.\fipir_aug_old.py	/^    def get_second_order_approx_coeff_fi(self, psi_x, psi_w, psi_q, d_first, d_second):$/;"	m	class:FullInfoModel
+get_second_order_approx_coeff_fi	.\fipir_new.py	/^    def get_second_order_approx_coeff_fi(self, psi_x, psi_w, d_first, d_second):$/;"	m	class:FullInfoModel
+get_second_order_coeff_fi	.\fipiro\fullinfo.py	/^    def get_second_order_coeff_fi(self):$/;"	m	class:FullInfoModel
+get_second_order_coeff_fi_from_fo	.\fipiro\fullinfo.py	/^    def get_second_order_coeff_fi_from_fo(self, psi_x, psi_w, psi_q, d_first, d_second):$/;"	m	class:FullInfoModel
+get_sstate_sol_dict_from_sympy_eqs	.\fipir_aug.py	/^def get_sstate_sol_dict_from_sympy_eqs(glist, xss_sym_dict, xini_dict={}):$/;"	f
+get_sstate_sol_dict_from_sympy_eqs	.\fipir_aug_old.py	/^def get_sstate_sol_dict_from_sympy_eqs(glist, xss_sym_dict, xini_dict={}):$/;"	f
+get_sstate_sol_dict_from_sympy_eqs	.\fipir_new.py	/^def get_sstate_sol_dict_from_sympy_eqs(glist, xss_sym_dict, xini_dict={}):$/;"	f
+get_sstate_sol_dict_from_sympy_eqs	.\fipiro\utils.py	/^def get_sstate_sol_dict_from_sympy_eqs(glist, xss_sym_dict, xini_dict={}):$/;"	f
+get_sstate_sol_dict_from_sympy_eqs	.\fipiro\utils_before_introducing_classes.py	/^def get_sstate_sol_dict_from_sympy_eqs(glist, xss_sym_dict, xini_dict={}):$/;"	f
+get_stationary_Sigma_Kgain	.\fipir.py	/^    def get_stationary_Sigma_Kgain(self):$/;"	m	class:PartialInfoModel
+get_steady_state_x_dict	.\fipir.py	/^    def get_steady_state_x_dict(self):$/;"	m	class:FullInfoModel
+get_steady_state_x_values	.\fipir.py	/^    def get_steady_state_x_values(self):$/;"	m	class:FullInfoModel
+glist_cikly_az	.\fipiro\define_ciklyaz_infodate_aleads_equilibrium_eqs.py	/^glist_cikly_az = eq_conditions_toy_FI_CIKLY_az()$/;"	v
+glist_cikly_az	.\main-fipir-fi-march.py	/^glist_cikly_az = eq_conditions_toy_FI_CIKLY_az()$/;"	v
+glist_cikly_az	.\model_ew_azckily.py	/^glist_cikly_az = eq_conditions_toy_FI_CIKLY_az()$/;"	v
+glist_cikly_az	.\model_ew_azckily_bu.py	/^glist_cikly_az = eq_conditions_toy_FI_CIKLY_az()$/;"	v
+glist_cikly_az	.\model_ew_azckily_fipiro.py	/^glist_cikly_az = eq_conditions_toy_FI_CIKLY_az()$/;"	v
+glist_cikly_az	.\test_new_fipir.py	/^glist_cikly_az = eq_conditions_toy_FI_CIKLY_az()$/;"	v
+glist_cikly_az	.\test_new_fipir_azCIKLY.py	/^glist_cikly_az = eq_conditions_toy_FI_CIKLY_az()$/;"	v
+glist_cikly_az	.\use_fipiro.py	/^glist_cikly_az = eq_conditions_toy_FI_CIKLY_az()$/;"	v
+glist_cikly_az_info_date	.\test_new_fipir_azCIKLY.py	/^glist_cikly_az_info_date = eq_conditions_toy_FI_CIKLY_az_infodate_contK()$/;"	v
+glist_cikly_z	.\test_new_fipir.py	/^glist_cikly_z = [x.subs(az_dict) for x in glist_cikly_az]$/;"	v
+glist_cikly_z_info	.\define_tfp_only_equilibrium_eqs.py	/^glist_cikly_z_info = [x.subs(az1) for x in glist_cikly_az_info]$/;"	v
+glist_cikly_z_info_conte	.\define_tfp_only_equilibrium_eqs.py	/^glist_cikly_z_info_conte = [x.subs(az3) for x in glist_cikly_az_info_conte]$/;"	v
+glist_cikly_z_use	.\define_tfp_only_equilibrium_eqs.py	/^glist_cikly_z_use = [x.subs(az2) for x in glist_cikly_az_use]$/;"	v
+glist_cikly_z_use_conte	.\define_tfp_only_equilibrium_eqs.py	/^glist_cikly_z_use_conte = [x.subs(az4) for x in glist_cikly_az_use_conte]$/;"	v
+glist_ckl_az	.\test_new_fipir.py	/^glist_ckl_az = [x.subs(invout_dict) for x in glist_cikly_az]$/;"	v
+glist_ckl_az_info	.\define_tfp_only_equilibrium_eqs.py	/^glist_ckl_az_info = [x.subs(iy1) for x in glist_cikly_az_info]$/;"	v
+glist_ckl_az_info_conte	.\define_tfp_only_equilibrium_eqs.py	/^glist_ckl_az_info_conte = [x.subs(iy3) for x in glist_cikly_az_info_conte]$/;"	v
+glist_ckl_az_use	.\define_tfp_only_equilibrium_eqs.py	/^glist_ckl_az_use = [x.subs(iy2) for x in glist_cikly_az_use]$/;"	v
+glist_ckl_az_use_conte	.\define_tfp_only_equilibrium_eqs.py	/^glist_ckl_az_use_conte = [x.subs(iy4) for x in glist_cikly_az_use_conte]$/;"	v
+glist_ckl_z	.\test_new_fipir.py	/^glist_ckl_z = [x.subs(az_dict) for x in glist_ckl_az]$/;"	v
+glist_ckl_z_info	.\define_tfp_only_equilibrium_eqs.py	/^glist_ckl_z_info = [x.subs(az1) for x in glist_ckl_az_info]$/;"	v
+glist_ckl_z_info_conte	.\define_tfp_only_equilibrium_eqs.py	/^glist_ckl_z_info_conte = [x.subs(az3) for x in glist_ckl_az_info_conte]$/;"	v
+glist_ckl_z_use	.\define_tfp_only_equilibrium_eqs.py	/^glist_ckl_z_use = [x.subs(az2) for x in glist_ckl_az_use]$/;"	v
+glist_ckl_z_use_conte	.\define_tfp_only_equilibrium_eqs.py	/^glist_ckl_z_use_conte = [x.subs(az4) for x in glist_ckl_az_use_conte]$/;"	v
+gqq	.\model_ew_azckily_bu.py	/^gqq = d_second[35]$/;"	v
+gqq	.\test_new_fipir.py	/^gqq = d_second[35]$/;"	v
+gqq	.\test_new_fipir_azCIKLY.py	/^gqq = d_second[35]$/;"	v
+gqwt	.\model_ew_azckily_bu.py	/^gqwt = d_second[34]$/;"	v
+gqwt	.\test_new_fipir.py	/^gqwt = d_second[34]$/;"	v
+gqwt	.\test_new_fipir_azCIKLY.py	/^gqwt = d_second[34]$/;"	v
+gqwtp1	.\model_ew_azckily_bu.py	/^gqwtp1 = d_second[33]$/;"	v
+gqwtp1	.\test_new_fipir.py	/^gqwtp1 = d_second[33]$/;"	v
+gqwtp1	.\test_new_fipir_azCIKLY.py	/^gqwtp1 = d_second[33]$/;"	v
+gqxt	.\model_ew_azckily_bu.py	/^gqxt = d_second[31]$/;"	v
+gqxt	.\test_new_fipir.py	/^gqxt = d_second[31]$/;"	v
+gqxt	.\test_new_fipir_azCIKLY.py	/^gqxt = d_second[31]$/;"	v
+gqxtm1	.\model_ew_azckily_bu.py	/^gqxtm1 = d_second[32]$/;"	v
+gqxtm1	.\test_new_fipir.py	/^gqxtm1 = d_second[32]$/;"	v
+gqxtm1	.\test_new_fipir_azCIKLY.py	/^gqxtm1 = d_second[32]$/;"	v
+gqxtp1	.\model_ew_azckily_bu.py	/^gqxtp1 = d_second[30]$/;"	v
+gqxtp1	.\test_new_fipir.py	/^gqxtp1 = d_second[30]$/;"	v
+gqxtp1	.\test_new_fipir_azCIKLY.py	/^gqxtp1 = d_second[30]$/;"	v
+gvec_autodiff_at_ss_toymodel_fi	.\fipir.py	/^    def gvec_autodiff_at_ss_toymodel_fi(self, symbolic_elem='just_x_w', $/;"	m	class:FullInfoModel
+gvec_diffs_ev_at_ss_toymodel_fi	.\fipir.py	/^    def gvec_diffs_ev_at_ss_toymodel_fi(self, symbolic_elem='just_x_w', $/;"	m	class:FullInfoModel
+gvec_diffs_ev_at_ss_toymodel_pi	.\fipir.py	/^    def gvec_diffs_ev_at_ss_toymodel_pi(self,subs_x_to_ss_num=True):$/;"	m	class:PartialInfoModel
+gvec_ss_toymodel_full_info_sympy	.\fipir.py	/^    def gvec_ss_toymodel_full_info_sympy(self, g_az, g_z):$/;"	m	class:FullInfoModel
+gvec_toymodel_fi	.\fipir.py	/^    def gvec_toymodel_fi(self, symbolic_elem = 'just_x_w'):$/;"	m	class:FullInfoModel
+gvec_toymodel_full_info_sympy	.\fipir.py	/^    def gvec_toymodel_full_info_sympy(self, symbolic_elem = 'just_x_w'):$/;"	m	class:FullInfoModel
+gvec_toymodel_fullinfo_numpy_from_sympy	.\fipir.py	/^    def gvec_toymodel_fullinfo_numpy_from_sympy(self):$/;"	m	class:FullInfoModel
+gvec_toymodel_pi	.\fipir.py	/^    def gvec_toymodel_pi(self, symbolic_elem = 'just_x_w'):$/;"	m	class:PartialInfoModel
+gvec_toymodel_rfi	.\fipir.py	/^    def gvec_toymodel_rfi(self, symbolic_elem = 'just_x_w'):$/;"	m	class:RobustFullInfoModel
+gvec_toymodel_rpi	.\fipir.py	/^    def gvec_toymodel_rpi(self, symbolic_elem = 'just_x_w'):$/;"	m	class:RobustPartialInfoModel
+gwtp1q	.\model_ew_azckily_bu.py	/^gwtp1q = d_second[23]$/;"	v
+gwtp1q	.\test_new_fipir.py	/^gwtp1q = d_second[23]$/;"	v
+gwtp1q	.\test_new_fipir_azCIKLY.py	/^gwtp1q = d_second[23]$/;"	v
+gwtp1wt	.\model_ew_azckily_bu.py	/^gwtp1wt = d_second[22]$/;"	v
+gwtp1wt	.\test_new_fipir.py	/^gwtp1wt = d_second[22]$/;"	v
+gwtp1wt	.\test_new_fipir_azCIKLY.py	/^gwtp1wt = d_second[22]$/;"	v
+gwtp1wtp1	.\model_ew_azckily_bu.py	/^gwtp1wtp1 = d_second[21]$/;"	v
+gwtp1wtp1	.\test_new_fipir.py	/^gwtp1wtp1 = d_second[21]$/;"	v
+gwtp1wtp1	.\test_new_fipir_azCIKLY.py	/^gwtp1wtp1 = d_second[21]$/;"	v
+gwtp1xt	.\model_ew_azckily_bu.py	/^gwtp1xt = d_second[19]$/;"	v
+gwtp1xt	.\test_new_fipir.py	/^gwtp1xt = d_second[19]$/;"	v
+gwtp1xt	.\test_new_fipir_azCIKLY.py	/^gwtp1xt = d_second[19]$/;"	v
+gwtp1xtm1	.\model_ew_azckily_bu.py	/^gwtp1xtm1 = d_second[20]$/;"	v
+gwtp1xtm1	.\test_new_fipir.py	/^gwtp1xtm1 = d_second[20]$/;"	v
+gwtp1xtm1	.\test_new_fipir_azCIKLY.py	/^gwtp1xtm1 = d_second[20]$/;"	v
+gwtp1xtp1	.\model_ew_azckily_bu.py	/^gwtp1xtp1 = d_second[18]$/;"	v
+gwtp1xtp1	.\test_new_fipir.py	/^gwtp1xtp1 = d_second[18]$/;"	v
+gwtp1xtp1	.\test_new_fipir_azCIKLY.py	/^gwtp1xtp1 = d_second[18]$/;"	v
+gwtq	.\model_ew_azckily_bu.py	/^gwtq = d_second[29]$/;"	v
+gwtq	.\test_new_fipir.py	/^gwtq = d_second[29]$/;"	v
+gwtq	.\test_new_fipir_azCIKLY.py	/^gwtq = d_second[29]$/;"	v
+gwtwt	.\model_ew_azckily_bu.py	/^gwtwt = d_second[28]$/;"	v
+gwtwt	.\test_new_fipir.py	/^gwtwt = d_second[28]$/;"	v
+gwtwt	.\test_new_fipir_azCIKLY.py	/^gwtwt = d_second[28]$/;"	v
+gwtwtp1	.\model_ew_azckily_bu.py	/^gwtwtp1 = d_second[27]$/;"	v
+gwtwtp1	.\test_new_fipir.py	/^gwtwtp1 = d_second[27]$/;"	v
+gwtwtp1	.\test_new_fipir_azCIKLY.py	/^gwtwtp1 = d_second[27]$/;"	v
+gwtxt	.\model_ew_azckily_bu.py	/^gwtxt = d_second[25]$/;"	v
+gwtxt	.\test_new_fipir.py	/^gwtxt = d_second[25]$/;"	v
+gwtxt	.\test_new_fipir_azCIKLY.py	/^gwtxt = d_second[25]$/;"	v
+gwtxtm1	.\model_ew_azckily_bu.py	/^gwtxtm1 = d_second[26]$/;"	v
+gwtxtm1	.\test_new_fipir.py	/^gwtxtm1 = d_second[26]$/;"	v
+gwtxtm1	.\test_new_fipir_azCIKLY.py	/^gwtxtm1 = d_second[26]$/;"	v
+gwtxtp1	.\model_ew_azckily_bu.py	/^gwtxtp1 = d_second[24]$/;"	v
+gwtxtp1	.\test_new_fipir.py	/^gwtxtp1 = d_second[24]$/;"	v
+gwtxtp1	.\test_new_fipir_azCIKLY.py	/^gwtxtp1 = d_second[24]$/;"	v
+gxtm1q	.\model_ew_azckily_bu.py	/^gxtm1q = d_second[17]$/;"	v
+gxtm1q	.\test_new_fipir.py	/^gxtm1q = d_second[17]$/;"	v
+gxtm1q	.\test_new_fipir_azCIKLY.py	/^gxtm1q = d_second[17]$/;"	v
+gxtm1wt	.\model_ew_azckily_bu.py	/^gxtm1wt = d_second[16]$/;"	v
+gxtm1wt	.\test_new_fipir.py	/^gxtm1wt = d_second[16]$/;"	v
+gxtm1wt	.\test_new_fipir_azCIKLY.py	/^gxtm1wt = d_second[16]$/;"	v
+gxtm1wtp1	.\model_ew_azckily_bu.py	/^gxtm1wtp1 = d_second[15]$/;"	v
+gxtm1wtp1	.\test_new_fipir.py	/^gxtm1wtp1 = d_second[15]$/;"	v
+gxtm1wtp1	.\test_new_fipir_azCIKLY.py	/^gxtm1wtp1 = d_second[15]$/;"	v
+gxtm1xt	.\model_ew_azckily_bu.py	/^gxtm1xt = d_second[13]$/;"	v
+gxtm1xt	.\test_new_fipir.py	/^gxtm1xt = d_second[13]$/;"	v
+gxtm1xt	.\test_new_fipir_azCIKLY.py	/^gxtm1xt = d_second[13]$/;"	v
+gxtm1xtm1	.\model_ew_azckily_bu.py	/^gxtm1xtm1 = d_second[14]$/;"	v
+gxtm1xtm1	.\test_new_fipir.py	/^gxtm1xtm1 = d_second[14]$/;"	v
+gxtm1xtm1	.\test_new_fipir_azCIKLY.py	/^gxtm1xtm1 = d_second[14]$/;"	v
+gxtm1xtp1	.\model_ew_azckily_bu.py	/^gxtm1xtp1 = d_second[12]$/;"	v
+gxtm1xtp1	.\test_new_fipir.py	/^gxtm1xtp1 = d_second[12]$/;"	v
+gxtm1xtp1	.\test_new_fipir_azCIKLY.py	/^gxtm1xtp1 = d_second[12]$/;"	v
+gxtp1q	.\model_ew_azckily_bu.py	/^gxtp1q = d_second[5]$/;"	v
+gxtp1q	.\test_new_fipir.py	/^gxtp1q = d_second[5]$/;"	v
+gxtp1q	.\test_new_fipir_azCIKLY.py	/^gxtp1q = d_second[5]$/;"	v
+gxtp1wt	.\model_ew_azckily_bu.py	/^gxtp1wt = d_second[4]$/;"	v
+gxtp1wt	.\test_new_fipir.py	/^gxtp1wt = d_second[4]$/;"	v
+gxtp1wt	.\test_new_fipir_azCIKLY.py	/^gxtp1wt = d_second[4]$/;"	v
+gxtp1wtp1	.\model_ew_azckily_bu.py	/^gxtp1wtp1 = d_second[3]$/;"	v
+gxtp1wtp1	.\test_new_fipir.py	/^gxtp1wtp1 = d_second[3]$/;"	v
+gxtp1wtp1	.\test_new_fipir_azCIKLY.py	/^gxtp1wtp1 = d_second[3]$/;"	v
+gxtp1xt	.\model_ew_azckily_bu.py	/^gxtp1xt = d_second[1]$/;"	v
+gxtp1xt	.\test_new_fipir.py	/^gxtp1xt = d_second[1]$/;"	v
+gxtp1xt	.\test_new_fipir_azCIKLY.py	/^gxtp1xt = d_second[1]$/;"	v
+gxtp1xtm1	.\model_ew_azckily_bu.py	/^gxtp1xtm1 = d_second[2]$/;"	v
+gxtp1xtm1	.\test_new_fipir.py	/^gxtp1xtm1 = d_second[2]$/;"	v
+gxtp1xtm1	.\test_new_fipir_azCIKLY.py	/^gxtp1xtm1 = d_second[2]$/;"	v
+gxtp1xtp1	.\model_ew_azckily_bu.py	/^gxtp1xtp1 = d_second[0]$/;"	v
+gxtp1xtp1	.\test_new_fipir.py	/^gxtp1xtp1 = d_second[0]$/;"	v
+gxtp1xtp1	.\test_new_fipir_azCIKLY.py	/^gxtp1xtp1 = d_second[0]$/;"	v
+gxtq	.\model_ew_azckily_bu.py	/^gxtq = d_second[11]$/;"	v
+gxtq	.\test_new_fipir.py	/^gxtq = d_second[11]$/;"	v
+gxtq	.\test_new_fipir_azCIKLY.py	/^gxtq = d_second[11]$/;"	v
+gxtwt	.\model_ew_azckily_bu.py	/^gxtwt = d_second[10]$/;"	v
+gxtwt	.\test_new_fipir.py	/^gxtwt = d_second[10]$/;"	v
+gxtwt	.\test_new_fipir_azCIKLY.py	/^gxtwt = d_second[10]$/;"	v
+gxtwtp1	.\model_ew_azckily_bu.py	/^gxtwtp1 = d_second[9]$/;"	v
+gxtwtp1	.\test_new_fipir.py	/^gxtwtp1 = d_second[9]$/;"	v
+gxtwtp1	.\test_new_fipir_azCIKLY.py	/^gxtwtp1 = d_second[9]$/;"	v
+gxtxt	.\model_ew_azckily_bu.py	/^gxtxt = d_second[7]$/;"	v
+gxtxt	.\test_new_fipir.py	/^gxtxt = d_second[7]$/;"	v
+gxtxt	.\test_new_fipir_azCIKLY.py	/^gxtxt = d_second[7]$/;"	v
+gxtxtm1	.\model_ew_azckily_bu.py	/^gxtxtm1 = d_second[8]$/;"	v
+gxtxtm1	.\test_new_fipir.py	/^gxtxtm1 = d_second[8]$/;"	v
+gxtxtm1	.\test_new_fipir_azCIKLY.py	/^gxtxtm1 = d_second[8]$/;"	v
+gxtxtp1	.\model_ew_azckily_bu.py	/^gxtxtp1 = d_second[6]$/;"	v
+gxtxtp1	.\test_new_fipir.py	/^gxtxtp1 = d_second[6]$/;"	v
+gxtxtp1	.\test_new_fipir_azCIKLY.py	/^gxtxtp1 = d_second[6]$/;"	v
+impulse_response_toy_fi	.\fipir.py	/^    def impulse_response_toy_fi(self, phi_x, phi_w, shock = 1, x0 = [],$/;"	m	class:FullInfoModel
+impulse_response_toy_fi	.\fipir_aug.py	/^    def impulse_response_toy_fi(self, phi_x, phi_w, shock=1, x0=[],$/;"	m	class:FullInfoModel
+impulse_response_toy_fi	.\fipir_aug_old.py	/^    def impulse_response_toy_fi(self, phi_x, phi_w, shock=1, x0=[],$/;"	m	class:FullInfoModel
+impulse_response_toy_fi	.\fipir_new.py	/^    def impulse_response_toy_fi(self, phi_x, phi_w, shock=1, x0=[],$/;"	m	class:FullInfoModel
+impulse_response_toy_fi	.\fipiro\fullinfo.py	/^    def impulse_response_toy_fi(self, phi_x, phi_w, shock=1, x0=[],$/;"	m	class:FullInfoModel
+impulse_response_toy_pi	.\fipir.py	/^    def impulse_response_toy_pi(self, phi_x, phi_w, shock = 1, x0 = [],$/;"	m	class:PartialInfoModel
+impulse_response_toy_rpi	.\fipir.py	/^    def impulse_response_toy_rpi(self, phi_x, phi_w, phi_q, shock = 1, x0 = [],$/;"	m	class:RobustFullInfoModel
+impulse_response_toy_rpi	.\fipir.py	/^    def impulse_response_toy_rpi(self, phi_x, phi_w, phi_q, shock = 1, x0 = [],$/;"	m	class:RobustPartialInfoModel
+invIbetaphi	.\model_ew_azckily_bu.py	/^invIbetaphi = linalg.inv(Ibetaphi)$/;"	v
+invIbetaphi	.\test_new_fipir.py	/^invIbetaphi = scipy.linalg.inv(Ibetaphi)$/;"	v
+invIbetaphi	.\test_new_fipir_azCIKLY.py	/^invIbetaphi = scipy.linalg.inv(Ibetaphi)$/;"	v
+inv_of_Vxx_term_2	.\model_ew_azckily_bu.py	/^inv_of_Vxx_term_2 = np.eye(nx*nx) - beta*psixkronpsix$/;"	v
+inv_of_Vxx_term_2	.\test_new_fipir.py	/^inv_of_Vxx_term_2 = np.eye(nx*nx) - beta*psixkronpsix$/;"	v
+inv_of_Vxx_term_2	.\test_new_fipir_azCIKLY.py	/^inv_of_Vxx_term_2 = np.eye(nx*nx) - beta*psixkronpsix$/;"	v
+invleftmat	.\model_ew_azckily_bu.py	/^invleftmat = linalg.inv(leftmat)$/;"	v
+invleftmat	.\test_new_fipir.py	/^invleftmat = scipy.linalg.inv(leftmat)$/;"	v
+invleftmat	.\test_new_fipir_azCIKLY.py	/^invleftmat = scipy.linalg.inv(leftmat)$/;"	v
+invout_dict	.\test_new_fipir.py	/^invout_dict = {Yt: sympy.exp((1-alpha)*at) * Kt**(alpha) * Lt**(1-alpha),$/;"	v
+ir_toy_rpi_from	.\fipir.py	/^def ir_toy_rpi_from(azA_mat, x_sta, x_nsta, BGP_det, phi_q, islog=False):$/;"	f
+ir_toy_rpi_from	.\fipir_aug.py	/^def ir_toy_rpi_from(azA_mat, x_sta, x_nsta, BGP_det, phi_q, islog=False):$/;"	f
+ir_toy_rpi_from	.\fipir_aug_old.py	/^def ir_toy_rpi_from(azA_mat, x_sta, x_nsta, BGP_det, phi_q, islog=False):$/;"	f
+ir_toy_rpi_from	.\fipir_new.py	/^def ir_toy_rpi_from(azA_mat, x_sta, x_nsta, BGP_det, phi_q, islog=False):$/;"	f
+ir_toy_rpi_from	.\fipiro\utils.py	/^def ir_toy_rpi_from(azA_mat, x_sta, x_nsta, BGP_det, phi_q, islog=False):$/;"	f
+ir_toy_rpi_from	.\fipiro\utils_before_introducing_classes.py	/^def ir_toy_rpi_from(azA_mat, x_sta, x_nsta, BGP_det, phi_q, islog=False):$/;"	f
+jacobians_sym_uh	.\fipiro\utils.py	/^    def jacobians_sym_uh(self, options={}):$/;"	m	class:UhligModel
+lambdify	.\define_tfp_only_equilibrium_eqs.py	/^from sympy.utilities.lambdify import lambdify$/;"	i
+lambdify	.\try_uhlig.py	/^from sympy.utilities.lambdify import lambdify$/;"	i
+leftmat	.\model_ew_azckily_bu.py	/^leftmat = np.kron(np.eye(nx*nx), A_for_psixx) + np.kron(B_for_psixx.T,gxtp1)$/;"	v
+leftmat	.\test_new_fipir.py	/^leftmat = np.kron(np.eye(nx*nx), A_for_psixx) + np.kron(B_for_psixx.T, gxtp1)$/;"	v
+leftmat	.\test_new_fipir_azCIKLY.py	/^leftmat = np.kron(np.eye(nx*nx), A_for_psixx) + np.kron(B_for_psixx.T, gxtp1)$/;"	v
+linalg	.\fipir.py	/^import scipy.linalg$/;"	i
+linalg	.\fipir_aug.py	/^from scipy import linalg, optimize$/;"	i
+linalg	.\fipir_aug_old.py	/^from scipy import linalg, optimize$/;"	i
+linalg	.\fipir_new.py	/^import scipy.linalg$/;"	i
+linalg	.\fipiro\fullinfo.py	/^from scipy import linalg$/;"	i
+linalg	.\fipiro\utils.py	/^from scipy import linalg, optimize$/;"	i
+linalg	.\fipiro\utils_before_introducing_classes.py	/^from scipy import linalg, optimize$/;"	i
+linalg	.\model_ew_azckily.py	/^from scipy import linalg$/;"	i
+linalg	.\model_ew_azckily_bu.py	/^from scipy import linalg$/;"	i
+linalg	.\model_ew_azckily_fipiro.py	/^from scipy import linalg$/;"	i
+linalg	.\test_new_fipir.py	/^import scipy.linalg$/;"	i
+linalg	.\test_new_fipir_azCIKLY.py	/^import scipy.linalg$/;"	i
+make_basic_sym_dic	.\fipiro\utils.py	/^def make_basic_sym_dic(names_list, date_string):$/;"	f
+make_expressions_at_ss_fi	.\fipir.py	/^    def make_expressions_at_ss_fi(self, sympy_object_to_convert):$/;"	m	class:FullInfoModel
+make_logs_from_lin	.\fipir.py	/^def make_logs_from_lin(linlinco, ckliy_ss_vals, selec_vec=[], isPartial=False,$/;"	f
+make_model_instances	.\fipir.py	/^def make_model_instances(alphavalue=0.36, betavalue=0.98, deltavalue=0.1,$/;"	f
+make_normal_to_q_dict	.\fipir_aug.py	/^def make_normal_to_q_dict(x_names, w_names):$/;"	f
+make_normal_to_q_dict	.\fipir_aug_old.py	/^def make_normal_to_q_dict(x_names, w_names):$/;"	f
+make_normal_to_q_dict	.\fipir_new.py	/^def make_normal_to_q_dict(x_names, w_names):$/;"	f
+make_normal_to_q_dict	.\fipiro\utils.py	/^def make_normal_to_q_dict(x_names, w_names):$/;"	f
+make_normal_to_q_dict	.\fipiro\utils_before_introducing_classes.py	/^def make_normal_to_q_dict(x_names, w_names):$/;"	f
+make_normal_to_steady_state	.\fipir_aug.py	/^def make_normal_to_steady_state(x_names, w_names):$/;"	f
+make_normal_to_steady_state	.\fipir_aug_old.py	/^def make_normal_to_steady_state(x_names, w_names):$/;"	f
+make_normal_to_steady_state	.\fipir_new.py	/^def make_normal_to_steady_state(x_names, w_names):$/;"	f
+make_normal_to_steady_state	.\fipiro\utils.py	/^def make_normal_to_steady_state(x_names, w_names):$/;"	f
+make_normal_to_steady_state	.\fipiro\utils_before_introducing_classes.py	/^def make_normal_to_steady_state(x_names, w_names):$/;"	f
+make_numpy_fns_of_d1d2xw	.\fipir_aug.py	/^    def make_numpy_fns_of_d1d2xw(self, dg_first, dg_second):$/;"	m	class:FullInfoModel
+make_numpy_fns_of_d1d2xw	.\fipir_aug_old.py	/^    def make_numpy_fns_of_d1d2xw(self, dg_first, dg_second):$/;"	m	class:FullInfoModel
+make_numpy_fns_of_d1d2xw	.\fipir_new.py	/^    def make_numpy_fns_of_d1d2xw(self, dg_first, dg_second):$/;"	m	class:FullInfoModel
+make_numpy_fns_of_d1d2xw	.\fipiro\fullinfo.py	/^    def make_numpy_fns_of_d1d2xw(self, dg_first, dg_second):$/;"	m	class:FullInfoModel
+make_param_sym_dict	.\fipir_aug.py	/^def make_param_sym_dict(param_names):$/;"	f
+make_param_sym_dict	.\fipir_aug_old.py	/^def make_param_sym_dict(param_names):$/;"	f
+make_param_sym_dict	.\fipir_new.py	/^def make_param_sym_dict(param_names):$/;"	f
+make_param_sym_dict	.\fipiro\utils.py	/^def make_param_sym_dict(param_names):$/;"	f
+make_param_sym_dict	.\fipiro\utils_before_introducing_classes.py	/^def make_param_sym_dict(param_names):$/;"	f
+make_qdiff_to_q012	.\fipir_aug.py	/^def make_qdiff_to_q012(x_names):$/;"	f
+make_qdiff_to_q012	.\fipir_aug_old.py	/^def make_qdiff_to_q012(x_names):$/;"	f
+make_qdiff_to_q012	.\fipir_new.py	/^def make_qdiff_to_q012(x_names):$/;"	f
+make_qdiff_to_q012	.\fipiro\utils.py	/^def make_qdiff_to_q012(x_names):$/;"	f
+make_qdiff_to_q012	.\fipiro\utils_before_introducing_classes.py	/^def make_qdiff_to_q012(x_names):$/;"	f
+make_state_space_sym	.\fipir_aug.py	/^def make_state_space_sym(num_signals, num_states, is_homo):$/;"	f
+make_state_space_sym	.\fipir_aug_old.py	/^def make_state_space_sym(num_signals, num_states, is_homo):$/;"	f
+make_state_space_sym	.\fipir_new.py	/^def make_state_space_sym(num_signals, num_states, is_homo):$/;"	f
+make_state_space_sym	.\fipiro\utils.py	/^def make_state_space_sym(num_signals, num_states, is_homo):$/;"	f
+make_state_space_sym	.\fipiro\utils_before_introducing_classes.py	/^def make_state_space_sym(num_signals, num_states, is_homo):$/;"	f
+make_sym_dict	.\fipir_aug.py	/^def make_sym_dict(names_list, date_str, isw=False):$/;"	f
+make_sym_dict	.\fipir_aug_old.py	/^def make_sym_dict(names_list, date_str, isw=False):$/;"	f
+make_sym_dict	.\fipir_new.py	/^def make_sym_dict(names_list, date_str, isw=False):$/;"	f
+make_sym_dict	.\fipiro\utils.py	/^def make_sym_dict(names_list, date_str, isw=False, do_derivatives=True):$/;"	f
+make_sym_dict	.\fipiro\utils_before_introducing_classes.py	/^def make_sym_dict(names_list, date_str, isw=False):$/;"	f
+make_sym_dict_all_dates	.\fipir_aug.py	/^def make_sym_dict_all_dates(names_list, dates_list, isw=True,$/;"	f
+make_sym_dict_all_dates	.\fipir_aug_old.py	/^def make_sym_dict_all_dates(names_list, dates_list, isw=True, do_steady_states_names=True):$/;"	f
+make_sym_dict_all_dates	.\fipir_new.py	/^def make_sym_dict_all_dates(names_list, dates_list, isw=True, do_steady_states_names=True):$/;"	f
+make_sym_dict_all_dates	.\fipiro\utils.py	/^def make_sym_dict_all_dates(names_list, dates_list, isw=True,$/;"	f
+make_sym_dict_all_dates	.\fipiro\utils_before_introducing_classes.py	/^def make_sym_dict_all_dates(names_list, dates_list, isw=True,$/;"	f
+make_theano_fns_of_d1d2xw	.\fipir_aug.py	/^    def make_theano_fns_of_d1d2xw(self, dg_first, dg_second):$/;"	m	class:FullInfoModel
+make_theano_fns_of_d1d2xw	.\fipir_aug_old.py	/^    def make_theano_fns_of_d1d2xw(self, dg_first, dg_second):$/;"	m	class:FullInfoModel
+make_theano_fns_of_d1d2xw	.\fipir_new.py	/^    def make_theano_fns_of_d1d2xw(self, dg_first, dg_second):$/;"	m	class:FullInfoModel
+make_theano_fns_of_d1d2xw	.\fipiro\fullinfo.py	/^    def make_theano_fns_of_d1d2xw(self, dg_first, dg_second):$/;"	m	class:FullInfoModel
+make_wss_to_zero_dict	.\fipir_aug.py	/^def make_wss_to_zero_dict(w_names):$/;"	f
+make_wss_to_zero_dict	.\fipir_aug_old.py	/^def make_wss_to_zero_dict(w_names):$/;"	f
+make_wss_to_zero_dict	.\fipir_new.py	/^def make_wss_to_zero_dict(w_names):$/;"	f
+make_wss_to_zero_dict	.\fipiro\utils.py	/^def make_wss_to_zero_dict(w_names):$/;"	f
+make_wss_to_zero_dict	.\fipiro\utils_before_introducing_classes.py	/^def make_wss_to_zero_dict(w_names):$/;"	f
+make_x_w_param_sym_dicts	.\fipir_aug.py	/^def make_x_w_param_sym_dicts(this_x_names, this_w_names, this_param_names):$/;"	f
+make_x_w_param_sym_dicts	.\fipir_aug_old.py	/^def make_x_w_param_sym_dicts(this_x_names, this_w_names, this_param_names):$/;"	f
+make_x_w_param_sym_dicts	.\fipir_new.py	/^def make_x_w_param_sym_dicts(this_x_names, this_w_names, this_param_names):$/;"	f
+make_x_w_param_sym_dicts	.\fipiro\utils.py	/^def make_x_w_param_sym_dicts(this_x_names, this_w_names, this_param_names):$/;"	f
+make_x_w_param_sym_dicts	.\fipiro\utils_before_introducing_classes.py	/^def make_x_w_param_sym_dicts(this_x_names, this_w_names, this_param_names):$/;"	f
+make_xw_tm1ttp1_dicts	.\fipiro\utils_before_introducing_classes.py	/^def make_xw_tm1ttp1_dicts(x_names, w_names):$/;"	f
+matGx_term_2	.\model_ew_azckily_bu.py	/^matGx_term_2 = Gx_term_2.reshape(nw,nx, order='F')$/;"	v
+matGx_term_2	.\test_new_fipir.py	/^matGx_term_2 = Gx_term_2.reshape(nw, nx, order='F')$/;"	v
+matGx_term_2	.\test_new_fipir_azCIKLY.py	/^matGx_term_2 = Gx_term_2.reshape(nw, nx, order='F')$/;"	v
+matGx_term_3	.\model_ew_azckily_bu.py	/^matGx_term_3 = Gx_term_3.reshape(nx,nw, order='F')$/;"	v
+matGx_term_3	.\test_new_fipir.py	/^matGx_term_3 = Gx_term_3.reshape(nx, nw, order='F')$/;"	v
+matGx_term_3	.\test_new_fipir_azCIKLY.py	/^matGx_term_3 = Gx_term_3.reshape(nx, nw, order='F')$/;"	v
+matplotlib	.\fipir.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	.\fipir_aug.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	.\fipir_aug_old.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	.\fipir_new.py	/^import matplotlib.pyplot as plt$/;"	i
+matrix2numpyfloat	.\fipir.py	/^    def matrix2numpyfloat(self, m):$/;"	m	class:FullInfoModel
+matrix2numpyfloat	.\fipir_aug.py	/^    def matrix2numpyfloat(self, m):$/;"	m	class:FullInfoModel
+matrix2numpyfloat	.\fipir_aug.py	/^def matrix2numpyfloat(m):$/;"	f
+matrix2numpyfloat	.\fipir_aug_old.py	/^    def matrix2numpyfloat(self, m):$/;"	m	class:FullInfoModel
+matrix2numpyfloat	.\fipir_aug_old.py	/^def matrix2numpyfloat(m):$/;"	f
+matrix2numpyfloat	.\fipir_new.py	/^    def matrix2numpyfloat(self, m):$/;"	m	class:FullInfoModel
+matrix2numpyfloat	.\fipir_new.py	/^def matrix2numpyfloat(m):$/;"	f
+matrix2numpyfloat	.\fipiro\utils.py	/^def matrix2numpyfloat(m):$/;"	f
+matrix2numpyfloat	.\fipiro\utils_before_introducing_classes.py	/^def matrix2numpyfloat(m):$/;"	f
+mua_tm	.\define_tfp_only_equilibrium_eqs.py	/^mua_tm = mua_value_true_Toy$/;"	v
+mua_tm	.\main-fipir-fi-march.py	/^mua_tm = mua_value_true$/;"	v
+mua_tm	.\model_ew_azckily.py	/^mua_tm = mua_value_true_Toy$/;"	v
+mua_tm	.\model_ew_azckily_bu.py	/^mua_tm = mua_value_true_Toy$/;"	v
+mua_tm	.\model_ew_azckily_fipiro.py	/^mua_tm = mua_value_true_Toy$/;"	v
+mua_tm	.\symbolic_ss_solution.py	/^mua_tm = mua_value_true_Toy$/;"	v
+mua_tm	.\test_new_fipir.py	/^mua_tm = mua_value_true_Toy$/;"	v
+mua_tm	.\test_new_fipir_azCIKLY.py	/^mua_tm = mua_value_true_Toy$/;"	v
+mua_tm	.\use_fipiro.py	/^mua_tm = mua_value_true_Toy$/;"	v
+mua_value_SSFI	.\define_tfp_only_equilibrium_eqs.py	/^mua_value_SSFI = mua_value_true_Toy$/;"	v
+mua_value_SSFI	.\main-fipir-fi-march.py	/^mua_value_SSFI = mua_value_true$/;"	v
+mua_value_SSFI	.\model_ew_azckily.py	/^mua_value_SSFI = mua_value_true_Toy$/;"	v
+mua_value_SSFI	.\model_ew_azckily_bu.py	/^mua_value_SSFI = mua_value_true_Toy$/;"	v
+mua_value_SSFI	.\model_ew_azckily_fipiro.py	/^mua_value_SSFI = mua_value_true_Toy$/;"	v
+mua_value_SSFI	.\symbolic_ss_solution.py	/^mua_value_SSFI = mua_value_true_Toy$/;"	v
+mua_value_SSFI	.\test_new_fipir.py	/^mua_value_SSFI = mua_value_true_Toy$/;"	v
+mua_value_SSFI	.\test_new_fipir_azCIKLY.py	/^mua_value_SSFI = mua_value_true_Toy$/;"	v
+mua_value_SSFI	.\use_fipiro.py	/^mua_value_SSFI = mua_value_true_Toy$/;"	v
+mua_value_true	.\main-fipir-fi-march.py	/^mua_value_true = 0.03$/;"	v
+mua_value_true_Toy	.\define_tfp_only_equilibrium_eqs.py	/^mua_value_true_Toy = 0.03$/;"	v
+mua_value_true_Toy	.\model_ew_azckily.py	/^mua_value_true_Toy = 0.03$/;"	v
+mua_value_true_Toy	.\model_ew_azckily_bu.py	/^mua_value_true_Toy = 0.03$/;"	v
+mua_value_true_Toy	.\model_ew_azckily_fipiro.py	/^mua_value_true_Toy = 0.03$/;"	v
+mua_value_true_Toy	.\symbolic_ss_solution.py	/^mua_value_true_Toy = 0.03$/;"	v
+mua_value_true_Toy	.\test_new_fipir.py	/^mua_value_true_Toy = 0.03$/;"	v
+mua_value_true_Toy	.\test_new_fipir_azCIKLY.py	/^mua_value_true_Toy = 0.03$/;"	v
+mua_value_true_Toy	.\use_fipiro.py	/^mua_value_true_Toy = 0.03$/;"	v
+my_glist_cikly_az	.\main-fipir-fi-march.py	/^my_glist_cikly_az = eq_conditions_toy_FI_CIKLY_az_infodate_contK()$/;"	v
+my_glist_cikly_az	.\test_new_fipir.py	/^my_glist_cikly_az = eq_conditions_toy_FI_CIKLY_az_infodate_contK()$/;"	v
+my_glist_cikly_z	.\test_new_fipir.py	/^my_glist_cikly_z = [x.subs(az_dict) for x in my_glist_cikly_az]$/;"	v
+my_glist_ckl_az	.\test_new_fipir.py	/^my_glist_ckl_az = [x.subs(my_invout_dict) for x in my_glist_cikly_az]$/;"	v
+my_glist_ckl_z	.\test_new_fipir.py	/^my_glist_ckl_z = [x.subs(az_dict) for x in my_glist_ckl_az]$/;"	v
+my_invout_dict	.\main-fipir-fi-march.py	/^my_invout_dict = {Yt:sympy.exp((1-alpha)*at)  * Ktm1**(alpha) * Lt**(1-alpha),$/;"	v
+my_invout_dict	.\test_new_fipir.py	/^my_invout_dict = {Yt: sympy.exp((1-alpha)*at) * Ktm1**(alpha) * Lt**(1-alpha),$/;"	v
+n_s	.\model_ew_azckily.py	/^                                 n_s=num_s_state_space,$/;"	v
+n_s	.\model_ew_azckily_bu.py	/^                                 n_s=num_s_state_space,$/;"	v
+n_s	.\model_ew_azckily_fipiro.py	/^                                 n_s=num_s_state_space,$/;"	v
+n_s	.\use_fipiro.py	/^                              n_s=num_s_state_space,$/;"	v
+non_ex_block_index	.\try_uhlig.py	/^non_ex_block_index = (1, 2, 3, 4)$/;"	v
+np	.\fipir.py	/^import numpy as np$/;"	i
+np	.\fipir_aug.py	/^import numpy as np$/;"	i
+np	.\fipir_aug_old.py	/^import numpy as np$/;"	i
+np	.\fipir_new.py	/^import numpy as np$/;"	i
+np	.\fipiro\fullinfo.py	/^import numpy as np$/;"	i
+np	.\fipiro\utils.py	/^import numpy as np$/;"	i
+np	.\fipiro\utils_before_introducing_classes.py	/^import numpy as np$/;"	i
+np	.\main-fipir-fi-march.py	/^import numpy as np$/;"	i
+np	.\model_ew_azckily.py	/^import numpy as np$/;"	i
+np	.\model_ew_azckily_bu.py	/^import numpy as np$/;"	i
+np	.\model_ew_azckily_fipiro.py	/^import numpy as np$/;"	i
+np	.\test_new_fipir.py	/^import numpy as np$/;"	i
+np	.\test_new_fipir_azCIKLY.py	/^import numpy as np$/;"	i
+nu_value	.\define_tfp_only_equilibrium_eqs.py	/^nu_value = 0.29$/;"	v
+nu_value	.\main-fipir-fi-march.py	/^nu_value = 0.29$/;"	v
+nu_value	.\model_ew_azckily.py	/^nu_value = 0.29$/;"	v
+nu_value	.\model_ew_azckily_bu.py	/^nu_value = 0.29$/;"	v
+nu_value	.\model_ew_azckily_fipiro.py	/^nu_value = 0.29$/;"	v
+nu_value	.\symbolic_ss_solution.py	/^nu_value = 0.29$/;"	v
+nu_value	.\test_new_fipir.py	/^nu_value = 0.29$/;"	v
+nu_value	.\test_new_fipir_azCIKLY.py	/^nu_value = 0.29$/;"	v
+nu_value	.\use_fipiro.py	/^nu_value = 0.29$/;"	v
+num_s_state_space	.\main-fipir-fi-march.py	/^num_s_state_space = 1$/;"	v
+num_s_state_space	.\model_ew_azckily.py	/^num_s_state_space = 1$/;"	v
+num_s_state_space	.\model_ew_azckily_bu.py	/^num_s_state_space = 1$/;"	v
+num_s_state_space	.\model_ew_azckily_fipiro.py	/^num_s_state_space = 1$/;"	v
+num_s_state_space	.\test_new_fipir.py	/^num_s_state_space = 1$/;"	v
+num_s_state_space	.\test_new_fipir_azCIKLY.py	/^num_s_state_space = 1$/;"	v
+num_s_state_space	.\use_fipiro.py	/^num_s_state_space = 1$/;"	v
+num_sols_CIKLYaz_ss_info	.\define_tfp_only_equilibrium_eqs.py	/^num_sols_CIKLYaz_ss_info = sol_CIKLYaz_ss_info_lam(*all_param_values_dict.values())$/;"	v
+num_sols_CIKLYaz_ss_use	.\define_tfp_only_equilibrium_eqs.py	/^num_sols_CIKLYaz_ss_use= sol_CIKLYaz_ss_use_lam(*all_param_values_dict.values())$/;"	v
+num_x_state_space	.\main-fipir-fi-march.py	/^num_x_state_space = 1$/;"	v
+num_x_state_space	.\model_ew_azckily.py	/^num_x_state_space = 1$/;"	v
+num_x_state_space	.\model_ew_azckily_bu.py	/^num_x_state_space = 1$/;"	v
+num_x_state_space	.\model_ew_azckily_fipiro.py	/^num_x_state_space = 1$/;"	v
+num_x_state_space	.\test_new_fipir.py	/^num_x_state_space = 1$/;"	v
+num_x_state_space	.\test_new_fipir_azCIKLY.py	/^num_x_state_space = 1$/;"	v
+num_x_state_space	.\use_fipiro.py	/^num_x_state_space = 1$/;"	v
+numpy2ri	.\fipir.py	/^import rpy2.robjects.numpy2ri$/;"	i
+numpy2ri	.\fipir_aug.py	/^import rpy2.robjects.numpy2ri$/;"	i
+numpy2ri	.\fipir_aug_old.py	/^import rpy2.robjects.numpy2ri$/;"	i
+numpy2ri	.\fipir_new.py	/^import rpy2.robjects.numpy2ri$/;"	i
+numpy_state_space_matrices	.\fipir_aug.py	/^def numpy_state_space_matrices(sspacemats_dic, name2val_dic, user_names=False,$/;"	f
+numpy_state_space_matrices	.\fipir_aug_old.py	/^def numpy_state_space_matrices(sspacemats_dic, name2val_dic, user_names=False,$/;"	f
+numpy_state_space_matrices	.\fipir_new.py	/^def numpy_state_space_matrices(sspacemats_dic, name2val_dic, user_names=False,$/;"	f
+numpy_state_space_matrices	.\fipiro\utils.py	/^def numpy_state_space_matrices(sspacemats_dic, name2val_dic, user_names=False,$/;"	f
+numpy_state_space_matrices	.\fipiro\utils_before_introducing_classes.py	/^def numpy_state_space_matrices(sspacemats_dic, name2val_dic, user_names=False,$/;"	f
+numpy_state_space_matrices_old	.\fipir_aug.py	/^def numpy_state_space_matrices_old(A, C, D, G, name2val_dic, user_names=False,$/;"	f
+numpy_state_space_matrices_old	.\fipir_aug_old.py	/^def numpy_state_space_matrices_old(A, C, D, G, name2val_dic, user_names=False,$/;"	f
+numpy_state_space_matrices_old	.\fipir_new.py	/^def numpy_state_space_matrices_old(A, C, D, G, name2val_dic, user_names=False,$/;"	f
+nw	.\model_ew_azckily_bu.py	/^nw = psi_w.shape[1]$/;"	v
+nw	.\test_new_fipir.py	/^nw = psi_w.shape[1]$/;"	v
+nw	.\test_new_fipir_azCIKLY.py	/^nw = psi_w.shape[1]$/;"	v
+nx	.\model_ew_azckily_bu.py	/^nx =  psi_x.shape[1]$/;"	v
+nx	.\test_new_fipir.py	/^nx = psi_x.shape[1]$/;"	v
+nx	.\test_new_fipir_azCIKLY.py	/^nx = psi_x.shape[1]$/;"	v
+old_d1d2_g_x_w_unevaluated_old	.\fipir_new.py	/^    def old_d1d2_g_x_w_unevaluated_old(self):$/;"	m	class:FullInfoModel
+old_get_evaluated_dgdxw12	.\fipiro\fullinfo.py	/^    def old_get_evaluated_dgdxw12(self, eq_system=[], param_vals_d={}, mod='numpy'):$/;"	m	class:FullInfoModel
+old_make_numpy_fns_of_d1d2xw	.\fipiro\fullinfo.py	/^    def old_make_numpy_fns_of_d1d2xw(self, dg_first, dg_second):$/;"	m	class:FullInfoModel
+old_matrix2numpyfloat	.\fipir_aug.py	/^def old_matrix2numpyfloat(m):$/;"	f
+old_matrix2numpyfloat	.\fipir_aug_old.py	/^def old_matrix2numpyfloat(m):$/;"	f
+old_matrix2numpyfloat	.\fipir_new.py	/^def old_matrix2numpyfloat(m):$/;"	f
+oneratphi	.\main-fipir-fi-march.py	/^oneratphi = (1 - rhoa_value ** 2 - ratio_var)$/;"	v
+oneratphi	.\test_new_fipir.py	/^oneratphi = (1 - rhoa_value**2 - ratio_var)$/;"	v
+oneratphi	.\test_new_fipir_azCIKLY.py	/^oneratphi = (1 - rhoa_value**2 - ratio_var)$/;"	v
+optimize	.\fipir_aug.py	/^from scipy import linalg, optimize$/;"	i
+optimize	.\fipir_aug_old.py	/^from scipy import linalg, optimize$/;"	i
+optimize	.\fipiro\utils.py	/^from scipy import linalg, optimize$/;"	i
+optimize	.\fipiro\utils_before_introducing_classes.py	/^from scipy import linalg, optimize$/;"	i
+par_to_values_dict	.\main-fipir-fi-march.py	/^                                 par_to_values_dict=all_param_values_dict,$/;"	v
+par_to_values_dict	.\model_ew_azckily.py	/^                             par_to_values_dict=all_param_values_dict,$/;"	v
+par_to_values_dict	.\model_ew_azckily_bu.py	/^                             par_to_values_dict=all_param_values_dict,$/;"	v
+par_to_values_dict	.\model_ew_azckily_fipiro.py	/^                             par_to_values_dict=all_param_values_dict,$/;"	v
+par_to_values_dict	.\test_new_fipir.py	/^                                 par_to_values_dict=all_param_values_dict,$/;"	v
+par_to_values_dict	.\test_new_fipir_azCIKLY.py	/^                                 par_to_values_dict=all_param_values_dict,$/;"	v
+par_to_values_dict	.\use_fipiro.py	/^                             par_to_values_dict=all_param_values_dict,$/;"	v
+par_vs_par	.\fipir.py	/^def par_vs_par(set_of_par_x=[], par_name_x="", par_tex_x="", set_of_par_lev=[],$/;"	f
+param_names	.\define_tfp_only_equilibrium_eqs.py	/^param_names = ['alpha', 'beta', 'delta', 'mua',$/;"	v
+param_names	.\fipiro\define_ciklyaz_infodate_aleads_equilibrium_eqs.py	/^param_names = ['alpha', 'beta', 'delta', 'mua',$/;"	v
+param_names	.\main-fipir-fi-march.py	/^param_names = ['alpha', 'beta', 'delta', 'mua', 'rhoa',$/;"	v
+param_names	.\model_ew_azckily.py	/^param_names = ['alpha', 'beta', 'delta', 'mua',$/;"	v
+param_names	.\model_ew_azckily_bu.py	/^param_names = ['alpha', 'beta', 'delta', 'mua',$/;"	v
+param_names	.\model_ew_azckily_fipiro.py	/^param_names = ['alpha', 'beta', 'delta', 'mua',$/;"	v
+param_names	.\test_new_fipir.py	/^param_names = ['alpha', 'beta', 'delta', 'mua',$/;"	v
+param_names	.\test_new_fipir_azCIKLY.py	/^param_names = ['alpha', 'beta', 'delta', 'mua',$/;"	v
+param_names	.\try_uhlig.py	/^                      param_names=param_names,$/;"	v
+param_names	.\try_uhlig.py	/^param_names = ['alpha', 'beta', 'delta', 'mua',$/;"	v
+param_names	.\use_fipiro.py	/^param_names = ['alpha', 'beta', 'delta', 'mua',$/;"	v
+param_names_module_to_user	.\define_tfp_only_equilibrium_eqs.py	/^param_names_module_to_user = {'rho_0': 'rhoa', 'mu_0': 'mua',$/;"	v
+param_names_module_to_user	.\fipiro\define_ciklyaz_infodate_aleads_equilibrium_eqs.py	/^param_names_module_to_user = {'rho_0': 'rhoa', 'mu_0': 'mua',$/;"	v
+param_names_module_to_user	.\main-fipir-fi-march.py	/^param_names_module_to_user = {'rho_0': 'rhoa', 'mu_0': 'mua',$/;"	v
+param_names_module_to_user	.\model_ew_azckily.py	/^param_names_module_to_user = {'rho_0': 'rhoa', 'mu_0': 'mua',$/;"	v
+param_names_module_to_user	.\model_ew_azckily_bu.py	/^param_names_module_to_user = {'rho_0': 'rhoa', 'mu_0': 'mua',$/;"	v
+param_names_module_to_user	.\model_ew_azckily_fipiro.py	/^param_names_module_to_user = {'rho_0': 'rhoa', 'mu_0': 'mua',$/;"	v
+param_names_module_to_user	.\test_new_fipir.py	/^param_names_module_to_user = {'rho_0': 'rhoa', 'mu_0': 'mua',$/;"	v
+param_names_module_to_user	.\test_new_fipir_azCIKLY.py	/^param_names_module_to_user = {'rho_0': 'rhoa', 'mu_0': 'mua',$/;"	v
+param_names_module_to_user	.\use_fipiro.py	/^param_names_module_to_user = {'rho_0': 'rhoa', 'mu_0': 'mua',$/;"	v
+param_names_user_to_module	.\main-fipir-fi-march.py	/^param_names_user_to_module = {'rhoa': 'rho_0', 'mua': 'mu_0',$/;"	v
+param_names_user_to_module	.\test_new_fipir.py	/^param_names_user_to_module = {'rhoa': 'rho_0', 'mua': 'mu_0',$/;"	v
+param_names_user_to_module	.\test_new_fipir_azCIKLY.py	/^param_names_user_to_module = {'rhoa': 'rho_0', 'mua': 'mu_0',$/;"	v
+param_sym_d	.\main-fipir-fi-march.py	/^param_sym_d = fipir_new.set_param_sym_dict(param_names)$/;"	v
+param_sym_d	.\test_new_fipir.py	/^param_sym_d = fipir_new.set_param_sym_dict(param_names)$/;"	v
+param_sym_d	.\test_new_fipir_azCIKLY.py	/^param_sym_d = fipir_new.set_param_sym_dict(param_names)$/;"	v
+param_val_dic	.\main-fipir-fi-march.py	/^                                                       param_val_dic=all_param_values_dict,$/;"	v
+param_val_dic	.\main-fipir-fi-march.py	/^                                             param_val_dic=all_param_values_dict)$/;"	v
+param_val_dic	.\model_ew_azckily.py	/^                                 param_val_dic=ssp_par_user_to_values,$/;"	v
+param_val_dic	.\model_ew_azckily_bu.py	/^                                 param_val_dic=ssp_par_user_to_values,$/;"	v
+param_val_dic	.\model_ew_azckily_fipiro.py	/^                                 param_val_dic=ssp_par_user_to_values,$/;"	v
+param_val_dic	.\test_new_fipir.py	/^                                                       param_val_dic=all_param_values_dict,$/;"	v
+param_val_dic	.\test_new_fipir.py	/^                                             param_val_dic=all_param_values_dict)$/;"	v
+param_val_dic	.\test_new_fipir_azCIKLY.py	/^                                                       param_val_dic=all_param_values_dict,$/;"	v
+param_val_dic	.\test_new_fipir_azCIKLY.py	/^                                             param_val_dic=all_param_values_dict)$/;"	v
+param_val_dic	.\use_fipiro.py	/^                              param_val_dic=ssp_par_user_to_values,$/;"	v
+plt	.\fipir.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	.\fipir_aug.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	.\fipir_aug_old.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	.\fipir_new.py	/^import matplotlib.pyplot as plt$/;"	i
+pref_tech_names_to_values	.\define_tfp_only_equilibrium_eqs.py	/^pref_tech_names_to_values = {'alpha': alpha_value, 'beta': beta_value,$/;"	v
+pref_tech_names_to_values	.\main-fipir-fi-march.py	/^pref_tech_names_to_values = {'alpha': alpha_value, 'beta': beta_value,$/;"	v
+pref_tech_names_to_values	.\model_ew_azckily.py	/^pref_tech_names_to_values = {'alpha': alpha_value, 'beta': beta_value,$/;"	v
+pref_tech_names_to_values	.\model_ew_azckily_bu.py	/^pref_tech_names_to_values = {'alpha': alpha_value, 'beta': beta_value,$/;"	v
+pref_tech_names_to_values	.\model_ew_azckily_fipiro.py	/^pref_tech_names_to_values = {'alpha': alpha_value, 'beta': beta_value,$/;"	v
+pref_tech_names_to_values	.\test_new_fipir.py	/^pref_tech_names_to_values = {'alpha': alpha_value, 'beta': beta_value,$/;"	v
+pref_tech_names_to_values	.\test_new_fipir_azCIKLY.py	/^pref_tech_names_to_values = {'alpha': alpha_value, 'beta': beta_value,$/;"	v
+pref_tech_names_to_values	.\use_fipiro.py	/^pref_tech_names_to_values = {'alpha': alpha_value, 'beta': beta_value,$/;"	v
+pref_tech_vars_to_values	.\define_tfp_only_equilibrium_eqs.py	/^pref_tech_vars_to_values = {alpha: alpha_value, beta: beta_value,$/;"	v
+prefs_dict	.\main-fipir-fi-march.py	/^prefs_dict = {'beta': beta_value, 'nu': nu_value}$/;"	v
+prefs_dict	.\symbolic_ss_solution.py	/^prefs_dict = {'beta': beta_value, 'nu': nu_value}$/;"	v
+prefs_dict	.\test_new_fipir.py	/^prefs_dict = {'beta': beta_value, 'nu': nu_value}$/;"	v
+prefs_dict	.\test_new_fipir_azCIKLY.py	/^prefs_dict = {'beta': beta_value, 'nu': nu_value}$/;"	v
+prod_dict	.\main-fipir-fi-march.py	/^prod_dict = {'rhoa': rhoa_value, 'muatrue': mua_value_true}$/;"	v
+prod_dict	.\symbolic_ss_solution.py	/^prod_dict = {'rhoa': rhoa_value, 'mua': mua_value_true_Toy,$/;"	v
+prod_dict	.\test_new_fipir.py	/^prod_dict = {'rhoa': rhoa_value, 'muatrue': mua_value_true_Toy}$/;"	v
+prod_dict	.\test_new_fipir_azCIKLY.py	/^prod_dict = {'rhoa': rhoa_value, 'muatrue': mua_value_true_Toy}$/;"	v
+psi_q_q	.\model_ew_azckily_bu.py	/^psi_q_q = linalg.solve(Eq52_coe, -cons_for_psiqq )$/;"	v
+psi_q_q	.\test_new_fipir.py	/^psi_q_q = scipy.linalg.solve(Eq52_coe, -cons_for_psiqq)$/;"	v
+psi_q_q	.\test_new_fipir_azCIKLY.py	/^psi_q_q = scipy.linalg.solve(Eq52_coe, -cons_for_psiqq)$/;"	v
+psi_second_order	.\model_ew_azckily.py	/^psi_second_order = fi.get_second_order_approx_coeff_fi(psi_x, psi_w, psi_q, dfi_n, dse_n)$/;"	v
+psi_second_order	.\model_ew_azckily_fipiro.py	/^psi_second_order = fi.get_second_order_approx_coeff_fi(psi_x, psi_w, psi_q, dfi_n, dse_n)$/;"	v
+psi_w_q	.\model_ew_azckily_bu.py	/^psi_w_q = vec_psiwq.reshape((nx,nw), order='F')$/;"	v
+psi_w_q	.\test_new_fipir.py	/^psi_w_q = vec_psiwq.reshape((nx, nw), order='F')$/;"	v
+psi_w_q	.\test_new_fipir_azCIKLY.py	/^psi_w_q = vec_psiwq.reshape((nx, nw), order='F')$/;"	v
+psi_w_w	.\model_ew_azckily_bu.py	/^psi_w_w = np.dot(linalg.inv(A_for_psi_w_w), b_for_psi_w_w )$/;"	v
+psi_w_w	.\test_new_fipir.py	/^psi_w_w = np.dot(scipy.linalg.inv(A_for_psi_w_w), b_for_psi_w_w)$/;"	v
+psi_w_w	.\test_new_fipir_azCIKLY.py	/^psi_w_w = np.dot(scipy.linalg.inv(A_for_psi_w_w), b_for_psi_w_w)$/;"	v
+psi_w_w_bysolve	.\model_ew_azckily_bu.py	/^psi_w_w_bysolve = linalg.solve(A_for_psi_w_w, b_for_psi_w_w)$/;"	v
+psi_w_w_bysolve	.\test_new_fipir.py	/^psi_w_w_bysolve = scipy.linalg.solve(A_for_psi_w_w, b_for_psi_w_w)$/;"	v
+psi_w_w_bysolve	.\test_new_fipir_azCIKLY.py	/^psi_w_w_bysolve = scipy.linalg.solve(A_for_psi_w_w, b_for_psi_w_w)$/;"	v
+psi_x_q	.\model_ew_azckily_bu.py	/^psi_x_q = vec_psixq.reshape((nx,nx), order='F')$/;"	v
+psi_x_q	.\test_new_fipir.py	/^psi_x_q = vec_psixq.reshape((nx, nx), order='F')$/;"	v
+psi_x_q	.\test_new_fipir_azCIKLY.py	/^psi_x_q = vec_psixq.reshape((nx, nx), order='F')$/;"	v
+psi_x_w	.\model_ew_azckily_bu.py	/^psi_x_w = np.dot(linalg.inv(A_for_psi_x_w), b_for_psi_x_w )$/;"	v
+psi_x_w	.\test_new_fipir.py	/^psi_x_w = np.dot(scipy.linalg.inv(A_for_psi_x_w), b_for_psi_x_w)$/;"	v
+psi_x_w	.\test_new_fipir_azCIKLY.py	/^psi_x_w = np.dot(scipy.linalg.inv(A_for_psi_x_w), b_for_psi_x_w)$/;"	v
+psi_x_w_bysolve	.\model_ew_azckily_bu.py	/^psi_x_w_bysolve = linalg.solve(A_for_psi_x_w, b_for_psi_x_w)$/;"	v
+psi_x_w_bysolve	.\test_new_fipir.py	/^psi_x_w_bysolve = scipy.linalg.solve(A_for_psi_x_w, b_for_psi_x_w)$/;"	v
+psi_x_w_bysolve	.\test_new_fipir_azCIKLY.py	/^psi_x_w_bysolve = scipy.linalg.solve(A_for_psi_x_w, b_for_psi_x_w)$/;"	v
+psi_x_x	.\model_ew_azckily_bu.py	/^psi_x_x = vec_psixx_sol.reshape((nx, nx*nx), order='F')$/;"	v
+psi_x_x	.\test_new_fipir.py	/^psi_x_x = vec_psixx_sol.reshape((nx, nx*nx), order='F')$/;"	v
+psi_x_x	.\test_new_fipir_azCIKLY.py	/^psi_x_x = vec_psixx_sol.reshape((nx, nx*nx), order='F')$/;"	v
+psi_x_x_2d	.\model_ew_azckily_bu.py	/^psi_x_x_2d = vec_psixx_sol2d.reshape((nx, nx*nx), order='F')$/;"	v
+psi_x_x_2d	.\test_new_fipir.py	/^psi_x_x_2d = vec_psixx_sol2d.reshape((nx, nx*nx), order='F')$/;"	v
+psi_x_x_2d	.\test_new_fipir_azCIKLY.py	/^psi_x_x_2d = vec_psixx_sol2d.reshape((nx, nx*nx), order='F')$/;"	v
+psiqkronIk	.\model_ew_azckily_bu.py	/^psiqkronIk = np.kron(psi_q, np.eye(nw))$/;"	v
+psiqkronIk	.\test_new_fipir.py	/^psiqkronIk = np.kron(psi_q, np.eye(nw))$/;"	v
+psiqkronIk	.\test_new_fipir_azCIKLY.py	/^psiqkronIk = np.kron(psi_q, np.eye(nw))$/;"	v
+psiqkronIn	.\model_ew_azckily_bu.py	/^psiqkronIn = np.kron(psi_q, np.eye(nx))$/;"	v
+psiqkronIn	.\test_new_fipir.py	/^psiqkronIn = np.kron(psi_q, np.eye(nx))$/;"	v
+psiqkronIn	.\test_new_fipir_azCIKLY.py	/^psiqkronIn = np.kron(psi_q, np.eye(nx))$/;"	v
+psiqkronpsiw	.\model_ew_azckily_bu.py	/^psiqkronpsiw = np.kron(psi_q, psi_w)$/;"	v
+psiqkronpsiw	.\test_new_fipir.py	/^psiqkronpsiw = np.kron(psi_q, psi_w)$/;"	v
+psiqkronpsiw	.\test_new_fipir_azCIKLY.py	/^psiqkronpsiw = np.kron(psi_q, psi_w)$/;"	v
+psiqkronpsix	.\model_ew_azckily_bu.py	/^psiqkronpsix = np.kron(psi_q, psi_x)$/;"	v
+psiqkronpsix	.\test_new_fipir.py	/^psiqkronpsix = np.kron(psi_q, psi_x)$/;"	v
+psiqkronpsix	.\test_new_fipir_azCIKLY.py	/^psiqkronpsix = np.kron(psi_q, psi_x)$/;"	v
+psiwkronIk	.\model_ew_azckily_bu.py	/^psiwkronIk = np.kron(psi_w, np.eye(nw))$/;"	v
+psiwkronIk	.\test_new_fipir.py	/^psiwkronIk = np.kron(psi_w, np.eye(nw))$/;"	v
+psiwkronIk	.\test_new_fipir_azCIKLY.py	/^psiwkronIk = np.kron(psi_w, np.eye(nw))$/;"	v
+psiwkronIndotj	.\model_ew_azckily_bu.py	/^psiwkronIndotj = np.concatenate(psiwkronIndotj_list, axis=1)$/;"	v
+psiwkronIndotj	.\test_new_fipir.py	/^psiwkronIndotj = np.concatenate(psiwkronIndotj_list, axis=1)$/;"	v
+psiwkronIndotj	.\test_new_fipir_azCIKLY.py	/^psiwkronIndotj = np.concatenate(psiwkronIndotj_list, axis=1)$/;"	v
+psiwkronIndotj_list	.\model_ew_azckily_bu.py	/^psiwkronIndotj_list = [np.kron(psi_w, c) for c in I_n_dot_j]$/;"	v
+psiwkronIndotj_list	.\test_new_fipir.py	/^psiwkronIndotj_list = [np.kron(psi_w, c) for c in I_n_dot_j]$/;"	v
+psiwkronIndotj_list	.\test_new_fipir_azCIKLY.py	/^psiwkronIndotj_list = [np.kron(psi_w, c) for c in I_n_dot_j]$/;"	v
+psiwkronpsiq	.\model_ew_azckily_bu.py	/^psiwkronpsiq = np.kron(psi_w, psi_q)$/;"	v
+psiwkronpsiq	.\test_new_fipir.py	/^psiwkronpsiq = np.kron(psi_w, psi_q)$/;"	v
+psiwkronpsiq	.\test_new_fipir_azCIKLY.py	/^psiwkronpsiq = np.kron(psi_w, psi_q)$/;"	v
+psiwkronpsiw	.\model_ew_azckily_bu.py	/^psiwkronpsiw = np.kron(psi_w, psi_w)$/;"	v
+psiwkronpsiw	.\test_new_fipir.py	/^psiwkronpsiw = np.kron(psi_w, psi_w)$/;"	v
+psiwkronpsiw	.\test_new_fipir_azCIKLY.py	/^psiwkronpsiw = np.kron(psi_w, psi_w)$/;"	v
+psiwkronpsix	.\model_ew_azckily_bu.py	/^psiwkronpsix = np.kron(psi_w, psi_x)$/;"	v
+psiwkronpsix	.\test_new_fipir.py	/^psiwkronpsix = np.kron(psi_w, psi_x)$/;"	v
+psiwkronpsix	.\test_new_fipir_azCIKLY.py	/^psiwkronpsix = np.kron(psi_w, psi_x)$/;"	v
+psixkronIk	.\model_ew_azckily_bu.py	/^psixkronIk = np.kron(psi_x, np.eye(nw))$/;"	v
+psixkronIk	.\test_new_fipir.py	/^psixkronIk = np.kron(psi_x, np.eye(nw))$/;"	v
+psixkronIk	.\test_new_fipir_azCIKLY.py	/^psixkronIk = np.kron(psi_x, np.eye(nw))$/;"	v
+psixkronIn	.\model_ew_azckily_bu.py	/^psixkronIn = np.kron(psi_x, np.eye(nx))$/;"	v
+psixkronIn	.\test_new_fipir.py	/^psixkronIn = np.kron(psi_x, np.eye(nx))$/;"	v
+psixkronIn	.\test_new_fipir_azCIKLY.py	/^psixkronIn = np.kron(psi_x, np.eye(nx))$/;"	v
+psixkronpsiq	.\model_ew_azckily_bu.py	/^psixkronpsiq = np.kron(psi_x, psi_q)$/;"	v
+psixkronpsiq	.\test_new_fipir.py	/^psixkronpsiq = np.kron(psi_x, psi_q)$/;"	v
+psixkronpsiq	.\test_new_fipir_azCIKLY.py	/^psixkronpsiq = np.kron(psi_x, psi_q)$/;"	v
+psixkronpsiw	.\model_ew_azckily_bu.py	/^psixkronpsiw = np.kron(psi_x, psi_w)$/;"	v
+psixkronpsiw	.\test_new_fipir.py	/^psixkronpsiw = np.kron(psi_x, psi_w)$/;"	v
+psixkronpsiw	.\test_new_fipir_azCIKLY.py	/^psixkronpsiw = np.kron(psi_x, psi_w)$/;"	v
+psixkronpsix	.\model_ew_azckily_bu.py	/^psixkronpsix = np.kron(psi_x, psi_x)$/;"	v
+psixkronpsix	.\test_new_fipir.py	/^psixkronpsix = np.kron(psi_x, psi_x)$/;"	v
+psixkronpsix	.\test_new_fipir_azCIKLY.py	/^psixkronpsix = np.kron(psi_x, psi_x)$/;"	v
+pypiro	.\fipiro\testing_pypiro.py	/^import pypiro$/;"	i
+q	.\fipir_aug.py	/^q = sympy.Symbol('q')$/;"	v
+q	.\fipir_aug_old.py	/^q = sympy.Symbol('q')$/;"	v
+q	.\fipir_new.py	/^q = sympy.Symbol('q')$/;"	v
+q	.\fipiro\utils.py	/^q = sympy.Symbol('q')$/;"	v
+q	.\fipiro\utils_before_introducing_classes.py	/^q = sympy.Symbol('q')$/;"	v
+ratio_var	.\main-fipir-fi-march.py	/^ratio_var = (sigmaza_value \/ sigmaa_value) ** 2$/;"	v
+ratio_var	.\test_new_fipir.py	/^ratio_var = (sigmaza_value\/sigmaa_value)**2$/;"	v
+ratio_var	.\test_new_fipir_azCIKLY.py	/^ratio_var = (sigmaza_value\/sigmaa_value)**2$/;"	v
+resid_CIKLYaz_ss_info	.\define_tfp_only_equilibrium_eqs.py	/^resid_CIKLYaz_ss_info = ss_eq_conds_TFP_FI_CIKLY_az_infodating_aleads_sta_all(num_sols_CIKLYaz_ss_info, all_param_values_names_dict)$/;"	v
+resid_CIKLYaz_ss_use	.\define_tfp_only_equilibrium_eqs.py	/^resid_CIKLYaz_ss_use = ss_eq_conds_TFP_FI_CIKLY_az_usedating_aleads_sta_all(num_sols_CIKLYaz_ss_use, all_param_values_names_dict)$/;"	v
+rgqz	.\fipir.py	/^rgqz = robjects.r.gqz$/;"	v
+rgqz	.\fipir_aug.py	/^rgqz = robjects.r.gqz$/;"	v
+rgqz	.\fipir_aug_old.py	/^rgqz = robjects.r.gqz$/;"	v
+rgqz	.\fipir_new.py	/^rgqz = robjects.r.gqz$/;"	v
+rhoa_sym	.\test_new_fipir.py	/^rhoa_sym = sympy.Symbol('rho_a', positive=True)$/;"	v
+rhoa_sym	.\test_new_fipir_azCIKLY.py	/^rhoa_sym = sympy.Symbol('rho_a', positive=True)$/;"	v
+rhoa_value	.\define_tfp_only_equilibrium_eqs.py	/^rhoa_value = 0.97  # 0.01087417, 0.00213658$/;"	v
+rhoa_value	.\main-fipir-fi-march.py	/^rhoa_value = 0.97  # 0.01087417, 0.00213658$/;"	v
+rhoa_value	.\model_ew_azckily.py	/^rhoa_value = 0.97  # 0.01087417, 0.00213658$/;"	v
+rhoa_value	.\model_ew_azckily_bu.py	/^rhoa_value = 0.97  # 0.01087417, 0.00213658$/;"	v
+rhoa_value	.\model_ew_azckily_fipiro.py	/^rhoa_value = 0.97  # 0.01087417, 0.00213658$/;"	v
+rhoa_value	.\symbolic_ss_solution.py	/^rhoa_value = 0.97  # 0.01087417, 0.00213658$/;"	v
+rhoa_value	.\test_new_fipir.py	/^rhoa_value = 0.97  # 0.01087417, 0.00213658$/;"	v
+rhoa_value	.\test_new_fipir_azCIKLY.py	/^rhoa_value = 0.97  # 0.01087417, 0.00213658$/;"	v
+rhoa_value	.\use_fipiro.py	/^rhoa_value = 0.97  # 0.01087417, 0.00213658$/;"	v
+riccati	.\fipir.py	/^import riccati$/;"	i
+rightmat	.\model_ew_azckily_bu.py	/^rightmat = - C_for_psixx.T.flatten() # one dimensional array$/;"	v
+rightmat	.\test_new_fipir.py	/^rightmat = - C_for_psixx.T.flatten()  # one dimensional array$/;"	v
+rightmat	.\test_new_fipir_azCIKLY.py	/^rightmat = - C_for_psixx.T.flatten()  # one dimensional array$/;"	v
+rightmat2d	.\model_ew_azckily_bu.py	/^rightmat2d = - C_for_psixx.T.reshape(-1,1) # two dimensional column array$/;"	v
+rightmat2d	.\test_new_fipir.py	/^rightmat2d = - C_for_psixx.T.reshape(-1, 1)  # two dimensional column array$/;"	v
+rightmat2d	.\test_new_fipir_azCIKLY.py	/^rightmat2d = - C_for_psixx.T.reshape(-1, 1)  # two dimensional column array$/;"	v
+robjects	.\fipir.py	/^import rpy2.robjects as robjects$/;"	i
+robjects	.\fipir.py	/^import rpy2.robjects.numpy2ri$/;"	i
+robjects	.\fipir_aug.py	/^import rpy2.robjects as robjects$/;"	i
+robjects	.\fipir_aug.py	/^import rpy2.robjects.numpy2ri$/;"	i
+robjects	.\fipir_aug_old.py	/^import rpy2.robjects as robjects$/;"	i
+robjects	.\fipir_aug_old.py	/^import rpy2.robjects.numpy2ri$/;"	i
+robjects	.\fipir_new.py	/^import rpy2.robjects as robjects$/;"	i
+robjects	.\fipir_new.py	/^import rpy2.robjects.numpy2ri$/;"	i
+rpy2	.\fipir.py	/^import rpy2.robjects as robjects$/;"	i
+rpy2	.\fipir.py	/^import rpy2.robjects.numpy2ri$/;"	i
+rpy2	.\fipir_aug.py	/^import rpy2.robjects as robjects$/;"	i
+rpy2	.\fipir_aug.py	/^import rpy2.robjects.numpy2ri$/;"	i
+rpy2	.\fipir_aug_old.py	/^import rpy2.robjects as robjects$/;"	i
+rpy2	.\fipir_aug_old.py	/^import rpy2.robjects.numpy2ri$/;"	i
+rpy2	.\fipir_new.py	/^import rpy2.robjects as robjects$/;"	i
+rpy2	.\fipir_new.py	/^import rpy2.robjects.numpy2ri$/;"	i
+s	.\fipiro\fullinfo.py	/^import sspace as s$/;"	i
+s	.\use_fipiro.py	/^from fipiro import sspace as s$/;"	i
+s_space_matrices_sym	.\main-fipir-fi-march.py	/^s_space_matrices_sym = fipir_new.make_state_space_sym(num_s_state_space,$/;"	v
+s_space_matrices_sym	.\test_new_fipir.py	/^s_space_matrices_sym = fipir_new.make_state_space_sym(num_s_state_space,$/;"	v
+s_space_matrices_sym	.\test_new_fipir_azCIKLY.py	/^s_space_matrices_sym = fipir_new.make_state_space_sym(num_s_state_space,$/;"	v
+scipy	.\fipir.py	/^import scipy.linalg$/;"	i
+scipy	.\fipir_new.py	/^import scipy.linalg$/;"	i
+scipy	.\test_new_fipir.py	/^import scipy.linalg$/;"	i
+scipy	.\test_new_fipir_azCIKLY.py	/^import scipy.linalg$/;"	i
+set_get_psi_toy	.\fipir.py	/^def set_get_psi_toy(alpha = 0.33, delta = 0.1, gamma=1,$/;"	f
+set_param_sym_dict	.\fipir_aug.py	/^def set_param_sym_dict(this_param_names):$/;"	f
+set_param_sym_dict	.\fipir_aug_old.py	/^def set_param_sym_dict(this_param_names):$/;"	f
+set_param_sym_dict	.\fipir_new.py	/^def set_param_sym_dict(this_param_names):$/;"	f
+set_param_sym_dict	.\fipiro\utils.py	/^def set_param_sym_dict(this_param_names):$/;"	f
+set_param_sym_dict	.\fipiro\utils_before_introducing_classes.py	/^def set_param_sym_dict(this_param_names):$/;"	f
+set_x_w_sym_dicts	.\fipir_aug.py	/^def set_x_w_sym_dicts(this_x_names, this_w_names):$/;"	f
+set_x_w_sym_dicts	.\fipir_aug_old.py	/^def set_x_w_sym_dicts(this_x_names, this_w_names):$/;"	f
+set_x_w_sym_dicts	.\fipir_new.py	/^def set_x_w_sym_dicts(this_x_names, this_w_names):$/;"	f
+set_x_w_sym_dicts	.\fipiro\utils.py	/^def set_x_w_sym_dicts(this_x_names, this_w_names):$/;"	f
+set_x_w_sym_dicts	.\fipiro\utils_before_introducing_classes.py	/^def set_x_w_sym_dicts(this_x_names, this_w_names):$/;"	f
+shift_forward_t_eqs	.\fipiro\utils_before_introducing_classes.py	/^def shift_forward_t_eqs(eqs_list, tm1_dic, t_dic, tp1_dic):$/;"	f
+shift_z_forward	.\try_uhlig.py	/^                      shift_z_forward=True,$/;"	v
+sigmaa_value	.\define_tfp_only_equilibrium_eqs.py	/^sigmaa_value = 0.01*7.5  # sskg = sskg= 0.128156077839$/;"	v
+sigmaa_value	.\main-fipir-fi-march.py	/^sigmaa_value = 0.01 * 7.5  # sskg = sskg= 0.128156077839$/;"	v
+sigmaa_value	.\model_ew_azckily.py	/^sigmaa_value = 0.01*7.5  # sskg = sskg= 0.128156077839$/;"	v
+sigmaa_value	.\model_ew_azckily_bu.py	/^sigmaa_value = 0.01*7.5  # sskg = sskg= 0.128156077839$/;"	v
+sigmaa_value	.\model_ew_azckily_fipiro.py	/^sigmaa_value = 0.01*7.5  # sskg = sskg= 0.128156077839$/;"	v
+sigmaa_value	.\symbolic_ss_solution.py	/^sigmaa_value = 0.01*7.5  # sskg = sskg= 0.128156077839$/;"	v
+sigmaa_value	.\test_new_fipir.py	/^sigmaa_value = 0.01*7.5  # sskg = sskg= 0.128156077839$/;"	v
+sigmaa_value	.\test_new_fipir_azCIKLY.py	/^sigmaa_value = 0.01*7.5  # sskg = sskg= 0.128156077839$/;"	v
+sigmaa_value	.\use_fipiro.py	/^sigmaa_value = 0.01*7.5  # sskg = sskg= 0.128156077839$/;"	v
+sigmaza_value	.\define_tfp_only_equilibrium_eqs.py	/^sigmaza_value = 0.01*1$/;"	v
+sigmaza_value	.\main-fipir-fi-march.py	/^sigmaza_value = 0.01 * 1$/;"	v
+sigmaza_value	.\model_ew_azckily.py	/^sigmaza_value = 0.01*1$/;"	v
+sigmaza_value	.\model_ew_azckily_bu.py	/^sigmaza_value = 0.01*1$/;"	v
+sigmaza_value	.\model_ew_azckily_fipiro.py	/^sigmaza_value = 0.01*1$/;"	v
+sigmaza_value	.\symbolic_ss_solution.py	/^sigmaza_value = 0.01*1$/;"	v
+sigmaza_value	.\test_new_fipir.py	/^sigmaza_value = 0.01*1$/;"	v
+sigmaza_value	.\test_new_fipir_azCIKLY.py	/^sigmaza_value = 0.01*1$/;"	v
+sigmaza_value	.\use_fipiro.py	/^sigmaza_value = 0.01*1$/;"	v
+sigmaza_value_from_SNR	.\main-fipir-fi-march.py	/^sigmaza_value_from_SNR = np.sqrt(SNR_value) * sigmaa_value$/;"	v
+sigmaza_value_from_SNR	.\test_new_fipir.py	/^sigmaza_value_from_SNR = np.sqrt(SNR_value)*sigmaa_value$/;"	v
+sigmaza_value_from_SNR	.\test_new_fipir_azCIKLY.py	/^sigmaza_value_from_SNR = np.sqrt(SNR_value)*sigmaa_value$/;"	v
+simul_approx_secord_fi	.\fipir_aug.py	/^    def simul_approx_secord_fi(inix0, inix1, inix2, phi_var, phi_var_var):$/;"	m	class:FullInfoModel
+simul_approx_secord_fi	.\fipir_aug_old.py	/^    def simul_approx_secord_fi(inix0, inix1, inix2, phi_var, phi_var_var):$/;"	m	class:FullInfoModel
+simul_second_fi	.\fipiro\fullinfo.py	/^    def simul_second_fi(self,  ini_x1=[], ini_x2=[],$/;"	m	class:FullInfoModel
+sol_CIKLYaz_ss_info_lam	.\define_tfp_only_equilibrium_eqs.py	/^sol_CIKLYaz_ss_info_lam = lambdify(all_param_values_dict.keys(),$/;"	v
+sol_CIKLYaz_ss_use_lam	.\define_tfp_only_equilibrium_eqs.py	/^sol_CIKLYaz_ss_use_lam = lambdify(all_param_values_dict.keys(),$/;"	v
+solve_quad_matrix_stable_sol_QZ	.\fipir.py	/^    def solve_quad_matrix_stable_sol_QZ(self, lin_con_mat, quad_mat, nx):$/;"	m	class:FullInfoModel
+solve_quad_matrix_stable_sol_QZ	.\fipir_aug.py	/^    def solve_quad_matrix_stable_sol_QZ(self, lin_con_mat, quad_mat, nx):$/;"	m	class:FullInfoModel
+solve_quad_matrix_stable_sol_QZ	.\fipir_aug_old.py	/^    def solve_quad_matrix_stable_sol_QZ(self, lin_con_mat, quad_mat, nx):$/;"	m	class:FullInfoModel
+solve_quad_matrix_stable_sol_QZ	.\fipir_new.py	/^    def solve_quad_matrix_stable_sol_QZ(self, lin_con_mat, quad_mat, nx):$/;"	m	class:FullInfoModel
+solve_quad_matrix_stable_sol_QZ	.\fipiro\fullinfo.py	/^    def solve_quad_matrix_stable_sol_QZ(self, lin_con_mat, quad_mat, nx):$/;"	m	class:FullInfoModel
+solve_quad_matrix_stable_sol_QZ	.\fipiro\utils.py	/^def solve_quad_matrix_stable_sol_QZ(lin_con_mat, quad_mat, nx):$/;"	f
+solve_quad_matrix_stable_sol_QZ	.\fipiro\utils_before_introducing_classes.py	/^def solve_quad_matrix_stable_sol_QZ(lin_con_mat, quad_mat, nx):$/;"	f
+sp	.\fipir_new.py	/^import scipy as sp$/;"	i
+ss_elw	.\main-fipir-fi-march.py	/^ss_elw = fipir_new.SignalStateSpace(A_num=A_z_num, C_num=C_z_num,D_num=D_s_num,$/;"	v
+ss_elw	.\test_new_fipir.py	/^ss_elw = fipir_new.SignalStateSpace(A_num=A_z_num, C_num=C_z_num,$/;"	v
+ss_elw	.\test_new_fipir_azCIKLY.py	/^ss_elw = fipir_new.SignalStateSpace(A_num=A_z_num, C_num=C_z_num,$/;"	v
+ss_elw_dic_vals	.\main-fipir-fi-march.py	/^ss_elw_dic_vals = fipir_new.SignalStateSpace(A_sym=A_z_sym, C_sym=C_z_sym,$/;"	v
+ss_elw_dic_vals	.\test_new_fipir.py	/^ss_elw_dic_vals = fipir_new.SignalStateSpace(A_sym=A_z_sym, C_sym=C_z_sym,$/;"	v
+ss_elw_dic_vals	.\test_new_fipir_azCIKLY.py	/^ss_elw_dic_vals = fipir_new.SignalStateSpace(A_sym=A_z_sym, C_sym=C_z_sym,$/;"	v
+ss_elw_dic_vals_names_dic	.\main-fipir-fi-march.py	/^ss_elw_dic_vals_names_dic = fipir_new.SignalStateSpace(A_sym=A_z_sym,$/;"	v
+ss_elw_dic_vals_names_dic	.\test_new_fipir.py	/^ss_elw_dic_vals_names_dic = fipir_new.SignalStateSpace(A_sym=A_z_sym,$/;"	v
+ss_elw_dic_vals_names_dic	.\test_new_fipir_azCIKLY.py	/^ss_elw_dic_vals_names_dic = fipir_new.SignalStateSpace(A_sym=A_z_sym,$/;"	v
+ss_elw_novals	.\main-fipir-fi-march.py	/^ss_elw_novals = fipir_new.SignalStateSpace(A_sym=A_z_sym, C_sym=C_z_sym,$/;"	v
+ss_elw_novals	.\test_new_fipir.py	/^ss_elw_novals = fipir_new.SignalStateSpace(A_sym=A_z_sym, C_sym=C_z_sym,$/;"	v
+ss_elw_novals	.\test_new_fipir_azCIKLY.py	/^ss_elw_novals = fipir_new.SignalStateSpace(A_sym=A_z_sym, C_sym=C_z_sym,$/;"	v
+ss_eq_conds_TFP_FI_CIKLY_az_infodating_aleads_sta_all	.\define_tfp_only_equilibrium_eqs.py	/^def ss_eq_conds_TFP_FI_CIKLY_az_infodating_aleads_sta_all(sols_ciklyaz, pardict):$/;"	f
+ss_eq_conds_TFP_FI_CIKLY_az_usedating_aleads_sta_all	.\define_tfp_only_equilibrium_eqs.py	/^def ss_eq_conds_TFP_FI_CIKLY_az_usedating_aleads_sta_all(sols_ciklyaz, pardict):$/;"	f
+ss_sol_values_from_symb_dict	.\symbolic_ss_solution.py	/^ss_sol_values_from_symb_dict = dict($/;"	v
+ss_sol_values_from_symb_list	.\symbolic_ss_solution.py	/^ss_sol_values_from_symb_list = [x.subs(tech_prefs_prod_dict) for x in$/;"	v
+ss_sym_sols_TFP_FI_CIKLY_az_infodating_aleads_sta_all	.\define_tfp_only_equilibrium_eqs.py	/^def ss_sym_sols_TFP_FI_CIKLY_az_infodating_aleads_sta_all():$/;"	f
+ss_sym_sols_TFP_FI_CIKLY_az_usedating_aleads_sta_all	.\define_tfp_only_equilibrium_eqs.py	/^def ss_sym_sols_TFP_FI_CIKLY_az_usedating_aleads_sta_all():$/;"	f
+ss_symbolic_solutions_dict	.\symbolic_ss_solution.py	/^ss_symbolic_solutions_dict = {Css: Css_sol_sym, Iss: Iss_sol_sym,$/;"	v
+sskg	.\main-fipir-fi-march.py	/^sskg = 1 - 2.0 \/ sskg_bden$/;"	v
+sskg	.\test_new_fipir.py	/^sskg = 1 - 2.0\/sskg_bden$/;"	v
+sskg	.\test_new_fipir_azCIKLY.py	/^sskg = 1 - 2.0\/sskg_bden$/;"	v
+sskg_bden	.\main-fipir-fi-march.py	/^sskg_bden = 2 - oneratphi + np.sqrt(oneratphi + 4 * ratio_var)$/;"	v
+sskg_bden	.\test_new_fipir.py	/^sskg_bden = 2 - oneratphi + np.sqrt(oneratphi + 4*ratio_var)$/;"	v
+sskg_bden	.\test_new_fipir_azCIKLY.py	/^sskg_bden = 2 - oneratphi + np.sqrt(oneratphi + 4*ratio_var)$/;"	v
+ssp	.\model_ew_azckily.py	/^ssp = fipir_aug.SignalStateSpace(n_x=num_x_state_space,$/;"	v
+ssp	.\model_ew_azckily_bu.py	/^ssp = fipir_aug.SignalStateSpace(n_x=num_x_state_space,$/;"	v
+ssp	.\model_ew_azckily_fipiro.py	/^ssp = fipiro.SignalStateSpace(n_x=num_x_state_space,$/;"	v
+ssp	.\use_fipiro.py	/^ssp = s.SignalStateSpace(n_x=num_x_state_space,$/;"	v
+ssp_par_user_names_to_values	.\define_tfp_only_equilibrium_eqs.py	/^ssp_par_user_names_to_values = {'mua': mua_value_true_Toy,$/;"	v
+ssp_par_user_to_values	.\define_tfp_only_equilibrium_eqs.py	/^ssp_par_user_to_values = {mua: mua_value_true_Toy,$/;"	v
+ssp_par_user_to_values	.\model_ew_azckily.py	/^ssp_par_user_to_values = {'mua': mua_value_true_Toy,$/;"	v
+ssp_par_user_to_values	.\model_ew_azckily_bu.py	/^ssp_par_user_to_values = {'mua': mua_value_true_Toy,$/;"	v
+ssp_par_user_to_values	.\model_ew_azckily_fipiro.py	/^ssp_par_user_to_values = {'mua': mua_value_true_Toy,$/;"	v
+ssp_par_user_to_values	.\use_fipiro.py	/^ssp_par_user_to_values = {'mua': mua_value_true_Toy,$/;"	v
+sspace	.\use_fipiro.py	/^import fipiro.sspace$/;"	i
+sspace_mat_sym	.\model_ew_azckily.py	/^sspace_mat_sym = fipir_aug.make_state_space_sym(num_s_state_space,$/;"	v
+sspace_mat_sym	.\model_ew_azckily_bu.py	/^sspace_mat_sym = fipir_aug.make_state_space_sym(num_s_state_space,$/;"	v
+sspace_mat_sym	.\model_ew_azckily_fipiro.py	/^sspace_mat_sym = fipiro.make_state_space_sym(num_s_state_space,$/;"	v
+sspace_mat_sym	.\use_fipiro.py	/^sspace_mat_sym = u.make_state_space_sym(num_s_state_space,$/;"	v
+state_space_params_modulenames_to_values	.\main-fipir-fi-march.py	/^state_space_params_modulenames_to_values = {'mu_0': mua_value_true,$/;"	v
+state_space_params_modulenames_to_values	.\test_new_fipir.py	/^state_space_params_modulenames_to_values = {'mu_0': mua_value_true_Toy,$/;"	v
+state_space_params_modulenames_to_values	.\test_new_fipir_azCIKLY.py	/^state_space_params_modulenames_to_values = {'mu_0': mua_value_true_Toy,$/;"	v
+state_space_params_usernames_to_values	.\main-fipir-fi-march.py	/^state_space_params_usernames_to_values = {'mua': mua_value_true,$/;"	v
+state_space_params_usernames_to_values	.\test_new_fipir.py	/^state_space_params_usernames_to_values = {'mua': mua_value_true_Toy,$/;"	v
+state_space_params_usernames_to_values	.\test_new_fipir_azCIKLY.py	/^state_space_params_usernames_to_values = {'mua': mua_value_true_Toy,$/;"	v
+stsp_sdict	.\test_new_fipir.py	/^stsp_sdict = {'D': Ds_elw}$/;"	v
+stsp_sdict	.\test_new_fipir_azCIKLY.py	/^stsp_sdict = {'D': Ds_elw}$/;"	v
+sympy	.\define_tfp_only_equilibrium_eqs.py	/^import sympy$/;"	i
+sympy	.\fipir.py	/^import sympy$/;"	i
+sympy	.\fipir_aug.py	/^import sympy$/;"	i
+sympy	.\fipir_aug_old.py	/^import sympy$/;"	i
+sympy	.\fipir_new.py	/^import sympy$/;"	i
+sympy	.\fipiro\define_ciklyaz_infodate_aleads_equilibrium_eqs.py	/^import sympy$/;"	i
+sympy	.\fipiro\fullinfo.py	/^import sympy$/;"	i
+sympy	.\fipiro\utils.py	/^import sympy$/;"	i
+sympy	.\fipiro\utils_before_introducing_classes.py	/^import sympy$/;"	i
+sympy	.\main-fipir-fi-march.py	/^import sympy$/;"	i
+sympy	.\model_ew_azckily.py	/^import sympy$/;"	i
+sympy	.\model_ew_azckily_bu.py	/^import sympy$/;"	i
+sympy	.\model_ew_azckily_fipiro.py	/^import sympy$/;"	i
+sympy	.\symbolic_ss_solution.py	/^import sympy$/;"	i
+sympy	.\test_new_fipir.py	/^import sympy$/;"	i
+sympy	.\test_new_fipir_azCIKLY.py	/^import sympy$/;"	i
+sympy	.\try_uhlig.py	/^import sympy$/;"	i
+sympy	.\use_fipiro.py	/^import sympy$/;"	i
+symsols_info	.\define_tfp_only_equilibrium_eqs.py	/^symsols_info = ss_sym_sols_TFP_FI_CIKLY_az_infodating_aleads_sta_all()$/;"	v
+symsols_use	.\define_tfp_only_equilibrium_eqs.py	/^symsols_use = ss_sym_sols_TFP_FI_CIKLY_az_usedating_aleads_sta_all()$/;"	v
+tech_dict	.\main-fipir-fi-march.py	/^tech_dict = {'alpha': alpha_value, 'delta': delta_value}$/;"	v
+tech_dict	.\symbolic_ss_solution.py	/^tech_dict = {'alpha': alpha_value, 'delta': delta_value}$/;"	v
+tech_dict	.\test_new_fipir.py	/^tech_dict = {'alpha': alpha_value, 'delta': delta_value}$/;"	v
+tech_dict	.\test_new_fipir_azCIKLY.py	/^tech_dict = {'alpha': alpha_value, 'delta': delta_value}$/;"	v
+tech_prefs_prod_dict	.\main-fipir-fi-march.py	/^tech_prefs_prod_dict = {}$/;"	v
+tech_prefs_prod_dict	.\symbolic_ss_solution.py	/^tech_prefs_prod_dict = {}$/;"	v
+tech_prefs_prod_dict	.\test_new_fipir.py	/^tech_prefs_prod_dict = {}$/;"	v
+tech_prefs_prod_dict	.\test_new_fipir_azCIKLY.py	/^tech_prefs_prod_dict = {}$/;"	v
+terms_in_Eq56	.\model_ew_azckily_bu.py	/^terms_in_Eq56 =  np.dot(Gx, psi_q) - cons_psiqq_ab - cons_psiqq_ac - cons_psiqq_ad$/;"	v
+terms_in_Eq56	.\test_new_fipir.py	/^    cons_psiqq_ac - cons_psiqq_ad$/;"	v
+terms_in_Eq56	.\test_new_fipir_azCIKLY.py	/^    cons_psiqq_ac - cons_psiqq_ad$/;"	v
+theano	.\fipir.py	/^import theano$/;"	i
+theano_function	.\fipir_aug.py	/^from sympy.printing.theanocode import theano_function$/;"	i
+theano_function	.\fipir_aug_old.py	/^from sympy.printing.theanocode import theano_function$/;"	i
+theano_function	.\fipir_new.py	/^from sympy.printing.theanocode import theano_function$/;"	i
+theta	.\model_ew_azckily_bu.py	/^theta = fi.theta$/;"	v
+theta	.\symbolic_ss_solution.py	/^theta = nu*(1-alpha)\/(1-nu)$/;"	v
+theta	.\test_new_fipir.py	/^theta = elw_fi.theta$/;"	v
+theta	.\test_new_fipir_azCIKLY.py	/^theta = elw_fi.theta$/;"	v
+u	.\define_tfp_only_equilibrium_eqs.py	/^from fipiro import utils as u$/;"	i
+u	.\fipiro\define_ciklyaz_infodate_aleads_equilibrium_eqs.py	/^from fipiro import utils as u$/;"	i
+u	.\fipiro\sspace.py	/^import utils as u$/;"	i
+u	.\try_uhlig.py	/^import fipiro.utils as u$/;"	i
+u	.\use_fipiro.py	/^from fipiro import utils as u$/;"	i
+u_x_names	.\try_uhlig.py	/^                      u_x_names=u_x_names,$/;"	v
+u_x_names	.\try_uhlig.py	/^u_x_names = ['K']$/;"	v
+u_y_names	.\try_uhlig.py	/^                      u_y_names=u_y_names,$/;"	v
+u_y_names	.\try_uhlig.py	/^u_y_names = ['C', 'I', 'K', 'L', 'Y']$/;"	v
+u_z_names	.\try_uhlig.py	/^                      u_z_names=u_z_names)$/;"	v
+u_z_names	.\try_uhlig.py	/^u_z_names = ['a', 'zetaa']$/;"	v
+uhlig_block_indices	.\try_uhlig.py	/^uhlig_block_indices = {'expectational_block': ex_block_index,$/;"	v
+umodel	.\try_uhlig.py	/^umodel = u.UhligModel(glist_cikly_az_info,$/;"	v
+update_ss_solutions_fi_toy	.\fipir.py	/^    def update_ss_solutions_fi_toy(self):$/;"	m	class:FullInfoModel
+update_ss_solutions_pi_toy	.\fipir.py	/^    def update_ss_solutions_pi_toy(self, current_z):$/;"	m	class:PartialInfoModel
+update_z_Sigma	.\fipir.py	/^    def update_z_Sigma(self, s_obs):$/;"	m	class:PartialInfoModel
+user_names_dic	.\main-fipir-fi-march.py	/^                                                       user_names_dic=param_names_module_to_user)$/;"	v
+user_names_dic	.\model_ew_azckily.py	/^                                 user_names_dic=param_names_module_to_user)$/;"	v
+user_names_dic	.\model_ew_azckily_bu.py	/^                                 user_names_dic=param_names_module_to_user)$/;"	v
+user_names_dic	.\model_ew_azckily_fipiro.py	/^                                 user_names_dic=param_names_module_to_user)$/;"	v
+user_names_dic	.\test_new_fipir.py	/^                                                       user_names_dic=param_names_module_to_user)$/;"	v
+user_names_dic	.\test_new_fipir_azCIKLY.py	/^                                                       user_names_dic=param_names_module_to_user)$/;"	v
+user_names_dic	.\use_fipiro.py	/^                              user_names_dic=param_names_module_to_user)$/;"	v
+utility	.\main-fipir-fi-march.py	/^                                 utility=utility_elw,$/;"	v
+utility	.\model_ew_azckily.py	/^                             utility=utility_elw,$/;"	v
+utility	.\model_ew_azckily_bu.py	/^                             utility=utility_elw,$/;"	v
+utility	.\model_ew_azckily_fipiro.py	/^                             utility=utility_elw,$/;"	v
+utility	.\test_new_fipir.py	/^                                 utility=utility_elw,$/;"	v
+utility	.\test_new_fipir_azCIKLY.py	/^                                 utility=utility_elw,$/;"	v
+utility	.\use_fipiro.py	/^                             utility=utility_elw,$/;"	v
+utility_elw	.\main-fipir-fi-march.py	/^utility_elw = nu * sympy.log(Ct) + (1-nu) * sympy.log(Lt)                                $/;"	v
+utility_elw	.\model_ew_azckily.py	/^utility_elw = nu * sympy.log(Ct) + (1-nu) * sympy.log(Lt)$/;"	v
+utility_elw	.\model_ew_azckily_bu.py	/^utility_elw = nu * sympy.log(Ct) + (1-nu) * sympy.log(Lt)$/;"	v
+utility_elw	.\model_ew_azckily_fipiro.py	/^utility_elw = nu * sympy.log(Ct) + (1-nu) * sympy.log(Lt)$/;"	v
+utility_elw	.\test_new_fipir.py	/^utility_elw = nu * sympy.log(Ct) + (1-nu) * sympy.log(Lt)$/;"	v
+utility_elw	.\test_new_fipir_azCIKLY.py	/^utility_elw = nu * sympy.log(Ct) + (1-nu) * sympy.log(Lt)$/;"	v
+utility_elw	.\use_fipiro.py	/^utility_elw = nu * sympy.log(Ct) + (1-nu) * sympy.log(Lt)$/;"	v
+utility_sym_mat	.\model_ew_azckily_bu.py	/^utility_sym_mat = sympy.Matrix([fi.utility]) $/;"	v
+utility_sym_mat	.\test_new_fipir.py	/^utility_sym_mat = sympy.Matrix([elw_fi.utility])$/;"	v
+utility_sym_mat	.\test_new_fipir_azCIKLY.py	/^utility_sym_mat = sympy.Matrix([elw_fi.utility])$/;"	v
+utils	.\fipiro\fullinfo.py	/^import utils$/;"	i
+utils	.\use_fipiro.py	/^import fipiro.utils$/;"	i
+uxq	.\model_ew_azckily_bu.py	/^uxq = du_dx_dq_at_ss$/;"	v
+uxq	.\test_new_fipir.py	/^uxq = du_dx_dq_at_ss$/;"	v
+uxq	.\test_new_fipir_azCIKLY.py	/^uxq = du_dx_dq_at_ss$/;"	v
+vec_psi_x_x_bysolve	.\model_ew_azckily_bu.py	/^vec_psi_x_x_bysolve = linalg.solve(leftmat, rightmat) #twice as fast $/;"	v
+vec_psi_x_x_bysolve	.\test_new_fipir.py	/^vec_psi_x_x_bysolve = scipy.linalg.solve(leftmat, rightmat)  # twice as fast$/;"	v
+vec_psi_x_x_bysolve	.\test_new_fipir_azCIKLY.py	/^vec_psi_x_x_bysolve = scipy.linalg.solve(leftmat, rightmat)  # twice as fast$/;"	v
+vec_psiwq	.\model_ew_azckily_bu.py	/^vec_psiwq = linalg.solve(A_for_vecpsiwq, b_for_vecpsiwq)$/;"	v
+vec_psiwq	.\test_new_fipir.py	/^vec_psiwq = scipy.linalg.solve(A_for_vecpsiwq, b_for_vecpsiwq)$/;"	v
+vec_psiwq	.\test_new_fipir_azCIKLY.py	/^vec_psiwq = scipy.linalg.solve(A_for_vecpsiwq, b_for_vecpsiwq)$/;"	v
+vec_psixq	.\model_ew_azckily_bu.py	/^vec_psixq = linalg.solve(A_for_vecpsixq, b_for_vecpsixq)$/;"	v
+vec_psixq	.\test_new_fipir.py	/^vec_psixq = scipy.linalg.solve(A_for_vecpsixq, b_for_vecpsixq)$/;"	v
+vec_psixq	.\test_new_fipir_azCIKLY.py	/^vec_psixq = scipy.linalg.solve(A_for_vecpsixq, b_for_vecpsixq)$/;"	v
+vec_psixx_sol	.\model_ew_azckily_bu.py	/^vec_psixx_sol = np.dot(invleftmat , rightmat)$/;"	v
+vec_psixx_sol	.\test_new_fipir.py	/^vec_psixx_sol = np.dot(invleftmat, rightmat)$/;"	v
+vec_psixx_sol	.\test_new_fipir_azCIKLY.py	/^vec_psixx_sol = np.dot(invleftmat, rightmat)$/;"	v
+vec_psixx_sol2d	.\model_ew_azckily_bu.py	/^vec_psixx_sol2d = np.dot(invleftmat, rightmat2d)$/;"	v
+vec_psixx_sol2d	.\test_new_fipir.py	/^vec_psixx_sol2d = np.dot(invleftmat, rightmat2d)$/;"	v
+vec_psixx_sol2d	.\test_new_fipir_azCIKLY.py	/^vec_psixx_sol2d = np.dot(invleftmat, rightmat2d)$/;"	v
+w_dates	.\define_tfp_only_equilibrium_eqs.py	/^w_dates = ['t', 'tp1']$/;"	v
+w_dates	.\fipiro\define_ciklyaz_infodate_aleads_equilibrium_eqs.py	/^w_dates = ['t', 'tp1']$/;"	v
+w_dates	.\main-fipir-fi-march.py	/^w_dates = ['t', 'tp1']$/;"	v
+w_dates	.\model_ew_azckily.py	/^w_dates = ['t', 'tp1']$/;"	v
+w_dates	.\model_ew_azckily_bu.py	/^w_dates = ['t', 'tp1']$/;"	v
+w_dates	.\model_ew_azckily_fipiro.py	/^w_dates = ['t', 'tp1']$/;"	v
+w_dates	.\test_new_fipir.py	/^w_dates = ['t', 'tp1']$/;"	v
+w_dates	.\test_new_fipir_azCIKLY.py	/^w_dates = ['t', 'tp1']$/;"	v
+w_dates	.\try_uhlig.py	/^w_dates = ['t', 'tp1']$/;"	v
+w_dates	.\use_fipiro.py	/^w_dates = ['t', 'tp1']$/;"	v
+w_names	.\define_tfp_only_equilibrium_eqs.py	/^w_names = ['wa', 'wzetaa']$/;"	v
+w_names	.\fipir_aug.py	/^w_names = []$/;"	v
+w_names	.\fipir_aug_old.py	/^w_names = []$/;"	v
+w_names	.\fipir_new.py	/^w_names = []$/;"	v
+w_names	.\fipiro\define_ciklyaz_infodate_aleads_equilibrium_eqs.py	/^w_names = ['wa', 'wzetaa']$/;"	v
+w_names	.\fipiro\utils.py	/^w_names = []$/;"	v
+w_names	.\fipiro\utils_before_introducing_classes.py	/^w_names = []$/;"	v
+w_names	.\main-fipir-fi-march.py	/^w_names = ['wa', 'wzetaa']$/;"	v
+w_names	.\model_ew_azckily.py	/^w_names = ['wa', 'wzetaa']$/;"	v
+w_names	.\model_ew_azckily_bu.py	/^w_names = ['wa', 'wzetaa']$/;"	v
+w_names	.\model_ew_azckily_fipiro.py	/^w_names = ['wa', 'wzetaa']$/;"	v
+w_names	.\test_new_fipir.py	/^w_names = ['wa', 'wzetaa']$/;"	v
+w_names	.\test_new_fipir_azCIKLY.py	/^w_names = ['wa', 'wzetaa']$/;"	v
+w_names	.\try_uhlig.py	/^w_names = ['wa', 'wzetaa']$/;"	v
+w_names	.\use_fipiro.py	/^w_names = ['wa', 'wzetaa']$/;"	v
+w_sym_dict	.\fipir_aug.py	/^w_sym_dict = {}$/;"	v
+w_sym_dict	.\fipir_aug_old.py	/^w_sym_dict = {}$/;"	v
+w_sym_dict	.\fipir_new.py	/^w_sym_dict = {}$/;"	v
+w_sym_dict	.\fipiro\utils.py	/^w_sym_dict = {}$/;"	v
+w_sym_dict	.\fipiro\utils_before_introducing_classes.py	/^w_sym_dict = {}$/;"	v
+wss_sym_dict	.\fipir_aug.py	/^wss_sym_dict = {}$/;"	v
+wss_sym_dict	.\fipir_aug_old.py	/^wss_sym_dict = {}$/;"	v
+wss_sym_dict	.\fipir_new.py	/^wss_sym_dict = {}$/;"	v
+wss_sym_dict	.\fipiro\utils.py	/^wss_sym_dict = {}$/;"	v
+wss_sym_dict	.\fipiro\utils_before_introducing_classes.py	/^wss_sym_dict = {}$/;"	v
+x	.\fipir.py	/^    x = 0$/;"	v	class:FullInfoModel
+x	.\fipir.py	/^    x = 0$/;"	v	class:PartialInfoModel
+x	.\fipir.py	/^    x = 0$/;"	v	class:RobustFullInfoModel
+x	.\fipir.py	/^    x = 0$/;"	v	class:RobustPartialInfoModel
+x	.\fipir.py	/^    x = 0$/;"	v	class:StateSpace
+x	.\fipir_aug.py	/^    x = 0$/;"	v	class:FullInfoModel
+x	.\fipir_aug_old.py	/^    x = 0$/;"	v	class:FullInfoModel
+x	.\fipir_new.py	/^    x = 0$/;"	v	class:FullInfoModel
+x	.\fipiro\fullinfo.py	/^    x = 0$/;"	v	class:FullInfoModel
+x_dates	.\define_tfp_only_equilibrium_eqs.py	/^x_dates = ['tm1', 't', 'tp1']$/;"	v
+x_dates	.\fipiro\define_ciklyaz_infodate_aleads_equilibrium_eqs.py	/^x_dates = ['tm1', 't', 'tp1']$/;"	v
+x_dates	.\main-fipir-fi-march.py	/^x_dates = ['tm1', 't', 'tp1']$/;"	v
+x_dates	.\model_ew_azckily.py	/^x_dates = ['tm1', 't', 'tp1']$/;"	v
+x_dates	.\model_ew_azckily_bu.py	/^x_dates = ['tm1', 't', 'tp1']$/;"	v
+x_dates	.\model_ew_azckily_fipiro.py	/^x_dates = ['tm1', 't', 'tp1']$/;"	v
+x_dates	.\test_new_fipir.py	/^x_dates = ['tm1', 't', 'tp1']$/;"	v
+x_dates	.\test_new_fipir_azCIKLY.py	/^x_dates = ['tm1', 't', 'tp1']$/;"	v
+x_dates	.\try_uhlig.py	/^x_dates = ['tm1', 't', 'tp1']$/;"	v
+x_dates	.\use_fipiro.py	/^x_dates = ['tm1', 't', 'tp1']$/;"	v
+x_in_ss_sym_d	.\main-fipir-fi-march.py	/^x_in_ss_sym_d = {st: x_s_d[st] for st in x_s_d.keys() if 'ss' in st}$/;"	v
+x_in_ss_sym_d	.\test_new_fipir.py	/^x_in_ss_sym_d = {st: x_s_d[st] for st in x_s_d.keys() if 'ss' in st}$/;"	v
+x_in_ss_sym_d	.\test_new_fipir_azCIKLY.py	/^x_in_ss_sym_d = {st: x_s_d[st] for st in x_s_d.keys() if 'ss' in st}$/;"	v
+x_in_ss_sym_d_ckl_az	.\test_new_fipir.py	/^x_in_ss_sym_d_ckl_az = {st: x_s_d_ckl_az[st]$/;"	v
+x_in_ss_sym_d_ckl_z	.\test_new_fipir.py	/^x_in_ss_sym_d_ckl_z = {st: x_s_d_ckl_z[st]$/;"	v
+x_in_ss_sym_d_z	.\test_new_fipir.py	/^x_in_ss_sym_d_z = {st: x_s_d_z[st] for st in x_s_d_z.keys() if 'ss' in st}$/;"	v
+x_in_ss_sym_li	.\main-fipir-fi-march.py	/^x_in_ss_sym_li = x_in_ss_sym_d.values()$/;"	v
+x_in_ss_sym_li	.\test_new_fipir.py	/^x_in_ss_sym_li = x_in_ss_sym_d.values()$/;"	v
+x_in_ss_sym_li	.\test_new_fipir_azCIKLY.py	/^x_in_ss_sym_li = x_in_ss_sym_d.values()$/;"	v
+x_in_ss_sym_li_ckl_az	.\test_new_fipir.py	/^x_in_ss_sym_li_ckl_az = x_in_ss_sym_d_ckl_az.values()$/;"	v
+x_in_ss_sym_li_ckl_z	.\test_new_fipir.py	/^x_in_ss_sym_li_ckl_z = x_in_ss_sym_d_ckl_z.values()$/;"	v
+x_in_ss_sym_li_z	.\test_new_fipir.py	/^x_in_ss_sym_li_z = x_in_ss_sym_d_z.values()$/;"	v
+x_ini	.\main-fipir-fi-march.py	/^x_ini = xini_az_cand1$/;"	v
+x_names	.\define_tfp_only_equilibrium_eqs.py	/^x_names = ['a', 'C', 'I', 'K', 'L', 'Y', 'zetaa']$/;"	v
+x_names	.\fipir_aug.py	/^x_names = []$/;"	v
+x_names	.\fipir_aug_old.py	/^x_names = []$/;"	v
+x_names	.\fipir_new.py	/^x_names = []$/;"	v
+x_names	.\fipiro\define_ciklyaz_infodate_aleads_equilibrium_eqs.py	/^x_names = ['a', 'C', 'I', 'K', 'L', 'Y', 'zetaa']$/;"	v
+x_names	.\fipiro\utils.py	/^x_names = []$/;"	v
+x_names	.\fipiro\utils_before_introducing_classes.py	/^x_names = []$/;"	v
+x_names	.\main-fipir-fi-march.py	/^x_names = ['a', 'C', 'I', 'K', 'L', 'Y', 'zetaa']$/;"	v
+x_names	.\model_ew_azckily.py	/^x_names = ['a', 'C', 'I', 'K', 'L', 'Y', 'zetaa']$/;"	v
+x_names	.\model_ew_azckily_bu.py	/^x_names = ['a', 'C', 'I', 'K', 'L', 'Y', 'zetaa']$/;"	v
+x_names	.\model_ew_azckily_fipiro.py	/^x_names = ['a', 'C', 'I', 'K', 'L', 'Y', 'zetaa']$/;"	v
+x_names	.\test_new_fipir.py	/^x_names = ['a', 'C', 'I', 'K', 'L', 'Y', 'zetaa']$/;"	v
+x_names	.\test_new_fipir_azCIKLY.py	/^x_names = ['a', 'C', 'I', 'K', 'L', 'Y', 'zetaa']$/;"	v
+x_names	.\try_uhlig.py	/^x_names = ['a', 'C', 'I', 'K', 'L', 'Y', 'zetaa']$/;"	v
+x_names	.\use_fipiro.py	/^x_names = ['a', 'C', 'I', 'K', 'L', 'Y', 'zetaa']$/;"	v
+x_names_ckl_az	.\test_new_fipir.py	/^x_names_ckl_az = ['a', 'C', 'K', 'L', 'zetaa']$/;"	v
+x_names_ckl_z	.\test_new_fipir.py	/^x_names_ckl_z = ['C', 'K', 'L', 'zetaa']$/;"	v
+x_names_z	.\test_new_fipir.py	/^x_names_z = ['C', 'I', 'K', 'L', 'Y', 'zetaa']$/;"	v
+x_sym_dict	.\fipir_aug.py	/^x_sym_dict = {}$/;"	v
+x_sym_dict	.\fipir_aug_old.py	/^x_sym_dict = {}$/;"	v
+x_sym_dict	.\fipir_new.py	/^x_sym_dict = {}$/;"	v
+x_sym_dict	.\fipiro\utils.py	/^x_sym_dict = {}$/;"	v
+x_sym_dict	.\fipiro\utils_before_introducing_classes.py	/^x_sym_dict = {}$/;"	v
+xini_az	.\test_new_fipir.py	/^xini_az = np.zeros((7))$/;"	v
+xini_az	.\test_new_fipir_azCIKLY.py	/^xini_az = np.zeros((7))$/;"	v
+xini_az_cand1	.\main-fipir-fi-march.py	/^xini_az_cand1 = np.array([0.02, 0.6, 0.3, 2.0, 0.01, 0.5, 1.0])$/;"	v
+xini_az_other	.\test_new_fipir.py	/^xini_az_other = np.array([0.6,  2.,  0.5,  0.3, 1.,  0.02,  0.01])$/;"	v
+xini_az_other	.\test_new_fipir_azCIKLY.py	/^xini_az_other = np.array([0.6,  2.,  0.5,  0.3, 1.,  0.02,  0.01])$/;"	v
+xini_ckl_az	.\test_new_fipir.py	/^xini_ckl_az = np.zeros((5))$/;"	v
+xini_ckl_z	.\test_new_fipir.py	/^xini_ckl_z = np.zeros((5))$/;"	v
+xini_z	.\test_new_fipir.py	/^xini_z = np.zeros((6))$/;"	v
+xss_ini_dict	.\main-fipir-fi-march.py	/^                                 xss_ini_dict=xss_ini_dict)$/;"	v
+xss_ini_dict	.\main-fipir-fi-march.py	/^xss_ini_dict = dict(zip(x_in_ss_sym_li, x_ini))$/;"	v
+xss_ini_dict	.\model_ew_azckily.py	/^                             xss_ini_dict=xss_ini_dict)$/;"	v
+xss_ini_dict	.\model_ew_azckily.py	/^xss_ini_dict = {x_in_ss_sym_d['Y_ss']: 1.0,$/;"	v
+xss_ini_dict	.\model_ew_azckily_bu.py	/^                             xss_ini_dict=xss_ini_dict)$/;"	v
+xss_ini_dict	.\model_ew_azckily_bu.py	/^xss_ini_dict = {x_in_ss_sym_d['Y_ss']: 1.0,$/;"	v
+xss_ini_dict	.\model_ew_azckily_fipiro.py	/^                             xss_ini_dict=xss_ini_dict)$/;"	v
+xss_ini_dict	.\model_ew_azckily_fipiro.py	/^xss_ini_dict = {x_in_ss_sym_d['Y_ss']: 1.0,$/;"	v
+xss_ini_dict	.\test_new_fipir.py	/^                                 xss_ini_dict=xss_ini_dict)$/;"	v
+xss_ini_dict	.\test_new_fipir.py	/^xss_ini_dict = dict(zip(x_in_ss_sym_li, xini_az))$/;"	v
+xss_ini_dict	.\test_new_fipir_azCIKLY.py	/^                                 xss_ini_dict=xss_ini_dict)$/;"	v
+xss_ini_dict	.\test_new_fipir_azCIKLY.py	/^xss_ini_dict = dict(zip(x_in_ss_sym_li, xini_az))$/;"	v
+xss_ini_dict	.\use_fipiro.py	/^                             xss_ini_dict=xss_ini_dict)$/;"	v
+xss_ini_dict	.\use_fipiro.py	/^xss_ini_dict = {x_in_ss_sym_d['Y_ss']: 1.0,$/;"	v
+xss_ini_dict_ckl_az	.\test_new_fipir.py	/^xss_ini_dict_ckl_az = dict(zip(x_in_ss_sym_li_ckl_az, xini_ckl_az))$/;"	v
+xss_ini_dict_ckl_z	.\test_new_fipir.py	/^xss_ini_dict_ckl_z = dict(zip(x_in_ss_sym_li_ckl_z, xini_ckl_z))$/;"	v
+xss_ini_dict_z	.\test_new_fipir.py	/^xss_ini_dict_z = dict(zip(x_in_ss_sym_li_z, xini_z))$/;"	v
+xss_sym_dict	.\fipir_aug.py	/^xss_sym_dict = {}$/;"	v
+xss_sym_dict	.\fipir_aug_old.py	/^xss_sym_dict = {}$/;"	v
+xss_sym_dict	.\fipir_new.py	/^xss_sym_dict = {}$/;"	v
+xss_sym_dict	.\fipiro\utils.py	/^xss_sym_dict = {}$/;"	v
+xss_sym_dict	.\fipiro\utils_before_introducing_classes.py	/^xss_sym_dict = {}$/;"	v
+xw_sym_dicts	.\main-fipir-fi-march.py	/^                                 xw_sym_dicts=xw_sym_dicts,$/;"	v
+xw_sym_dicts	.\main-fipir-fi-march.py	/^xw_sym_dicts = fipir_new.set_x_w_sym_dicts(x_names, w_names)$/;"	v
+xw_sym_dicts	.\test_new_fipir.py	/^                                 xw_sym_dicts=xw_sym_dicts,$/;"	v
+xw_sym_dicts	.\test_new_fipir.py	/^xw_sym_dicts = fipir_new.set_x_w_sym_dicts(x_names, w_names)$/;"	v
+xw_sym_dicts	.\test_new_fipir_azCIKLY.py	/^                                 xw_sym_dicts=xw_sym_dicts,$/;"	v
+xw_sym_dicts	.\test_new_fipir_azCIKLY.py	/^xw_sym_dicts = fipir_new.set_x_w_sym_dicts(x_names, w_names)$/;"	v
+xw_sym_dicts_ckl_az	.\test_new_fipir.py	/^xw_sym_dicts_ckl_az = fipir_new.set_x_w_sym_dicts(x_names_ckl_az, w_names)$/;"	v
+xw_sym_dicts_ckl_z	.\test_new_fipir.py	/^xw_sym_dicts_ckl_z = fipir_new.set_x_w_sym_dicts(x_names_ckl_z, w_names)$/;"	v
+xw_sym_dicts_z	.\test_new_fipir.py	/^xw_sym_dicts_z = fipir_new.set_x_w_sym_dicts(x_names_z, w_names)$/;"	v
+xxsswp_sym_d	.\define_tfp_only_equilibrium_eqs.py	/^xxsswp_sym_d = u.make_x_w_param_sym_dicts(x_names, w_names, param_names)$/;"	v
+xxsswp_sym_d	.\fipiro\define_ciklyaz_infodate_aleads_equilibrium_eqs.py	/^xxsswp_sym_d = u.make_x_w_param_sym_dicts(x_names, w_names, param_names)$/;"	v
+xxsswp_sym_d	.\model_ew_azckily.py	/^xxsswp_sym_d = fipir_aug.make_x_w_param_sym_dicts(x_names, w_names, param_names)$/;"	v
+xxsswp_sym_d	.\model_ew_azckily_bu.py	/^xxsswp_sym_d = fipir_aug.make_x_w_param_sym_dicts(x_names, w_names, param_names)$/;"	v
+xxsswp_sym_d	.\model_ew_azckily_fipiro.py	/^xxsswp_sym_d = fipiro.make_x_w_param_sym_dicts(x_names, w_names, param_names)$/;"	v
+xxsswp_sym_d	.\try_uhlig.py	/^xxsswp_sym_d = u.make_x_w_param_sym_dicts(x_names, w_names, param_names)$/;"	v
+xxsswp_sym_d	.\use_fipiro.py	/^xxsswp_sym_d = u.make_x_w_param_sym_dicts(x_names, w_names, param_names)$/;"	v
+z_block_index	.\try_uhlig.py	/^z_block_index = (5, 6)$/;"	v
+zss_sol_sym	.\symbolic_ss_solution.py	/^zss_sol_sym = 0$/;"	v

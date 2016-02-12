@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+fipiro	C:\Users\lalo\Downloads\pythonfiles\pythonfiles\final_push\do_toolkit.py	/^import fipiro$/;"	namespace	line:1
+fipiro	C:\Users\lalo\Downloads\pythonfiles\pythonfiles\final_push\do_toolkit.py	/^import fipiro.utils as u$/;"	namespace	line:2
+u	C:\Users\lalo\Downloads\pythonfiles\pythonfiles\final_push\do_toolkit.py	/^import fipiro.utils as u$/;"	namespace	line:2
+sympy	C:\Users\lalo\Downloads\pythonfiles\pythonfiles\final_push\do_toolkit.py	/^import sympy$/;"	namespace	line:3
+np	C:\Users\lalo\Downloads\pythonfiles\pythonfiles\final_push\do_toolkit.py	/^import numpy as np$/;"	namespace	line:6
+x_names	C:\Users\lalo\Downloads\pythonfiles\pythonfiles\final_push\do_toolkit.py	/^x_names = ['C', 'I', 'K', 'N', 'Y', 'Z']$/;"	variable	line:10
+x_dates	C:\Users\lalo\Downloads\pythonfiles\pythonfiles\final_push\do_toolkit.py	/^x_dates = ['_tm1', '_t', '_tp1']$/;"	variable	line:11
+w_names	C:\Users\lalo\Downloads\pythonfiles\pythonfiles\final_push\do_toolkit.py	/^w_names = ['wa', 'wzetaa']$/;"	variable	line:12
+w_dates	C:\Users\lalo\Downloads\pythonfiles\pythonfiles\final_push\do_toolkit.py	/^w_dates = ['_t', '_tp1']$/;"	variable	line:13
+param_names	C:\Users\lalo\Downloads\pythonfiles\pythonfiles\final_push\do_toolkit.py	/^param_names = ['alpha', 'beta', 'delta', 'mua',$/;"	variable	line:14
+all_names	C:\Users\lalo\Downloads\pythonfiles\pythonfiles\final_push\do_toolkit.py	/^all_names = {$/;"	variable	line:16
+xxsswp_sym_d	C:\Users\lalo\Downloads\pythonfiles\pythonfiles\final_push\do_toolkit.py	/^xxsswp_sym_d = u.make_x_w_param_sym_dicts(x_names, w_names, param_names)$/;"	variable	line:19
+xss_ini_dict	C:\Users\lalo\Downloads\pythonfiles\pythonfiles\final_push\do_toolkit.py	/^xss_ini_dict = {x_in_ss_sym_d['Y_ss']: 1.0,$/;"	variable	line:21
+xxsswp_sym_d	C:\Users\lalo\Downloads\pythonfiles\pythonfiles\final_push\do_toolkit.py	/^xxsswp_sym_d = u.make_x_w_param_sym_dicts(x_names, w_names, param_names)$/;"	variable	line:28
+g_hansen_1985_div_tk	C:\Users\lalo\Downloads\pythonfiles\pythonfiles\final_push\do_toolkit.py	/^def g_hansen_1985_div_tk():$/;"	function	line:31
+g_hansen_1985_div_miao	C:\Users\lalo\Downloads\pythonfiles\pythonfiles\final_push\do_toolkit.py	/^def g_hansen_1985_div_miao():$/;"	function	line:36

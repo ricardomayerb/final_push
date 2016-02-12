@@ -1,11 +1,11 @@
-import fipir_aug
-#import fipiro
+#import fipir_aug
+import fipiro
 import sympy
 import numpy as np
 from scipy import linalg
 
-reload(fipir_aug)
-#reload(fipiro)
+#reload(fipir_aug)
+reload(fipiro)
 
 x_names = ['a', 'C', 'I', 'K', 'L', 'Y', 'zetaa']
 x_dates = ['tm1', 't', 'tp1']
@@ -19,7 +19,7 @@ param_names_module_to_user = {'rho_0': 'rhoa', 'mu_0': 'mua',
                               'sigma_signal_0': 'sigmaa',
                               'sigma_state_0': 'sigmazetaa'}               
 
-xxsswp_sym_d = fipir_aug.make_x_w_param_sym_dicts(x_names, w_names, param_names)
+xxsswp_sym_d = fipiro.make_x_w_param_sym_dicts(x_names, w_names, param_names)
 
 x_s_d, x_in_ss_sym_d, w_s_d, param_sym_d = xxsswp_sym_d
 
@@ -34,7 +34,7 @@ xss_ini_dict = {x_in_ss_sym_d['Y_ss']: 1.0,
 num_x_state_space = 1
 num_s_state_space = 1
 
-sspace_mat_sym = fipir_aug.make_state_space_sym(num_s_state_space,
+sspace_mat_sym = fipiro.make_state_space_sym(num_s_state_space,
                                                 num_x_state_space, True)
 
 ##### parameter calibration part
@@ -58,7 +58,7 @@ ssp_par_user_to_values = {'mua': mua_value_true_Toy,
                                           'sigmaa': sigmaa_value,
                                           'sigmazetaa': sigmaza_value}
 
-ssp = fipir_aug.SignalStateSpace(n_x=num_x_state_space,
+ssp = fipiro.SignalStateSpace(n_x=num_x_state_space,
                                  n_s=num_s_state_space,
                                  param_val_dic=ssp_par_user_to_values,
                                  user_names_dic=param_names_module_to_user)
@@ -68,7 +68,7 @@ ssp = fipir_aug.SignalStateSpace(n_x=num_x_state_space,
 #                                          'sigma_signal_0': sigmaa_value,
 #                                          'sigma_state_0': sigmaza_value}
 #
-#ssp_modnames = fipir_aug.SignalStateSpace(n_x=num_x_state_space,
+#ssp_modnames = fipiro.SignalStateSpace(n_x=num_x_state_space,
 #                                 n_s=num_s_state_space,
 #                                 param_val_dic=ssp_par_module_to_values)
 
@@ -126,7 +126,7 @@ all_param_values_dict = {}
 all_param_values_dict.update(pref_tech_names_to_values)
 all_param_values_dict.update(ssp_par_user_to_values)
 
-fi = fipir_aug.FullInfoModel(ssp, all_names,
+fi = fipiro.FullInfoModel(ssp, all_names,
                              par_to_values_dict=all_param_values_dict,
                              eq_conditions=glist_cikly_az,
                              utility=utility_elw,
