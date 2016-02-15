@@ -23,6 +23,9 @@ xss_sym_dict = {}
 w_sym_dict = {}
 wss_sym_dict = {}
 
+default_x_dates = ['tm1', 't', 'tp1']
+default_w_dates = ['t', 'tp1']
+
 
 def solve_quad_matrix_stable_sol_QZ(lin_con_mat, quad_mat, nx):
 
@@ -72,8 +75,6 @@ def get_sstate_sol_dict_from_sympy_eqs(glist, vars_ss_sym,
 
     xini_list = np.array(xini_list)
 
-<<<<<<< HEAD
-=======
     print "entering ss solver function"
     print "equations to solve:"
     print glist
@@ -85,7 +86,6 @@ def get_sstate_sol_dict_from_sympy_eqs(glist, vars_ss_sym,
     print "xini_af:"
     print xini_af
 
->>>>>>> 25e5ad1... fix eqns 2
     sol = optimize.root(glist_lam, xini_af)
     print "steady state solution\n"
     print sol
@@ -94,7 +94,26 @@ def get_sstate_sol_dict_from_sympy_eqs(glist, vars_ss_sym,
     return dict(zip(vars_ss_sym, np.around(sol['x'], decimals=12)))
 
 
-def make_basic_sym_dic(names_list, date_string):
+def make_base_sym_dicts(x_names, w_names, x_dates=default_x_dates,
+                        w_dates=default_w_dates):
+
+    x_sym_dict = {}
+    for i in x_names:
+        for j in x_dates:
+            x_sym_dict.update(make_basic_sym_dict(i, j))
+
+    w_sym_dict = {}
+    for i in w_names:
+        for j in w_dates:
+            w_sym_dict.update(make_basic_sym_dict(i, j))
+
+    x_sym_ss_dict = {k+'ss': sympy.Symbol(k+'ss') for k in x_names}
+    w_sym_ss_dict = {k+'ss': sympy.Symbol(k+'ss') for k in w_names}
+
+    wss_to_zero_dict = {wss: 0 for wss in w_sym_dict.values()}
+
+
+def make_basic_sym_dict(names_list, date_string):
     """put docstring here"""
     dated_names = [name + date_string for name in names_list]
     sym_list = [sympy.Symbol(x) for x in dated_names]
@@ -395,7 +414,8 @@ def numpy_state_space_matrices(sspacemats_dic, name2val_dic, user_names=False,
 
 class ModelBase(object):
     """"docstring for """
-    def __init__(self, equations, x_names=[], w_names=[],
+    def __init__(self, equations, x_names, w_names,
+                 x_dates=['tm1', 't', 'tp1'], w_dates=['t', 'tp1'],
                  param_names=[], par_to_values_dict={},
                  vars_initvalues_dict={}, compute_ss=True):
         self.eqns = equations
@@ -404,7 +424,8 @@ class ModelBase(object):
         self.param_names = param_names
         self.par_to_values_dict = par_to_values_dict
 
-        self.x_dates = ['tm1', 't', 'tp1']
+        self.x_dates = x_dates
+        self.w_dates = w_dates
 
         xwp_sym_d = make_x_w_param_sym_dicts(
                 x_names, w_names, param_names)
