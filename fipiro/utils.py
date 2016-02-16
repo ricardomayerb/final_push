@@ -94,23 +94,31 @@ def get_sstate_sol_dict_from_sympy_eqs(glist, vars_ss_sym,
     return dict(zip(vars_ss_sym, np.around(sol['x'], decimals=12)))
 
 
-def make_base_sym_dicts(x_names, w_names, x_dates=default_x_dates,
-                        w_dates=default_w_dates):
+def make_base_sym_dicts(x_names, w_names, param_names,
+                        x_dates=default_x_dates, w_dates=default_w_dates):
 
     x_sym_dict = {}
-    for i in x_names:
-        for j in x_dates:
-            x_sym_dict.update(make_basic_sym_dict(i, j))
-
     w_sym_dict = {}
-    for i in w_names:
-        for j in w_dates:
-            w_sym_dict.update(make_basic_sym_dict(i, j))
+    x_sym_dict = {}
+    for t in x_dates:
+        xvars_this_date = {x+t: sympy.Symbol(x+t) for x in x_names}
+        x_sym_dict.update(xvars_this_date)
+
+    for t in w_dates:
+        wvars_this_date = {w+t: sympy.Symbol(w+t) for w in w_names}
+        w_sym_dict.update(wvars_this_date)
+
+    param_sym_dict = {k: sympy.Symbol(k) for k in param_names}
 
     x_sym_ss_dict = {k+'ss': sympy.Symbol(k+'ss') for k in x_names}
     w_sym_ss_dict = {k+'ss': sympy.Symbol(k+'ss') for k in w_names}
-
     wss_to_zero_dict = {wss: 0 for wss in w_sym_dict.values()}
+
+    all_dicts = {'x': x_sym_dict, 'xss': x_sym_ss_dict, 'w': w_sym_dict,
+                 'wss': w_sym_ss_dict, 'w_to_zero': wss_to_zero_dict,
+                 'param': param_sym_dict}
+
+    return all_dicts
 
 
 def make_basic_sym_dict(names_list, date_string):
@@ -412,7 +420,50 @@ def numpy_state_space_matrices(sspacemats_dic, name2val_dic, user_names=False,
     return Ann, Cnn, Dnn, Gnn
 
 
-class ModelBase(object):
+class BaseModel(object):
+
+    def __init__(self, var_names_dict, param_names, equations=[],
+                 param_num_dict={}, vars_initvalues_dict={},
+                 var_dates_dict={'x_dates': ['tm1', 't', 'tp1'],
+                                 'w_dates': ['t', 'tp1']}):
+
+        self.equations = equations
+        self.param_num_d = param_num_dict
+        self.initvalues = vars_initvalues_dict
+
+        self.var_names_d = var_names_dict
+
+        if 'x_names' in var_names_dict.keys():
+            self.x_names = var_names_dict['x_names']
+        else:
+            self.x_names = {}
+        if 'w_names' in var_names_dict.keys():
+            self.w_names = var_names_dict['w_names']
+        else:
+            self.w_names = {}
+
+        if 'x_dates' in var_dates_dict.keys():
+            self.x_dates = var_dates_dict['x_dates']
+        else:
+            self.x_dates = {}
+        if 'w_dates' in var_dates_dict.keys():
+            self.w_dates = var_dates_dict['w_dates']
+        else:
+            self.w_dates = {}
+
+        base_dicts = make_base_sym_dicts(self.x_names, self.w_names,
+                                         param_names, self.x_dates,
+                                         self.w_dates)
+
+        self.x_sym_d = base_dicts['x']
+        self.w_sym_d = base_dicts['w']
+        self.xss_sym_d = base_dicts['xss']
+        self.wss_sym_d = base_dicts['wss']
+        self.w_to_zero_sym_d = base_dicts['w_to_zero']
+        self.param_sym_d = base_dicts['param']
+
+
+class ModelBase(object):  # old class, with huge unit. BaseModel is newer
     """"docstring for """
     def __init__(self, equations, x_names, w_names,
                  x_dates=['tm1', 't', 'tp1'], w_dates=['t', 'tp1'],

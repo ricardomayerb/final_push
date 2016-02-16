@@ -6,13 +6,6 @@ import sympy
 import numpy as np
 reload(fipiro.utils)
 
-non_ex_block_index = (1, 2, 3, 4)
-ex_block_index = (0)
-# z_block_index = (5, 6)
-z_block_index = (5, 6, 7)
-uhlig_block_indices = {'expectational_block': ex_block_index,
-                       'non_expectational_block': non_ex_block_index,
-                       'z_block': z_block_index}
 u_x_names = ['K']
 u_y_names = ['C', 'I', 'N', 'R', 'Y']
 u_z_names = ['lnofZ']
