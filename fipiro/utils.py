@@ -99,10 +99,14 @@ def make_base_sym_dicts(x_names, w_names, param_names,
 
     x_sym_dict = {}
     w_sym_dict = {}
-    x_sym_dict = {}
+    x_to_xss_sym_dict = {}
+
     for t in x_dates:
         xvars_this_date = {x+t: sympy.Symbol(x+t) for x in x_names}
         x_sym_dict.update(xvars_this_date)
+
+        xtoxss_this_date = {sympy.Symbol(x+t): sympy.Symbol(x+'ss') for x in
+                            x_names}
 
     for t in w_dates:
         wvars_this_date = {w+t: sympy.Symbol(w+t) for w in w_names}
